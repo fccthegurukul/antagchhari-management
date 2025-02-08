@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>शानदार अंताक्षरी (गाना प्रतियोगिता)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --background-light: #f8f9fa;
+            --text-dark: #343a40;
+            --text-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            position: relative; /* For loader positioning */
+        }
+
+        .section {
+            background: var(--background-light);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        .player-input {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        input, select, button {
+            padding: 14px 22px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            background: var(--secondary);
+            color: var(--text-light);
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button:hover {
+            background: var(--primary);
+            transform: scale(1.03);
+        }
+
+        .game-screen {
+            display: none;
+        }
+
+        .game-info {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .timer-container {
+            position: absolute; /* Corner placement */
+            top: 20px;
+            right: 20px;
+        }
+
+        .timer-box {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: var(--accent);
+            position: relative; /* For circle overlay */
+            width: 80px;  /* Adjust size as needed */
+            height: 80px;
+            line-height: 80px; /* Vertically center text */
+            border-radius: 50%;
+            background-color: var(--background-light); /* Timer background */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .timer-circle-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid var(--secondary); /* Circle border color */
+            border-top-color: transparent; /* Animate this */
+            border-right-color: transparent;
+            transition: transform 1s linear; /* Smooth animation */
+            transform: rotate(-90deg); /* Start at top */
+        }
+
+
+        .song-input-box {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .song-input-box input {
+            flex-grow: 1;
+        }
+
+
+        .score-board {
+            margin-top: 3rem;
+        }
+
+        .leaderboard-filter {
+            margin-bottom: 1.5rem;
+            text-align: right;
+        }
+
+        .leaderboard-filter button, .leaderboard-header > div, .leaderboard-item > div {
+            padding: 10px;
+        }
+
+        .leaderboard-header {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+            padding: 0.8rem 1rem;
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .leaderboard-item {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            margin: 0.5rem 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.08);
+            font-size: 0.95rem;
+        }
+
+
+        .badge {
+            padding: 6px 14px;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .hidden-audio { display: none; }
+
+        .group-A { background: #3498db20; color: #3498db; }
+        .group-B { background: #e74c3c20; color: #e74c3c; }
+        .group-C { background: #2ecc7120; color: #2ecc71; }
+
+        .leaderboard-rank-1 { color: gold; font-weight: bolder; }
+        .leaderboard-rank-2 { color: silver; font-weight: bolder; }
+        .leaderboard-rank-3 { color: #cd7f32; font-weight: bolder; }
+
+        /* Loader Styles */
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1001; /* Above everything else */
+        }
+
+        .loader-overlay.show {
+            display: flex; /* Show loader */
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid var(--secondary);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .highlight-letter {
+            font-size: 1.5em;
+            color: var(--accent);
+            font-weight: bold;
+            background-color: rgba(var(--secondary-rgb), 0.15); /* Light background highlight */
+            padding: 0.2em 0.4em;
+            border-radius: 5px;
+            display: inline-block; /* Ensure inline layout */
+        }
+
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 1rem;
+                padding: 15px;
+            }
+            .section {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+            .player-input {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            .leaderboard-header, .leaderboard-item {
+                font-size: 0.8rem;
+                padding: 0.6rem;
+                grid-template-columns: auto;
+                text-align: center;
+            }
+             .leaderboard-item > div:first-child {
+                font-weight: bold;
+            }
+            .leaderboard-filter {
+                text-align: center;
+            }
+             .song-input-box {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .song-input-box button {
+                width: 100%;
+            }
+             .timer-container {
+                position: fixed; /* Fixed position on mobile */
+                top: 10px;
+                right: 10px;
+            }
+            .timer-box {
+                width: 60px; /* Smaller timer on mobile */
+                height: 60px;
+                line-height: 60px;
+                font-size: 2rem;
+            }
+        }
+
+        .leaderboard-item.group-total-row {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Player Setup -->
+    <div class="section player-setup">
+        <h2><i class="fas fa-users"></i> खिलाड़ी जोड़ें</h2>
+        <div class="player-input">
+            <input type="text" id="playerName" placeholder="नाम">
+            <select id="groupSelect">
+                <option value="A">ग्रुप A</option>
+                <option value="B">ग्रुप B</option>
+                <option value="C">ग्रुप C</option>
+            </select>
+            <button onclick="addPlayer()">
+                <i class="fas fa-plus"></i> जोड़ें
+            </button>
+        </div>
+        <button onclick="startGame()" style="width:100%">
+            <i class="fas fa-play"></i> गेम शुरू करें
+        </button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="section game-screen">
+        <h2><i class="fas fa-gamepad"></i> अंताक्षरी खेल</h2>
+        <div class="game-info">
+            <span id="currentGroup"></span> की बारी, <span id="currentPlayerName"></span> गाएंगे!
+        </div>
+
+        <div class="timer-container">
+            <div class="timer-box">
+                <span id="timer">00:00</span>
+                <div class="timer-circle-overlay" id="timerCircle"></div>
+            </div>
+        </div>
+
+
+        <div class="song-input-box">
+            <input type="text" id="songInput" placeholder="गाना गाएं या लिखें (वैकल्पिक)">
+            <button onclick="endTurn(true)"> <i class="fas fa-microphone-alt"></i> गाना खत्म (सदस्य)</button>
+            <button onclick="endTurn(false)"> <i class="fas fa-users"></i> गाना खत्म (टीम)</button>
+        </div>
+
+        <div class="score-board">
+            <h3><i class="fas fa-chart-line"></i> स्कोर</h3>
+            <div id="scoreList"></div>
+        </div>
+        <button onclick="endGame()" style="background:var(--accent);width:100%">
+            <i class="fas fa-flag-checkered"></i> गेम समाप्त करें
+        </button>
+    </div>
+
+     <!-- Loader -->
+    <div class="loader-overlay" id="loaderOverlay">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- Leaderboard -->
+    <div class="section leaderboard">
+        <h2><i class="fas fa-trophy"></i> लीडरबोर्ड</h2>
+        <div class="leaderboard-filter">
+            फ़िल्टर:
+            <button onclick="showLeaderboard('all')">सभी</button>
+            <button onclick="showLeaderboard('member')">सदस्य वार</button>
+            <button onclick="showLeaderboard('team')">टीम वार</button>
+        </div>
+        <div class="leaderboard-header">
+            <div>#</div>
+            <div>नाम</div>
+            <div>ग्रुप</div>
+            <div>स्कोर</div>
+            <div>समय (सेकंड)</div>
+            <div>प्रयास</div>
+        </div>
+        <div id="leaderboard"></div>
+    </div>
+
+<script>
+const GameManager = {
+    players: [],
+    currentGroupIndex: 0,
+    currentPlayerIndex: 0,
+    startTime: 0,
+    timerInterval: null,
+    elapsedTime: 0,
+    currentStartingLetter: null,
+    leaderboardFilterType: 'all',
+
+    addPlayer(name, group) {
+        this.players.push({
+            id: Date.now(),
+            name,
+            group,
+            score: 0,
+            singingTime: 0,
+            turnsPlayed: 0,
+            attemptedTurns: 0,
+            sangCorrectly: 0,
+            lastStartingLetter: null
+        });
+    },
+
+    saveGameState() {
+        const gameData = {
+            date: new Date().toISOString(),
+            players: this.players,
+            currentGroupIndex: this.currentGroupIndex,
+            currentPlayerIndex: this.currentPlayerIndex,
+            currentStartingLetter: this.currentStartingLetter,
+            leaderboardFilterType: this.leaderboardFilterType
+        };
+        localStorage.setItem('antakshariSongGameV2', JSON.stringify(gameData));
+    },
+
+    loadHistory() {
+        const history = localStorage.getItem('antakshariSongGameV2');
+        if(history) {
+            const savedData = JSON.parse(history);
+            this.players = savedData.players;
+            this.currentGroupIndex = savedData.currentGroupIndex;
+            this.currentPlayerIndex = savedData.currentPlayerIndex;
+            this.currentStartingLetter = savedData.currentStartingLetter;
+            this.leaderboardFilterType = savedData.leaderboardFilterType || 'all';
+        }
+    },
+
+    getGroups() {
+        return [...new Set(this.players.map(p => p.group))];
+    },
+
+    getCurrentGroup() {
+        const groups = this.getGroups();
+        return groups[this.currentGroupIndex % groups.length];
+    },
+
+    getCurrentPlayer() {
+        const currentGroup = this.getCurrentGroup();
+        const playersInGroup = this.players.filter(player => player.group === currentGroup);
+        if (playersInGroup.length === 0) return null;
+        return playersInGroup[this.currentPlayerIndex % playersInGroup.length];
+    },
+
+    moveToNextPlayer() {
+        const currentGroup = this.getCurrentGroup();
+        const playersInGroup = this.players.filter(player => player.group === currentGroup);
+        this.currentPlayerIndex = (this.currentPlayerIndex + 1) % playersInGroup.length;
+        if (this.currentPlayerIndex === 0) {
+            this.currentGroupIndex++;
+            if (this.currentGroupIndex >= this.getGroups().length) {
+                this.currentGroupIndex = 0;
+            }
+        }
+    },
+
+    startTurn() {
+        this.startTime = Date.now();
+        this.elapsedTime = 0;
+        this.timerInterval = setInterval(this.updateTimerDisplay.bind(this), 1000);
+        this.currentStartingLetter = this.generateRandomLetter();
+        showGameScreen();
+    },
+
+    updateTimerDisplay() {
+        this.elapsedTime++; // Increment elapsed time directly
+        const minutes = Math.floor(this.elapsedTime / 60).toString().padStart(2, '0');
+        const seconds = (this.elapsedTime % 60).toString().padStart(2, '0');
+        document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+
+        // Animate circle
+        const percentage = (this.elapsedTime % 60) / 60 * 100; // Percentage for circle animation (up to 60 seconds)
+        const rotation = percentage / 100 * 360;
+        const timerCircle = document.getElementById('timerCircle');
+        timerCircle.style.transform = `rotate(${rotation - 90}deg)`; // Adjust rotation to start at top
+
+        if (this.elapsedTime > 59) { // Reset circle animation after 60 seconds for each minute
+            timerCircle.style.transition = 'none'; // Disable transition briefly for reset
+            timerCircle.style.transform = `rotate(-90deg)`;
+            requestAnimationFrame(() => { // Force reflow for transition reset
+                timerCircle.style.transition = 'transform 1s linear'; // Re-enable transition
+            });
+        }
+    },
+
+
+    generateRandomLetter() {
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return alphabet[Math.floor(Math.random() * alphabet.length)];
+    },
+
+
+    endTurn(isMemberSinging) {
+        this.showLoader(); // Show loader before turn ends
+
+        clearInterval(this.timerInterval);
+        const singingDuration = this.elapsedTime;
+        const currentPlayer = this.getCurrentPlayer();
+
+        setTimeout(() => { // Simulate loading time
+            this.hideLoader();
+
+            if (currentPlayer) {
+                currentPlayer.singingTime += singingDuration;
+                currentPlayer.turnsPlayed++;
+                currentPlayer.attemptedTurns++;
+
+                let scoreToAdd = 0;
+                if (singingDuration > 0) {
+                    scoreToAdd = isMemberSinging ? 10 : 5;
+                    currentPlayer.score += scoreToAdd;
+                    currentPlayer.sangCorrectly++;
+                }
+
+                this.saveGameState();
+                updateScoreList();
+                GameManager.moveToNextPlayer();
+                this.startTurn(); // Next turn starts automatically with random letter
+            }
+        }, 2000); // 2 seconds loader delay
+    },
+
+    showLoader() {
+        document.getElementById('loaderOverlay').classList.add('show');
+    },
+
+    hideLoader() {
+        document.getElementById('loaderOverlay').classList.remove('show');
+    },
+
+
+    getLeaderboardData(filterType = 'all') {
+        let filteredPlayers = [...this.players];
+        if (filterType === 'member') {
+            filteredPlayers = [...this.players].sort((a, b) => b.score - a.score);
+        } else if (filterType === 'team') {
+             filteredPlayers = [...this.players].sort((a, b) => {
+                const groupScoreA = this.getGroupTotalScore(a.group);
+                const groupScoreB = this.getGroupTotalScore(b.group);
+                return groupScoreB - groupScoreA;
+            });
+        } else {
+            filteredPlayers = [...this.players].sort((a, b) => b.score - a.score);
+        }
+
+
+        let rank = 1;
+        let rankedPlayers = filteredPlayers.map((player, index) => {
+            if (index > 0 && player.score < filteredPlayers[index - 1].score && filterType === 'member') {
+                rank = index + 1;
+            } else if (filterType === 'team' && index > 0) {
+                const groupScoreCurrent = this.getGroupTotalScore(player.group);
+                const groupScorePrevious = this.getGroupTotalScore(filteredPlayers[index - 1].group);
+                if (groupScoreCurrent < groupScorePrevious) {
+                     rank = index + 1;
+                 }
+            } else if (filterType === 'all' && index > 0 && player.score < filteredPlayers[index - 1].score) {
+                rank = index + 1;
+            }
+
+            return {...player, rank: rank};
+        });
+        return rankedPlayers;
+    },
+
+    getGroupTotalScore(groupName) {
+        return this.players
+                   .filter(player => player.group === groupName)
+                   .reduce((sum, player) => sum + player.score, 0);
+    }
+
+
+};
+
+// UI Functions
+function addPlayer() {
+    const name = document.getElementById('playerName').value.trim();
+    const group = document.getElementById('groupSelect').value;
+
+    if(name) {
+        GameManager.addPlayer(name, group);
+        updateScoreList();
+        document.getElementById('playerName').value = '';
+    }
+}
+
+function startGame() {
+    if(GameManager.players.length === 0) return alert("कम से कम 1 खिलाड़ी जोड़ें!");
+    document.querySelector('.player-setup').style.display = 'none';
+    document.querySelector('.game-screen').style.display = 'block';
+    GameManager.startTurn();
+}
+
+function showGameScreen() {
+    const currentGroup = GameManager.getCurrentGroup();
+    const currentPlayer = GameManager.getCurrentPlayer();
+
+    if (!currentPlayer) {
+        alert("खेल समाप्त! लीडरबोर्ड देखें।");
+        endGame();
+        return;
+    }
+
+    document.getElementById('currentGroup').textContent = `ग्रुप ${currentGroup}`;
+    document.getElementById('currentPlayerName').textContent = currentPlayer.name;
+    document.getElementById('songInput').value = '';
+    document.getElementById('timer').textContent = '00:00'; // Reset timer text
+    document.getElementById('timerCircle').style.transform = `rotate(-90deg)`; // Reset circle animation
+
+
+    const gameInfoElement = document.querySelector('.game-info');
+    gameInfoElement.innerHTML = `<span id="currentGroup">ग्रुप ${currentGroup}</span> की बारी, <span id="currentPlayerName">${currentPlayer.name}</span> गाएंगे!`;
+    if (GameManager.currentStartingLetter) {
+        gameInfoElement.innerHTML += `<br>शुरूआती अक्षर: <span class="highlight-letter">${GameManager.currentStartingLetter}</span>`;
+    }
+}
+
+
+function endTurn(isMemberSinging) {
+    GameManager.endTurn(isMemberSinging);
+    showGameScreen();
+}
+
+
+function endGame() {
+    clearInterval(GameManager.timerInterval);
+    document.querySelector('.game-screen').style.display = 'none';
+    showLeaderboard(GameManager.leaderboardFilterType);
+}
+
+function updateScoreList() {
+    const scoreList = document.getElementById('scoreList');
+    scoreList.innerHTML = GameManager.players
+        .map(player => `
+            <div class="leaderboard-item">
+                <div class="badge group-${player.group}">${player.group}</div>
+                <div>${player.name}</div>
+                <div>${player.score} अंक</div>
+                <div>${formatTime(player.singingTime)}</div>
+            </div>
+        `).join('');
+}
+
+function showLeaderboard(filterType) {
+    GameManager.leaderboardFilterType = filterType;
+    const leaderboardData = GameManager.getLeaderboardData(filterType);
+    const leaderboard = document.getElementById('leaderboard');
+    leaderboard.innerHTML = '';
+
+    leaderboardData.forEach(player => {
+        const rankClass = player.rank <= 3 ? `leaderboard-rank-${player.rank}` : '';
+        leaderboard.innerHTML += `
+            <div class="leaderboard-item">
+                <div class="${rankClass}">${player.rank}</div>
+                <div>${player.name}</div>
+                <div class="badge group-${player.group}">ग्रुप ${player.group}</div>
+                <div>${player.score}</div>
+                <div>${formatTime(player.singingTime)}</div>
+                <div>${player.attemptedTurns}</div>
+            </div>
+        `;
+    });
+
+    document.querySelector('.leaderboard').style.display = 'block';
+}
+
+function formatTime(totalSeconds) {
+    const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
+    const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+    return `${minutes}:${seconds}`;
+}
+
+
+// Initialize
+window.onload = () => {
+    GameManager.loadHistory();
+    if(GameManager.players.length > 0) {
+        updateScoreList();
+        showLeaderboard(GameManager.leaderboardFilterType);
+    }
+};
+</script>
+</body>
+</html>
