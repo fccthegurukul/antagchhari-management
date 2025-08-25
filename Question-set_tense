@@ -1,0 +1,129 @@
+{
+  "questions": [
+    {
+      "question": "वह रोज सुबह स्कूल जाता है।",
+      "translation": "He goes to school every morning.",
+      "tense": "Present Indefinite Tense"
+    },
+    {
+      "question": "मैं अभी खेल रहा हूँ।",
+      "translation": "I am playing right now.",
+      "tense": "Present Continuous Tense"
+    },
+    {
+      "question": "उसने खाना खा लिया है।",
+      "translation": "He has eaten food.",
+      "tense": "Present Perfect Tense"
+    },
+    {
+      "question": "वह सुबह से पढ़ रहा है।",
+      "translation": "He has been studying since morning.",
+      "tense": "Present Perfect Continuous Tense"
+    },
+    {
+      "question": "कल मैं बाज़ार गया था।",
+      "translation": "I went to the market yesterday.",
+      "tense": "Past Indefinite Tense"
+    },
+    {
+      "question": "जब मैं आया, वह सो रहा था।",
+      "translation": "When I came, he was sleeping.",
+      "tense": "Past Continuous Tense"
+    },
+    {
+      "question": "डॉक्टर के आने से पहले मरीज़ मर चुका था।",
+      "translation": "The patient had died before the doctor came.",
+      "tense": "Past Perfect Tense"
+    },
+    {
+      "question": "वह दो घंटे से लिख रहा था।",
+      "translation": "He had been writing for two hours.",
+      "tense": "Past Perfect Continuous Tense"
+    },
+    {
+      "question": "मैं कल तुम्हारी मदद करूँगा।",
+      "translation": "I will help you tomorrow.",
+      "tense": "Future Indefinite Tense"
+    },
+    {
+      "question": "वह इस समय खाना बना रही होगी।",
+      "translation": "She will be cooking at this time.",
+      "tense": "Future Continuous Tense"
+    },
+    {
+      "question": "वे अपना काम खत्म कर चुके होंगे।",
+      "translation": "They will have finished their work.",
+      "tense": "Future Perfect Tense"
+    },
+    {
+      "question": "वह दो घंटे से खेल रहा होगा।",
+      "translation": "He will have been playing for two hours.",
+      "tense": "Future Perfect Continuous Tense"
+    },
+    {
+      "question": "क्या तुम पढ़ते हो?",
+      "translation": "Do you study?",
+      "tense": "Present Indefinite Tense (Interrogative)"
+    },
+    {
+      "question": "वह कहाँ जा रहा है?",
+      "translation": "Where is he going?",
+      "tense": "Present Continuous Tense (Wh-Family)"
+    },
+    {
+      "question": "क्या तुमने खाना नहीं खाया है?",
+      "translation": "Haven't you eaten food?",
+      "tense": "Present Perfect Tense (Negative Interrogative)"
+    },
+    {
+      "question": "तुम क्या पढ़ते हो?",
+      "translation": "What do you study?",
+      "tense": "Present Indefinite Tense (Wh-Family)"
+    },
+    {
+      "question": "वह क्यों रो रहा है?",
+      "translation": "Why is he crying?",
+      "tense": "Present Continuous Tense (Wh-Family)"
+    },
+    {
+      "question": "तुमने क्या खरीदा?",
+      "translation": "What did you buy?",
+      "tense": "Past Indefinite Tense (Wh-Family)"
+    },
+    {
+      "question": "क्या वे कल आएंगे?",
+      "translation": "Will they come tomorrow?",
+      "tense": "Future Indefinite Tense (Interrogative)"
+    },
+    {
+      "question": "मैं फिल्म नहीं देख रहा हूँ।",
+      "translation": "I am not watching a movie.",
+      "tense": "Present Continuous Tense (Negative)"
+    },
+    {
+      "question": "उन्होंने अपना काम नहीं किया।",
+      "translation": "They did not do their work.",
+      "tense": "Past Indefinite Tense (Negative)"
+    },
+    {
+      "question": "हम कल नहीं जाएंगे।",
+      "translation": "We will not go tomorrow.",
+      "tense": "Future Indefinite Tense (Negative)"
+    },
+    {
+      "question": "क्या तुम खाना खा रहे थे?",
+      "translation": "Were you eating food?",
+      "tense": "Past Continuous Tense (Interrogative)"
+    },
+    {
+      "question": "तुमने यह क्यों किया?",
+      "translation": "Why did you do this?",
+      "tense": "Past Indefinite Tense (Wh-Family)"
+    },
+    {
+      "question": "क्या वह खाना बना चुका होगा?",
+      "translation": "Will he have cooked food?",
+      "tense": "Future Perfect Tense (Interrogative)"
+    }
+  ]
+}
