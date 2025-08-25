@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>शानदार अंताक्षरी</title>
+    <title>Tense Translation Showdown</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="aspect-ratio-container">
-        <div class="container">
-            <!-- Player Setup Section -->
-            <div class="section player-setup">
-                <h2 class="section-title"><i class="fas fa-users"></i> गेम सेटअप</h2>
-                <div class="player-input">
-                    <input type="text" id="playerName" placeholder="खिलाड़ी का नाम">
+    <div class="background-shapes"></div>
+    <div class="game-container">
+        
+        <!-- ================================== -->
+        <!-- =========== SETUP SCREEN =========== -->
+        <!-- ================================== -->
+        <div class="screen active" id="setup-screen">
+            <div class="card setup-card">
+                <h1 class="title"><i class="fas fa-cogs shine"></i> गेम सेटअप</h1>
+                <div class="input-group">
+                    <i class="fas fa-user-plus input-icon"></i>
+                    <input type="text" id="playerName" placeholder="खिलाड़ी का नाम...">
+                </div>
+                 <div class="input-group">
+                    <i class="fas fa-users input-icon"></i>
                     <select id="groupSelect">
                         <option value="A">ग्रुप A</option>
                         <option value="B">ग्रुप B</option>
                         <option value="C">ग्रुप C</option>
                     </select>
-                    <button onclick="addPlayer()" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> जोड़ें
-                    </button>
                 </div>
+                <button onclick="addPlayer()" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> खिलाड़ी जोड़ें</button>
                 <div class="game-options">
                     <label for="turnOrderSelect">प्रश्न पूछने का क्रम:</label>
                     <select id="turnOrderSelect">
@@ -32,44 +41,70 @@
                         <option value="group-by-group">एक-एक टीम (Group by Group)</option>
                     </select>
                 </div>
-                <button onclick="startGame()" class="btn btn-start">
-                    <i class="fas fa-play"></i> गेम शुरू करें
-                </button>
+                <button onclick="startGame()" class="btn btn-start btn-block"><i class="fas fa-play"></i> गेम शुरू करें</button>
+            </div>
+            
+            <div id="leaderboard-preview-container" class="card">
+                <h2 class="preview-title"><i class="fas fa-users-viewfinder"></i> खिलाड़ी सूची</h2>
+                <div id="leaderboardContentPreview" class="leaderboard-content"></div>
+            </div>
+        </div>
+
+        <!-- ================================= -->
+        <!-- =========== GAME SCREEN =========== -->
+        <!-- ================================= -->
+        <div class="screen" id="game-screen">
+            <div class="game-header">
+                <div class="player-info-card card">
+                    <div id="currentGroup" class="player-group">ग्रुप A</div>
+                    <div id="currentPlayerName" class="player-name">Player Name</div>
+                </div>
+                 <div id="timerContainer" class="timer-container">
+                    <svg class="timer-svg" viewbox="0 0 60 60">
+                        <circle class="timer-bg" cx="30" cy="30" r="28"></circle>
+                        <circle class="timer-progress" cx="30" cy="30" r="28"></circle>
+                    </svg>
+                    <div class="timer-text">20</div>
+                </div>
+            </div>
+            
+            <div id="game-progress-container">
+                <div id="game-progress-bar"></div>
             </div>
 
-            <!-- Game Screen Section -->
-            <div class="section game-screen">
-                <div class="game-header">
-                    <h2 id="currentGroup"></h2>
-                    <div id="timerContainer" class="timer-container">
-                        <svg class="timer-svg" viewbox="0 0 60 60">
-                            <circle class="timer-bg" cx="30" cy="30" r="28"></circle>
-                            <circle class="timer-progress" cx="30" cy="30" r="28"></circle>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="timer-text">10</text>
-                        </svg>
+            <div class="question-container">
+                 <div class="question-box" id="question">प्रश्न यहाँ लोड होगा...</div>
+                 <div id="feedbackMessage"></div>
+            </div>
+
+            <div class="answer-grid" id="answers">
+                <!-- Answer buttons will be generated by JS -->
+            </div>
+
+            <div class="game-footer">
+                <div class="answer-type-selector">
+                    <div class="shortcut-hint">'T' दबाकर स्विच करें</div>
+                    <div class="answer-type-buttons">
+                        <button id="memberAnswerBtn" class="answer-type-btn active" onclick="setAnswerType('member', this)"><i class="fas fa-user"></i> सदस्य (10)</button>
+                        <button id="teamAnswerBtn" class="answer-type-btn" onclick="setAnswerType('team', this)"><i class="fas fa-users"></i> टीम (5)</button>
                     </div>
                 </div>
-                <div class="question-info">
-                    <span id="currentPlayerName"></span>, आपकी बारी!
-                </div>
-                <div class="question-box" id="question"></div>
-                <div id="feedbackMessage"></div>
-                <div class="answers" id="answers"></div>
-                <div class="answer-type-buttons">
-                    <button id="memberAnswerBtn" class="answer-type-btn active" onclick="setAnswerType('member', this)">सदस्य जवाब (10 अंक)</button>
-                    <button id="teamAnswerBtn" class="answer-type-btn" onclick="setAnswerType('team', this)">टीम जवाब (5 अंक)</button>
-                </div>
-                <div class="shortcut-hint">शॉर्टकट: 'T' दबाकर स्विच करें</div>
-                <button onclick="endGame()" class="btn btn-danger"><i class="fas fa-flag-checkered"></i> गेम समाप्त करें</button>
+                <button onclick="endGame()" class="btn btn-danger-outline"><i class="fas fa-flag-checkered"></i> गेम समाप्त करें</button>
             </div>
+        </div>
 
-            <!-- Leaderboard Section -->
-            <div class="section leaderboard">
+        <!-- ===================================== -->
+        <!-- =========== LEADERBOARD SCREEN =========== -->
+        <!-- ===================================== -->
+        <div class="screen" id="leaderboard-screen">
+             <div class="card leaderboard-card">
+                <h2 id="final-winner"></h2>
                 <div class="leaderboard-title-bar">
-                    <h2 class="section-title"><i class="fas fa-trophy"></i> लीडरबोर्ड</h2>
+                    <h1 class="title"><i class="fas fa-trophy shine"></i> लीडरबोर्ड</h1>
                     <div class="leaderboard-actions">
-                        <button class="btn-action" onclick="printLeaderboard()"><i class="fas fa-print"></i> प्रिंट करें</button>
-                        <button class="btn-action" onclick="downloadLeaderboardCSV()"><i class="fas fa-download"></i> CSV डाउनलोड करें</button>
+                        <button class="btn-icon" onclick="printLeaderboard()" title="प्रिंट करें"><i class="fas fa-print"></i></button>
+                        <button class="btn-icon" onclick="downloadLeaderboardCSV()" title="CSV डाउनलोड करें"><i class="fas fa-download"></i></button>
+                        <button class="btn btn-secondary" onclick="restartGameSetup()"><i class="fas fa-redo"></i> नया गेम</button>
                     </div>
                 </div>
                 <div id="leaderboardFilters">
