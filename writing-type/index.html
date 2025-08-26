@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Answer Quiz System | Educational Platform</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Navigation Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Quiz Master</span>
+                </div>
+                <div class="header-info" id="headerInfo">
+                    <span class="current-mode">सेटअप मोड</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Setup Screen -->
+        <div class="screen active" id="setup-screen">
+            <div class="screen-container">
+                <div class="welcome-section">
+                     <h1 class="main-title">
+                        <span class="gradient-text">Manual Answer</span>
+                        <span class="highlight-text">Quiz System</span>
+                    </h1>
+                    <p class="subtitle">छात्र कागज पर उत्तर लिखते हैं, शिक्षक मैन्युअल रूप से सत्यापित करते हैं</p>
+                </div>
+
+                <div class="setup-grid">
+                    <!-- Team Management Section (NEW) -->
+                    <div class="setup-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-users-cog"></i> टीम प्रबंधन</h3>
+                        </div>
+                        <div class="card-content">
+                            <form id="teamForm" class="player-form">
+                                <div class="input-group">
+                                    <label for="teamName"><i class="fas fa-users"></i> नई टीम का नाम</label>
+                                    <input type="text" id="teamName" placeholder="टीम का नाम लिखें..." required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-add">
+                                    <i class="fas fa-plus"></i><span>टीम जोड़ें</span>
+                                </button>
+                            </form>
+                            <div id="teamsListContainer" class="teams-list-container">
+                                <!-- Teams list will be generated here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player Addition Section -->
+                    <div class="setup-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-user-plus"></i> खिलाड़ी जोड़ें</h3>
+                        </div>
+                        <div class="card-content">
+                            <form id="playerForm" class="player-form">
+                                <div class="input-group">
+                                    <label for="playerName"><i class="fas fa-user"></i> नाम</label>
+                                    <input type="text" id="playerName" placeholder="छात्र का नाम लिखें..." required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="teamSelect"><i class="fas fa-users"></i> टीम</label>
+                                    <select id="teamSelect" required>
+                                        <option value="" disabled selected>टीम चुनें</option>
+                                        <!-- Teams will be populated dynamically -->
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-add">
+                                    <i class="fas fa-plus"></i><span>खिलाड़ी जोड़ें</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="setup-grid-single">
+                    <!-- Players List Section -->
+                    <div class="setup-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-list"></i> खिलाड़ी सूची</h3>
+                            <div class="player-stats">
+                                <span id="totalPlayersCount">0 खिलाड़ी</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="players-container" id="playersContainer">
+                                <div class="empty-state">
+                                    <div class="empty-icon"><i class="fas fa-users"></i></div>
+                                    <h4>कोई खिलाड़ी नहीं</h4>
+                                    <p>खिलाड़ी जोड़ने के लिए ऊपर दिए गए फॉर्म का उपयोग करें</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Game Section -->
+                <div class="start-game-section">
+                    <button onclick="startGame()" class="btn btn-start btn-lg" id="startGameBtn" disabled>
+                        <i class="fas fa-play"></i>
+                        <span>गेम शुरू करें</span>
+                    </button>
+                    <p class="start-hint">गेम शुरू करने के लिए कम से कम 2 खिलाड़ी जोड़ें</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="screen" id="game-screen">
+            <div class="screen-container">
+                <!-- Game Header -->
+                <div class="game-header">
+                    <div class="game-progress">
+                        <div class="progress-info">
+                            <span class="question-number" id="questionNumber">प्रश्न 1</span>
+                            <span class="total-questions" id="totalQuestions">/ 5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-actions-header">
+                        <button onclick="togglePause()" id="pauseBtn" class="btn btn-outline btn-sm">
+                            <i class="fas fa-pause"></i> <span>रोकें</span>
+                        </button>
+                        <button onclick="endGameEarly()" class="btn btn-danger btn-sm">
+                            <i class="fas fa-stop"></i> समाप्त करें
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question Section -->
+                <div class="question-section">
+                    <div class="question-card">
+                         <div class="question-content">
+                            <div class="question-text" id="questionText">
+                                प्रश्न यहाँ लोड होगा...
+                            </div>
+                            <div class="writing-timer" id="writingTimer">
+                                <i class="fas fa-clock"></i>
+                                <span>लेखन समय: 2:00</span>
+                            </div>
+                        </div>
+                        <div class="question-actions">
+                            <button onclick="showAnswer()" class="btn btn-primary btn-lg" id="showAnswerBtn">
+                                <i class="fas fa-eye"></i>
+                                <span>उत्तर दिखाएं</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Answer Section -->
+                    <div class="answer-section" id="answerSection">
+                        <div class="answer-card">
+                            <div class="answer-header">
+                                <h3><i class="fas fa-check-circle"></i> सही उत्तर</h3>
+                            </div>
+                            <div class="answer-content">
+                                <div class="answer-text" id="answerText">उत्तर यहाँ दिखेगा</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scoring Section -->
+                <div class="scoring-section" id="scoringSection">
+                    <div class="scoring-header">
+                        <h3><i class="fas fa-clipboard-check"></i> स्कोर एंट्री</h3>
+                        <div class="scoring-mode-toggle">
+                            <button class="nav-btn active" onclick="setScoringMode('team')" id="teamScoreBtn">टीम वाइज़</button>
+                            <button class="nav-btn" onclick="setScoringMode('individual')" id="individualScoreBtn">खिलाड़ी वाइज़</button>
+                        </div>
+                    </div>
+                    
+                    <div id="teamScoringContainer">
+                        <div class="teams-scoring" id="teamsScoring">
+                            <!-- Team scoring cards will be generated here -->
+                        </div>
+                    </div>
+
+                    <div id="individualScoringContainer" style="display: none;">
+                        <!-- Individual player scoring will be generated here -->
+                    </div>
+                    
+                    <div class="scoring-actions">
+                        <button onclick="saveScores()" class="btn btn-success btn-lg" id="saveScoresBtn">
+                            <i class="fas fa-save"></i>
+                            <span>स्कोर सेव करें</span>
+                        </button>
+                        <button onclick="nextQuestion()" class="btn btn-primary btn-lg" id="nextQuestionBtn" style="display: none;">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>अगला प्रश्न</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen" id="results-screen">
+             <div class="screen-container">
+                <!-- विनर सेक्शन -->
+                <div class="winner-section">
+                    <div class="trophy-animation"><i class="fas fa-trophy"></i></div>
+                    <h1 class="winner-title" id="winnerTitle">🏆 खेल समाप्त!</h1>
+                    <div class="winner-subtitle" id="winnerSubtitle">सभी प्रतिभागियों को बधाई!</div>
+                </div>
+
+                <!-- परिणाम नेविगेशन -->
+                <div class="results-navigation">
+                    <div class="nav-buttons">
+                        <button class="nav-btn active" onclick="showResults('individual')" id="individualBtn">
+                            <i class="fas fa-user"></i><span>व्यक्तिगत</span>
+                        </button>
+                        <button class="nav-btn" onclick="showResults('team')" id="teamBtn">
+                            <i class="fas fa-users"></i><span>टीम</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- लीडरबोर्ड -->
+                <div class="leaderboard-container">
+                    <div class="leaderboard-header" id="leaderboardHeader"></div>
+                    <div class="leaderboard-content" id="leaderboardContent"></div>
+                </div>
+
+                <!-- परिणाम एक्शन -->
+                <div class="results-actions">
+                     <button onclick="newGame()" class="btn btn-primary">
+                        <i class="fas fa-redo"></i><span>नया गेम</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">कार्रवाई की पुष्टि करें</h3>
+                <button onclick="closeModal()" class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-content"><p id="modalMessage">क्या आप निश्चित हैं?</p></div>
+            <div class="modal-actions">
+                <button onclick="closeModal()" class="btn btn-outline">रद्द करें</button>
+                <button onclick="confirmModalAction()" class="btn btn-danger" id="confirmBtn">पुष्टि करें</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,16 +2,26 @@
 const GameManager = {
     players: [],
     questions: [
-        { "question": "I am reading a book. - इस वाक्य का Hindi अनुवाद क्या है?", "correct": "मैं एक किताब पढ़ रहा हूँ।", "options": ["मैं एक किताब पढ़ रहा हूँ।", "मैं एक किताब पढ़ता हूँ।", "मैंने एक किताब पढ़ी है।", "मैं एक किताब पढ़ूंगा।"] },
-        { "question": "She goes to school. - इस वाक्य का Hindi अनुवाद क्या है?", "correct": "वह स्कूल जाती है।", "options": ["वह स्कूल जा रही है।", "वह स्कूल जाती है।", "वह स्कूल जाएगी।", "वह स्कूल गई थी।"] },
-        { "question": "They have played cricket. - इस वाक्य का Hindi अनुवाद क्या है?", "correct": "वे क्रिकेट खेल चुके हैं।", "options": ["वे क्रिकेट खेल रहे हैं।", "वे क्रिकेट खेलते हैं।", "वे क्रिकेट खेल चुके हैं।", "वे क्रिकेट खेलेंगे।"] },
-        { "question": "मैं अपना काम कर रहा हूँ। - इस वाक्य का English अनुवाद क्या है?", "correct": "I am doing my work.", "options": ["I do my work.", "I have done my work.", "I am doing my work.", "I will do my work."] },
-        { "question": "उसने एक पत्र लिखा। - इस वाक्य का English अनुवाद क्या है?", "correct": "He wrote a letter.", "options": ["He is writing a letter.", "He wrote a letter.", "He has written a letter.", "He writes a letter."] },
-        { "question": "हम कल दिल्ली जाएंगे। - इस वाक्य का English अनुवाद क्या है?", "correct": "We will go to Delhi tomorrow.", "options": ["We are going to Delhi tomorrow.", "We go to Delhi tomorrow.", "We have gone to Delhi tomorrow.", "We will go to Delhi tomorrow."] },
-        { "question": "He had finished his meal. - इस वाक्य का Hindi अनुवाद क्या है?", "correct": "वह अपना भोजन समाप्त कर चुका था।", "options": ["वह अपना भोजन समाप्त कर रहा था।", "वह अपना भोजन समाप्त करता है।", "वह अपना भोजन समाप्त कर चुका था।", "उसने अपना भोजन समाप्त कर लिया है।"] },
-        { "question": "बारिश हो रही है। - इस वाक्य का English अनुवाद क्या है?", "correct": "It is raining.", "options": ["It rains.", "It has been raining.", "It is raining.", "It will rain."] },
-        { "question": "Did you complete the task? - इस वाक्य का Hindi अनुवाद क्या है?", "correct": "क्या तुमने काम पूरा किया?", "options": ["क्या तुम काम पूरा कर रहे हो?", "क्या तुम काम पूरा कर चुके हो?", "क्या तुमने काम पूरा किया?", "क्या तुम काम पूरा करोगे?"] },
-        { "question": "उन्होंने अभी-अभी खाना खाया है। - इस वाक्य का English अनुवाद क्या है?", "correct": "They have just eaten food.", "options": ["They have just eaten food.", "They are just eating food.", "They just eat food.", "They will just eat food."] }
+        {
+            "question": "The boy was flying a kite.",
+            "correct": "लड़का पतंग उड़ा रहा था।",
+            "options": ["लड़का पतंग उड़ा रहा था।", "लड़का पतंग उड़ाता था।", "लड़का पतंग उड़ा चुका था।", "लड़का पतंग उड़ाएगा।"]
+        },
+        {
+            "question": "तुम पत्र लिख रहे हो।",
+            "correct": "You are writing a letter.",
+            "options": ["You are writing a letter.", "You write a letter.", "You have written a letter.", "You will write a letter."]
+        },
+        {
+            "question": "I ___ happy.",
+            "correct": "am",
+            "options": ["am", "is", "are", "was"]
+        },
+        {
+            "question": "She ___ my sister.",
+            "correct": "is",
+            "options": ["is", "am", "are", "were"]
+        }
     ],
     currentQuestion: null,
     answerType: 'member',

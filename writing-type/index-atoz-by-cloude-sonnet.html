@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Answer Verification Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #1a1a2e;
+            --primary-glow: #ff6b6b;
+            --secondary-glow: #4ecdc4;
+            --success-glow: #45b7d1;
+            --danger-glow: #ff4757;
+            --warning-glow: #ffa502;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --card-border: rgba(255, 255, 255, 0.2);
+            --text-color: #f0f0f0;
+            --text-muted: #b0b0b0;
+            --border-radius: 15px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .game-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .screen {
+            display: none;
+            padding: 30px;
+            min-height: 80vh;
+        }
+
+        .screen.active { display: block; }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, var(--primary-glow), var(--secondary-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .setup-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .input-section, .preview-section {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--card-border);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--card-border);
+            border-radius: 8px;
+            background: rgba(0,0,0,0.2);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--primary-glow);
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-glow);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-success {
+            background: var(--success-glow);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #3498db;
+            transform: translateY(-2px);
+        }
+
+        .btn-block {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .players-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .player-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .player-item:last-child {
+            border-bottom: none;
+        }
+
+        .team-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .team-A { background: #3498db; color: white; }
+        .team-B { background: #e74c3c; color: white; }
+        .team-C { background: #2ecc71; color: white; }
+
+        /* Game Screen Styles */
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .question-counter {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-glow);
+        }
+
+        .question-section {
+            margin-bottom: 30px;
+        }
+
+        .question-box {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--card-border);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .answer-section {
+            background: rgba(78, 205, 196, 0.1);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--secondary-glow);
+            display: none;
+            margin-bottom: 30px;
+        }
+
+        .answer-section.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .answer-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--secondary-glow);
+        }
+
+        .scoring-section {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+        }
+
+        .team-scoring {
+            margin-bottom: 25px;
+            background: rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .team-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .score-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .score-input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .score-input-group input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--card-border);
+            border-radius: 5px;
+            background: rgba(0,0,0,0.2);
+            color: var(--text-color);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .game-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* Leaderboard Styles */
+        .leaderboard-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--card-border);
+            background: transparent;
+            color: var(--text-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-glow);
+            border-color: var(--primary-glow);
+        }
+
+        .leaderboard-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .leaderboard-header {
+            background: var(--primary-glow);
+            padding: 15px;
+            font-weight: 600;
+            display: grid;
+        }
+
+        .leaderboard-header.individual {
+            grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+        }
+
+        .leaderboard-header.team {
+            grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 1.5fr;
+        }
+
+        .leaderboard-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--card-border);
+            display: grid;
+            align-items: center;
+        }
+
+        .leaderboard-item.individual {
+            grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+        }
+
+        .leaderboard-item.team {
+            grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 1.5fr;
+        }
+
+        .leaderboard-item:last-child {
+            border-bottom: none;
+        }
+
+        .rank-1 { background: linear-gradient(90deg, rgba(255,215,0,0.2), transparent); }
+        .rank-2 { background: linear-gradient(90deg, rgba(192,192,192,0.2), transparent); }
+        .rank-3 { background: linear-gradient(90deg, rgba(205,127,50,0.2), transparent); }
+
+        .final-winner {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--success-glow);
+        }
+
+        @media (max-width: 768px) {
+            .setup-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .score-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .game-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Setup Screen -->
+        <div class="screen active" id="setup-screen">
+            <h1 class="title"><i class="fas fa-cogs"></i> गेम सेटअप</h1>
+            <div class="setup-container">
+                <div class="input-section">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-glow);">
+                        <i class="fas fa-user-plus"></i> खिलाड़ी जोड़ें
+                    </h3>
+                    <div class="input-group">
+                        <label for="playerName">खिलाड़ी का नाम</label>
+                        <input type="text" id="playerName" placeholder="नाम लिखें...">
+                    </div>
+                    <div class="input-group">
+                        <label for="teamSelect">टीम चुनें</label>
+                        <select id="teamSelect">
+                            <option value="A">टीम A</option>
+                            <option value="B">टीम B</option>
+                            <option value="C">टीम C</option>
+                        </select>
+                    </div>
+                    <button onclick="addPlayer()" class="btn btn-primary btn-block">
+                        <i class="fas fa-plus"></i> खिलाड़ी जोड़ें
+                    </button>
+                    <button onclick="startGame()" class="btn btn-success btn-block" style="margin-top: 15px;">
+                        <i class="fas fa-play"></i> गेम शुरू करें
+                    </button>
+                </div>
+                
+                <div class="preview-section">
+                    <h3 style="margin-bottom: 20px; color: var(--secondary-glow);">
+                        <i class="fas fa-users"></i> खिलाड़ी सूची
+                    </h3>
+                    <div class="players-list" id="playersList">
+                        <div style="text-align: center; padding: 40px; color: var(--text-muted);">
+                            खिलाड़ी जोड़ने के लिए बाएं तरफ फॉर्म भरें
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="screen" id="game-screen">
+            <div class="game-header">
+                <h2><i class="fas fa-gamepad"></i> Manual Answer Quiz</h2>
+                <div class="question-counter" id="questionCounter">प्रश्न 1 / 5</div>
+            </div>
+
+            <div class="question-section">
+                <div class="question-box">
+                    <div class="question-text" id="questionText">प्रश्न यहाँ लोड होगा...</div>
+                    <div style="margin-top: 15px; color: var(--text-muted);">
+                        <i class="fas fa-pencil-alt"></i> सभी students अपनी copy पर answer लिखें
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <button onclick="showAnswer()" class="btn btn-primary" id="showAnswerBtn">
+                        <i class="fas fa-eye"></i> उत्तर दिखाएं
+                    </button>
+                </div>
+
+                <div class="answer-section" id="answerSection">
+                    <h3 style="text-align: center; margin-bottom: 15px;">
+                        <i class="fas fa-check-circle"></i> सही उत्तर:
+                    </h3>
+                    <div class="answer-text" id="answerText">उत्तर यहाँ दिखेगा</div>
+                    <div style="text-align: center; margin-top: 15px; color: var(--text-muted);">
+                        <i class="fas fa-hand-point-right"></i> अब students अपने answers check करें और सही/गलत mark करें
+                    </div>
+                </div>
+            </div>
+
+            <div class="scoring-section" id="scoringSection" style="display: none;">
+                <h3 style="margin-bottom: 20px; text-align: center; color: var(--warning-glow);">
+                    <i class="fas fa-clipboard-check"></i> टीम Score Entry
+                </h3>
+                <div id="teamScoringContainer"></div>
+                
+                <div class="game-actions">
+                    <button onclick="saveScores()" class="btn btn-success">
+                        <i class="fas fa-save"></i> Score सेव करें
+                    </button>
+                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextQuestionBtn" style="display: none;">
+                        <i class="fas fa-arrow-right"></i> अगला प्रश्न
+                    </button>
+                    <button onclick="finishGame()" class="btn" style="background: var(--warning-glow); color: white;" id="finishGameBtn">
+                        <i class="fas fa-flag-checkered"></i> गेम समाप्त करें
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div class="screen" id="leaderboard-screen">
+            <h1 class="title"><i class="fas fa-trophy"></i> Final Results</h1>
+            <div class="final-winner" id="finalWinner"></div>
+            
+            <div class="leaderboard-filters">
+                <button class="filter-btn active" onclick="setLeaderboardView('individual', this)">व्यक्तिगत</button>
+                <button class="filter-btn" onclick="setLeaderboardView('team', this)">टीम</button>
+            </div>
+
+            <div class="leaderboard-container">
+                <div class="leaderboard-header individual" id="leaderboardHeader">
+                    <div>#</div>
+                    <div>नाम</div>
+                    <div>टीम</div>
+                    <div>सही</div>
+                    <div>गलत</div>
+                    <div>स्कोर</div>
+                </div>
+                <div id="leaderboardContent"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button onclick="newGame()" class="btn btn-primary">
+                    <i class="fas fa-redo"></i> नया गेम
+                </button>
+                <button onclick="downloadResults()" class="btn btn-success">
+                    <i class="fas fa-download"></i> Results Download
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Game State Management
+        const GameState = {
+            players: [],
+            currentQuestionIndex: 0,
+            questions: [
+                {
+                    question: "2 + 3 × 4 = ?",
+                    answer: "14",
+                    subject: "Math"
+                },
+                {
+                    question: "The boy is playing cricket. (Hindi में translate करें)",
+                    answer: "लड़का क्रिकेट खेल रहा है।",
+                    subject: "Translation"
+                },
+                {
+                    question: "Newton का पहला नियम क्या है?",
+                    answer: "जड़त्व का नियम - वस्तु अपनी अवस्था में तब तक रहती है जब तक बाहरी बल न लगाया जाए।",
+                    subject: "Physics"
+                },
+                {
+                    question: "मैं रोज स्कूल जाता हूँ। (English में translate करें)",
+                    answer: "I go to school daily.",
+                    subject: "Translation"
+                },
+                {
+                    question: "एक संख्या में 5 जोड़ने पर 12 मिलता है। संख्या बताएं।",
+                    answer: "7",
+                    subject: "Math"
+                }
+            ],
+            currentScores: {},
+            leaderboardView: 'individual'
+        };
+
+        // Player Management
+        function addPlayer() {
+            const nameInput = document.getElementById('playerName');
+            const teamSelect = document.getElementById('teamSelect');
+            
+            const name = nameInput.value.trim();
+            if (!name) {
+                alert('कृपया खिलाड़ी का नाम दर्ज करें!');
+                return;
+            }
+
+            // Check if player already exists
+            if (GameState.players.find(p => p.name === name)) {
+                alert('यह नाम पहले से मौजूद है!');
+                return;
+            }
+
+            const player = {
+                id: Date.now(),
+                name: name,
+                team: teamSelect.value,
+                correctAnswers: 0,
+                wrongAnswers: 0,
+                totalScore: 0,
+                questionHistory: []
+            };
+
+            GameState.players.push(player);
+            nameInput.value = '';
+            updatePlayersDisplay();
+        }
+
+        function updatePlayersDisplay() {
+            const container = document.getElementById('playersList');
+            if (GameState.players.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: var(--text-muted);">
+                        खिलाड़ी जोड़ने के लिए बाएं तरफ फॉर्म भरें
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = GameState.players.map(player => `
+                <div class="player-item">
+                    <span>${player.name}</span>
+                    <span class="team-badge team-${player.team}">टीम ${player.team}</span>
+                </div>
+            `).join('');
+        }
+
+        // Game Flow
+        function startGame() {
+            if (GameState.players.length === 0) {
+                alert('कम से कम एक खिलाड़ी जोड़ें!');
+                return;
+            }
+
+            GameState.currentQuestionIndex = 0;
+            showScreen('game-screen');
+            displayCurrentQuestion();
+        }
+
+        function displayCurrentQuestion() {
+            const question = GameState.questions[GameState.currentQuestionIndex];
+            document.getElementById('questionText').textContent = question.question;
+            document.getElementById('answerText').textContent = question.answer;
+            document.getElementById('questionCounter').textContent = 
+                `प्रश्न ${GameState.currentQuestionIndex + 1} / ${GameState.questions.length}`;
+            
+            // Reset UI
+            document.getElementById('answerSection').classList.remove('show');
+            document.getElementById('scoringSection').style.display = 'none';
+            document.getElementById('showAnswerBtn').style.display = 'inline-flex';
+        }
+
+        function showAnswer() {
+            document.getElementById('answerSection').classList.add('show');
+            document.getElementById('showAnswerBtn').style.display = 'none';
+            document.getElementById('scoringSection').style.display = 'block';
+            generateTeamScoringInterface();
+        }
+
+        function generateTeamScoringInterface() {
+            const teams = [...new Set(GameState.players.map(p => p.team))].sort();
+            const container = document.getElementById('teamScoringContainer');
+            
+            container.innerHTML = teams.map(team => {
+                const teamPlayers = GameState.players.filter(p => p.team === team);
+                return `
+                    <div class="team-scoring">
+                        <div class="team-header">
+                            <span class="team-name">
+                                <span class="team-badge team-${team}">टीम ${team}</span>
+                                (${teamPlayers.length} खिलाड़ी)
+                            </span>
+                        </div>
+                        <div class="score-inputs">
+                            <div class="score-input-group">
+                                <label>सही उत्तर की संख्या</label>
+                                <input type="number" min="0" max="${teamPlayers.length}" 
+                                       id="correct-${team}" value="0" onchange="updateWrongCount('${team}')">
+                            </div>
+                            <div class="score-input-group">
+                                <label>गलत उत्तर की संख्या</label>
+                                <input type="number" min="0" max="${teamPlayers.length}" 
+                                       id="wrong-${team}" value="${teamPlayers.length}" readonly>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 10px;">
+                            कुल खिलाड़ी: ${teamPlayers.length} | 
+                            सही: +10 अंक | गलत: -5 अंक
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateWrongCount(team) {
+            const totalPlayers = GameState.players.filter(p => p.team === team).length;
+            const correctInput = document.getElementById(`correct-${team}`);
+            const wrongInput = document.getElementById(`wrong-${team}`);
+            
+            const correctCount = parseInt(correctInput.value) || 0;
+            wrongInput.value = totalPlayers - correctCount;
+        }
+
+        function saveScores() {
+            const teams = [...new Set(GameState.players.map(p => p.team))];
+            
+            teams.forEach(team => {
+                const correctCount = parseInt(document.getElementById(`correct-${team}`).value) || 0;
+                const wrongCount = parseInt(document.getElementById(`wrong-${team}`).value) || 0;
+                const teamPlayers = GameState.players.filter(p => p.team === team);
+                
+                // Distribute scores randomly among team members
+                const correctPlayers = teamPlayers.slice(0, correctCount);
+                const wrongPlayers = teamPlayers.slice(correctCount);
+                
+                correctPlayers.forEach(player => {
+                    player.correctAnswers++;
+                    player.totalScore += 10;
+                    player.questionHistory.push({
+                        question: GameState.currentQuestionIndex + 1,
+                        correct: true,
+                        points: 10
+                    });
+                });
+                
+                wrongPlayers.forEach(player => {
+                    player.wrongAnswers++;
+                    player.totalScore -= 5;
+                    player.questionHistory.push({
+                        question: GameState.currentQuestionIndex + 1,
+                        correct: false,
+                        points: -5
+                    });
+                });
+            });
+
+            document.getElementById('nextQuestionBtn').style.display = 'inline-flex';
+            alert('स्कोर सेव हो गया! अब आप अगले प्रश्न पर जा सकते हैं।');
+        }
+
+        function nextQuestion() {
+            GameState.currentQuestionIndex++;
+            if (GameState.currentQuestionIndex < GameState.questions.length) {
+                displayCurrentQuestion();
+            } else {
+                finishGame();
+            }
+        }
+
+        function finishGame() {
+            showScreen('leaderboard-screen');
+            displayLeaderboard();
+            displayWinner();
+        }
+
+        // Leaderboard Management
+        function setLeaderboardView(view, element) {
+            GameState.leaderboardView = view;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            displayLeaderboard();
+        }
+
+        function displayLeaderboard() {
+            const header = document.getElementById('leaderboardHeader');
+            const content = document.getElementById('leaderboardContent');
+            
+            if (GameState.leaderboardView === 'individual') {
+                header.className = 'leaderboard-header individual';
+                header.innerHTML = `
+                    <div>#</div><div>नाम</div><div>टीम</div>
+                    <div>सही</div><div>गलत</div><div>स्कोर</div>
+                `;
+                
+                const sortedPlayers = [...GameState.players].sort((a, b) => b.totalScore - a.totalScore);
+                content.innerHTML = sortedPlayers.map((player, index) => `
+                    <div class="leaderboard-item individual ${index < 3 ? `rank-${index + 1}` : ''}">
+                        <div>${index + 1}</div>
+                        <div>${player.name}</div>
+                        <div><span class="team-badge team-${player.team}">टीम ${player.team}</span></div>
+                        <div>${player.correctAnswers}</div>
+                        <div>${player.wrongAnswers}</div>
+                        <div><strong>${player.totalScore}</strong></div>
+                    </div>
+                `).join('');
+                
+            } else {
+                header.className = 'leaderboard-header team';
+                header.innerHTML = `
+                    <div>#</div><div>टीम</div><div>सही</div>
+                    <div>गलत</div><div>खिलाड़ी</div><div>कुल स्कोर</div>
+                `;
+                
+                const teams = [...new Set(GameState.players.map(p => p.team))];
+                const teamStats = teams.map(team => {
+                    const teamPlayers = GameState.players.filter(p => p.team === team);
+                    return {
+                        team: team,
+                        correct: teamPlayers.reduce((sum, p) => sum + p.correctAnswers, 0),
+                        wrong: teamPlayers.reduce((sum, p) => sum + p.wrongAnswers, 0),
+                        players: teamPlayers.length,
+                        totalScore: teamPlayers.reduce((sum, p) => sum + p.totalScore, 0)
+                    };
+                }).sort((a, b) => b.totalScore - a.totalScore);
+                
+                content.innerHTML = teamStats.map((team, index) => `
+                    <div class="leaderboard-item team ${index < 3 ? `rank-${index + 1}` : ''}">
+                        <div>${index + 1}</div>
+                        <div><span class="team-badge team-${team.team}">टीम ${team.team}</span></div>
+                        <div>${team.correct}</div>
+                        <div>${team.wrong}</div>
+                        <div>${team.players}</div>
+                        <div><strong>${team.totalScore}</strong></div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function displayWinner() {
+            let winner = '';
+            if (GameState.leaderboardView === 'individual') {
+                const topPlayer = [...GameState.players].sort((a, b) => b.totalScore - a.totalScore)[0];
+                winner = `🏆 विजेता: ${topPlayer.name} (${topPlayer.totalScore} अंक)`;
+            } else {
+                const teams = [...new Set(GameState.players.map(p => p.team))];
+                const teamStats = teams.map(team => ({
+                    team: team,
+                    totalScore: GameState.players.filter(p => p.team === team)
+                        .reduce((sum, p) => sum + p.totalScore, 0)
+                })).sort((a, b) => b.totalScore - a.totalScore);
+                
+                winner = `🏆 विजेता टीम: ${teamStats[0].team} (${teamStats[0].totalScore} अंक)`;
+            }
+            
+            document.getElementById('finalWinner').textContent = winner;
+        }
+
+        // Utility Functions
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        function newGame() {
+            GameState.players = [];
+            GameState.currentQuestionIndex = 0;
+            GameState.currentScores = {};
+            showScreen('setup-screen');
+            updatePlayersDisplay();
+        }
+
+        function downloadResults() {
+            const csvData = generateCSVData();
+            const blob = new Blob([csvData], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `quiz-results-${new Date().toLocaleDateString()}.csv`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function generateCSVData() {
+            let csv = 'नाम,टीम,सही उत्तर,गलत उत्तर,कुल स्कोर\n';
+            GameState.players.forEach(player => {
+                csv += `${player.name},${player.team},${player.correctAnswers},${player.wrongAnswers},${player.totalScore}\n`;
+            });
+            return csv;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePlayersDisplay();
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && document.getElementById('setup-screen').classList.contains('active')) {
+                addPlayer();
+            }
+        });
+    </script>
+</body>
+</html>
