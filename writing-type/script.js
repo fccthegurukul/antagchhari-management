@@ -2,10 +2,16 @@
 class QuizGameManager {
     constructor() {
         this.players = [];
-        this.teams = []; // NEW: Dynamic teams
+        this.teams = [];
         this.questions = [
-            { question: "2 + 3 × 4 = ?", answer: "14" },
-            { question: "The boy is playing cricket. (Hindi में translate करें)", answer: "लड़का क्रिकेट खेल रहा है।" },
+            { 
+                question: "2 + 3 × 4 = ?", 
+                answer: "<p><strong>गणना:</strong></p><ul><li>2 + 3 × 4</li><li>2 + 12 = <strong>14</strong></li></ul>" 
+            },
+            { 
+                question: "The boy is playing cricket. (Hindi में translate करें)", 
+                answer: "<p><strong>हिंदी अनुवाद:</strong></p><p class='highlight-answer'>लड़का क्रिकेट खेल रहा है।</p>" 
+            },
             { 
                 question: `
                     <p>न्यूटन का पहला नियम क्या है? इसके मुख्य बिंदु बताएं:</p>
@@ -14,17 +20,31 @@ class QuizGameManager {
                         <li>इसका एक उदाहरण दें।</li>
                     </ul>
                 `, 
-                answer: "जड़त्व का नियम - वस्तु अपनी अवस्था में तब तक रहती है जब तक बाहरी बल न लगाया जाए।" 
+                answer: `
+                    <p><strong>न्यूटन का पहला नियम:</strong></p>
+                    <ul>
+                        <li><strong>नाम:</strong> जड़त्व का नियम (Law of Inertia)</li>
+                        <li><strong>परिभाषा:</strong> वस्तु अपनी अवस्था में तब तक रहती है जब तक बाहरी बल न लगाया जाए</li>
+                        <li><strong>उदाहरण:</strong> चलती बस के अचानक रुकने पर सवारी आगे की ओर झुक जाती है</li>
+                    </ul>
+                ` 
             },
-            { question: "मैं रोज स्कूल जाता हूँ। (English में translate करें)", answer: "I go to school daily." },
-            { question: "भारत की राजधानी क्या है?", answer: "नई दिल्ली" }
+            { 
+                question: "मैं रोज स्कूल जाता हूँ। (English में translate करें)", 
+                answer: "<p><strong>English Translation:</strong></p><p class='highlight-answer'>I go to school daily.</p>" 
+            },
+            { 
+                question: "भारत की राजधानी क्या है?", 
+                answer: "<p><strong>भारत की राजधानी:</strong></p><p class='highlight-answer'>नई दिल्ली</p>" 
+            }
         ];
         this.currentQuestionIndex = 0;
         this.gameState = 'setup';
         this.writingTimer = null;
         this.timeLeft = 120; // 2 minutes
-        this.isPaused = false; // NEW: For timer
-        this.scoringMode = 'team'; // NEW: 'team' or 'individual'
+        this.isPaused = false;
+        this.scoringMode = 'team';
+        this.lastUsedScoringMode = 'team'; // NEW: Track which scoring mode was actually used
         
         this.init();
     }
@@ -47,7 +67,7 @@ class QuizGameManager {
         });
     }
 
-    // ===== NEW: Team Management =====
+    // ===== Team Management =====
     loadDefaultTeams() {
         this.teams = [
             { id: 'A', name: 'Alpha' }, { id: 'B', name: 'Beta' },
@@ -74,7 +94,6 @@ class QuizGameManager {
     }
 
     removeTeam(teamId) {
-        // Prevent removing a team if players are in it
         if (this.players.some(p => p.team === teamId)) {
             this.showToast('खिलाड़ियों वाली टीम को नहीं हटाया जा सकता!', 'error');
             return;
@@ -97,7 +116,6 @@ class QuizGameManager {
             </div>
         `).join('');
 
-        // Update player form dropdown
         select.innerHTML = '<option value="" disabled selected>टीम चुनें</option>';
         this.teams.forEach(team => {
             const option = document.createElement('option');
@@ -182,9 +200,9 @@ class QuizGameManager {
     
     displayCurrentQuestion() {
         const question = this.questions[this.currentQuestionIndex];
-        // NEW: Use innerHTML for rich content
         document.getElementById('questionText').innerHTML = question.question;
-        document.getElementById('answerText').textContent = question.answer;
+        // **FIX 1: Use innerHTML for dynamic answer display**
+        document.getElementById('answerText').innerHTML = question.answer;
         document.getElementById('questionNumber').textContent = `प्रश्न ${this.currentQuestionIndex + 1}`;
         document.getElementById('totalQuestions').textContent = `/ ${this.questions.length}`;
         const progress = ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
@@ -199,46 +217,76 @@ class QuizGameManager {
         document.getElementById('saveScoresBtn').disabled = false;
         document.getElementById('saveScoresBtn').querySelector('span').textContent = 'स्कोर सेव करें';
         
+        // **TIMER FIX: Clear previous timer before starting new one**
+        this.clearTimer();
         this.startWritingTimer();
+    }
+
+    clearTimer() {
+        if (this.writingTimer) {
+            clearInterval(this.writingTimer);
+            this.writingTimer = null;
+        }
     }
 
     startWritingTimer() {
         this.isPaused = false;
         this.timeLeft = 120; // Reset timer for each question
-        const timerElement = document.querySelector('#writingTimer span');
-        document.getElementById('pauseBtn').querySelector('span').textContent = 'रोकें';
+        const timerValueElement = document.getElementById('timerValue');
+        const pauseBtn = document.getElementById('pauseBtn');
+        pauseBtn.querySelector('span').textContent = 'रोकें';
+        pauseBtn.querySelector('i').className = 'fas fa-pause';
         
         this.writingTimer = setInterval(() => {
             if (this.isPaused) return;
 
             const minutes = Math.floor(this.timeLeft / 60);
             const seconds = this.timeLeft % 60;
-            timerElement.textContent = `लेखन समय: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            timerValueElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Add visual warning when time is running low
+            const timerContainer = document.getElementById('writingTimer');
+            if (this.timeLeft <= 30) {
+                timerContainer.classList.add('timer-warning');
+            } else if (this.timeLeft <= 10) {
+                timerContainer.classList.add('timer-critical');
+            }
             
             if (this.timeLeft <= 0) {
-                clearInterval(this.writingTimer);
+                this.clearTimer();
                 this.showAnswer(); // Auto-show answer when time is up
+                return;
             }
             this.timeLeft--;
         }, 1000);
     }
     
-    togglePause() { // NEW: Pause/Resume logic
+    togglePause() {
         this.isPaused = !this.isPaused;
-        const buttonText = document.getElementById('pauseBtn').querySelector('span');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const buttonText = pauseBtn.querySelector('span');
+        const buttonIcon = pauseBtn.querySelector('i');
+        
         if (this.isPaused) {
             buttonText.textContent = 'जारी रखें';
+            buttonIcon.className = 'fas fa-play';
             this.showToast('गेम रोक दिया गया', 'warning');
         } else {
             buttonText.textContent = 'रोकें';
+            buttonIcon.className = 'fas fa-pause';
+            this.showToast('गेम जारी है', 'success');
         }
     }
 
     showAnswer() {
-        clearInterval(this.writingTimer);
+        this.clearTimer();
         document.getElementById('answerSection').classList.add('show');
         document.getElementById('scoringSection').classList.add('show');
         document.getElementById('showAnswerBtn').style.display = 'none';
+        
+        // Remove timer warning classes
+        document.getElementById('writingTimer').classList.remove('timer-warning', 'timer-critical');
+        
         this.renderScoringUI();
     }
 
@@ -252,12 +300,13 @@ class QuizGameManager {
     }
     
     finishGame() {
+        this.clearTimer();
         this.gameState = 'results';
         this.showScreen('results-screen');
         this.displayResults();
     }
 
-    // ===== NEW: Scoring System =====
+    // ===== Scoring System =====
     setScoringMode(mode) {
         this.scoringMode = mode;
         document.getElementById('teamScoreBtn').classList.toggle('active', mode === 'team');
@@ -310,6 +359,9 @@ class QuizGameManager {
     }
 
     saveScores() {
+        // **FIX 2: Track which scoring mode was used**
+        this.lastUsedScoringMode = this.scoringMode;
+        
         if (this.scoringMode === 'team') {
             const teamsData = [...new Set(this.players.map(p => p.team))];
             teamsData.forEach(teamId => {
@@ -327,7 +379,7 @@ class QuizGameManager {
                     }
                 });
             });
-        } else { // Individual scoring
+        } else {
             const scoreItems = document.querySelectorAll('.individual-score-item');
             scoreItems.forEach(item => {
                 const playerId = parseInt(item.dataset.playerId);
@@ -349,21 +401,40 @@ class QuizGameManager {
         document.getElementById('saveScoresBtn').style.display = 'none';
         document.getElementById('nextQuestionBtn').style.display = 'inline-flex';
         
-        // Auto-advance
         setTimeout(() => this.nextQuestion(), 2000);
     }
     
     // ===== Results Management =====
     displayResults() {
         this.showWinner();
-        this.showResults('individual'); // Default to individual
+        this.showResults('individual');
     }
     
+    // **FIX 3: Smart winner detection based on actual scoring mode used**
     showWinner() {
-        const sortedPlayers = [...this.players].sort((a, b) => b.totalScore - a.totalScore);
-        const winner = sortedPlayers[0];
-        document.getElementById('winnerTitle').textContent = `🏆 विजेता: ${winner.name}! 🏆`;
-        document.getElementById('winnerSubtitle').textContent = `${this.getTeamName(winner.team)} टीम से, ${winner.totalScore} अंकों के साथ।`;
+        if (this.lastUsedScoringMode === 'team') {
+            // Show team winner
+            const teamStats = this.teams.map(team => {
+                const teamPlayers = this.players.filter(p => p.team === team.id);
+                if(teamPlayers.length === 0) return null;
+                return {
+                    id: team.id,
+                    name: team.name,
+                    players: teamPlayers.length,
+                    totalScore: teamPlayers.reduce((sum, p) => sum + p.totalScore, 0),
+                };
+            }).filter(Boolean).sort((a,b) => b.totalScore - a.totalScore);
+            
+            const winnerTeam = teamStats[0];
+            document.getElementById('winnerTitle').textContent = `🏆 विजेता टीम: ${winnerTeam.name}! 🏆`;
+            document.getElementById('winnerSubtitle').textContent = `${winnerTeam.totalScore} अंकों के साथ (${winnerTeam.players} खिलाड़ी)`;
+        } else {
+            // Show individual winner
+            const sortedPlayers = [...this.players].sort((a, b) => b.totalScore - a.totalScore);
+            const winner = sortedPlayers[0];
+            document.getElementById('winnerTitle').textContent = `🏆 विजेता: ${winner.name}! 🏆`;
+            document.getElementById('winnerSubtitle').textContent = `${this.getTeamName(winner.team)} टीम से, ${winner.totalScore} अंकों के साथ।`;
+        }
     }
 
     showResults(type) {
@@ -387,7 +458,7 @@ class QuizGameManager {
                     <div class="score-cell">${p.totalScore}</div>
                 </div>
             `).join('');
-        } else { // Team results
+        } else {
              header.className = 'leaderboard-header team';
             header.innerHTML = `<div>#</div><div>टीम</div><div>खिलाड़ी</div><div>सही</div><div>गलत</div><div>कुल स्कोर</div>`;
             const teamStats = this.teams.map(team => {
@@ -451,11 +522,12 @@ class QuizGameManager {
     }
 
     newGame() {
+        this.clearTimer();
         window.location.reload();
     }
 }
 
-// ===== Global Functions for HTML onclick handlers =====
+// ===== Global Functions =====
 let gameManager;
 document.addEventListener('DOMContentLoaded', () => {
     gameManager = new QuizGameManager();

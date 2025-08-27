@@ -41,7 +41,7 @@
                     <span>Quiz Master</span>
                 </div>
                 <div class="header-info" id="headerInfo">
-                    <span class="current-mode">सेटअप मोड</span>
+                    <span class="current-mode">by FCC The Gurukul</span>
                 </div>
             </div>
         </header>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="setup-grid">
-                    <!-- Team Management Section (NEW) -->
+                    <!-- Team Management Section -->
                     <div class="setup-card">
                         <div class="card-header">
                             <h3><i class="fas fa-users-cog"></i> टीम प्रबंधन</h3>
@@ -162,18 +162,33 @@
                     </div>
                 </div>
 
-                <!-- Question Section -->
+                <!-- Enhanced Question Section -->
                 <div class="question-section">
                     <div class="question-card">
-                         <div class="question-content">
+                        <div class="question-header">
+                            <div class="question-meta">
+                                <span class="question-type">
+                                    <i class="fas fa-question-circle"></i>
+                                    प्रश्न
+                                </span>
+                                <div class="writing-timer" id="writingTimer">
+                                    <div class="timer-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="timer-content">
+                                        <span class="timer-label">लेखन समय</span>
+                                        <span class="timer-value" id="timerValue">2:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="question-content">
                             <div class="question-text" id="questionText">
                                 प्रश्न यहाँ लोड होगा...
                             </div>
-                            <div class="writing-timer" id="writingTimer">
-                                <i class="fas fa-clock"></i>
-                                <span>लेखन समय: 2:00</span>
-                            </div>
                         </div>
+                        
                         <div class="question-actions">
                             <button onclick="showAnswer()" class="btn btn-primary btn-lg" id="showAnswerBtn">
                                 <i class="fas fa-eye"></i>
@@ -182,7 +197,7 @@
                         </div>
                     </div>
 
-                    <!-- Answer Section -->
+                    <!-- Enhanced Answer Section -->
                     <div class="answer-section" id="answerSection">
                         <div class="answer-card">
                             <div class="answer-header">
@@ -200,8 +215,8 @@
                     <div class="scoring-header">
                         <h3><i class="fas fa-clipboard-check"></i> स्कोर एंट्री</h3>
                         <div class="scoring-mode-toggle">
-                            <button class="nav-btn active" onclick="setScoringMode('team')" id="teamScoreBtn">टीम वाइज़</button>
-                            <button class="nav-btn" onclick="setScoringMode('individual')" id="individualScoreBtn">खिलाड़ी वाइज़</button>
+                            <button class="nav-btn active" onclick="setScoringMode('team')" id="teamScoreBtn">टीम वाइज़</button>
+                            <button class="nav-btn" onclick="setScoringMode('individual')" id="individualScoreBtn">खिलाड़ी वाइज़</button>
                         </div>
                     </div>
                     
