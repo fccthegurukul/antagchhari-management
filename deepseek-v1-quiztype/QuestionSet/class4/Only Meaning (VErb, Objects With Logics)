@@ -1,0 +1,524 @@
+{
+  "questions": [
+    {
+      "question": "'अध्ययन करना' का English meaning क्या है?",
+      "correct": "Study",
+      "options": ["Study", "Search", "Scan", "Scrutinize"]
+    },
+    {
+      "question": "'निर्माण करना' का सही English translation है:",
+      "correct": "Construct",
+      "options": ["Construct", "Create", "Build", "Make"]
+    },
+    {
+      "question": "'व्याख्या करना' का English में क्या कहते हैं?",
+      "correct": "Explain",
+      "options": ["Explain", "Express", "Explore", "Expand"]
+    },
+    {
+      "question": "'संचालन करना' का correct English verb है:",
+      "correct": "Operate",
+      "options": ["Operate", "Organize", "Order", "Offer"]
+    },
+    {
+      "question": "'अनुमति देना' का English meaning है:",
+      "correct": "Permit",
+      "options": ["Permit", "Present", "Prevent", "Protect"]
+    },
+    {
+      "question": "'जांच करना' के लिए सबसे appropriate English verb है:",
+      "correct": "Investigate",
+      "options": ["Investigate", "Invite", "Involve", "Inspire"]
+    },
+    {
+      "question": "'सहायता करना' का English translation है:",
+      "correct": "Assist",
+      "options": ["Assist", "Accept", "Access", "Achieve"]
+    },
+    {
+      "question": "'विकसित करना' का English verb है:",
+      "correct": "Develop",
+      "options": ["Develop", "Deliver", "Decide", "Describe"]
+    },
+    {
+      "question": "'संरक्षण करना' का English meaning है:",
+      "correct": "Preserve",
+      "options": ["Preserve", "Present", "Prepare", "Predict"]
+    },
+    {
+      "question": "'प्रबंधन करना' का correct English verb है:",
+      "correct": "Manage",
+      "options": ["Manage", "Monitor", "Maintain", "Measure"]
+    },
+    {
+      "question": "'Demonstrate' का Hindi meaning क्या है?",
+      "correct": "प्रदर्शित करना",
+      "options": ["प्रदर्शित करना", "प्रस्तुत करना", "प्रचार करना", "प्रकाशित करना"]
+    },
+    {
+      "question": "'Negotiate' का सही Hindi translation है:",
+      "correct": "बातचीत करना",
+      "options": ["बातचीत करना", "व्यवहार करना", "व्यापार करना", "विचार करना"]
+    },
+    {
+      "question": "'Accomplish' का Hindi meaning है:",
+      "correct": "पूर्ण करना",
+      "options": ["पूर्ण करना", "प्राप्त करना", "पहुंचना", "परीक्षा करना"]
+    },
+    {
+      "question": "'Collaborate' का Hindi में क्या अर्थ है?",
+      "correct": "सहयोग करना",
+      "options": ["सहयोग करना", "संकलन करना", "संपादन करना", "संचालन करना"]
+    },
+    {
+      "question": "'Distinguish' का correct Hindi meaning है:",
+      "correct": "अंतर करना",
+      "options": ["अंतर करना", "अनुवाद करना", "अनुसरण करना", "अनुमोदन करना"]
+    },
+    {
+      "question": "'Comprehend' का Hindi translation है:",
+      "correct": "समझना",
+      "options": ["समझना", "संग्रह करना", "संपूर्ण करना", "संबंधित करना"]
+    },
+    {
+      "question": "'Evaluate' का Hindi meaning है:",
+      "correct": "मूल्यांकन करना",
+      "options": ["मूल्यांकन करना", "विकास करना", "विश्लेषण करना", "विस्तार करना"]
+    },
+    {
+      "question": "'Anticipate' का सही Hindi अर्थ है:",
+      "correct": "प्रत्याशा करना",
+      "options": ["प्रत्याशा करना", "प्रयास करना", "प्रकाश करना", "प्रचलन करना"]
+    },
+    {
+      "question": "'Facilitate' का Hindi translation है:",
+      "correct": "सुविधा प्रदान करना",
+      "options": ["सुविधा प्रदान करना", "सुधार करना", "सुनिश्चित करना", "सुझाव देना"]
+    },
+    {
+      "question": "'Synthesize' का Hindi meaning है:",
+      "correct": "संश्लेषण करना",
+      "options": ["संश्लेषण करना", "संकलन करना", "संयोजन करना", "संशोधन करना"]
+    },
+    {
+      "question": "'प्रयोगशाला' का English translation है:",
+      "correct": "Laboratory",
+      "options": ["Laboratory", "Library", "Lavatory", "Locality"]
+    },
+    {
+      "question": "'पुस्तकालय' का correct English word है:",
+      "correct": "Library",
+      "options": ["Library", "Laboratory", "Lavatory", "Legacy"]
+    },
+    {
+      "question": "'अस्पताल' का English meaning है:",
+      "correct": "Hospital",
+      "options": ["Hospital", "Hostel", "Hotel", "Habitat"]
+    },
+    {
+      "question": "'न्यायालय' का English translation है:",
+      "correct": "Court",
+      "options": ["Court", "Council", "County", "Counter"]
+    },
+    {
+      "question": "'विद्यालय' का English word है:",
+      "correct": "School",
+      "options": ["School", "Scholar", "Schedule", "Scheme"]
+    },
+    {
+      "question": "'रसोईघर' का correct English है:",
+      "correct": "Kitchen",
+      "options": ["Kitchen", "Kitten", "Kidney", "Kindness"]
+    },
+    {
+      "question": "'शयनकक्ष' का English meaning है:",
+      "correct": "Bedroom",
+      "options": ["Bedroom", "Bathroom", "Boardroom", "Bookroom"]
+    },
+    {
+      "question": "'कार्यालय' का English translation है:",
+      "correct": "Office",
+      "options": ["Office", "Officer", "Official", "Offline"]
+    },
+    {
+      "question": "'बाज़ार' का English word है:",
+      "correct": "Market",
+      "options": ["Market", "Marker", "Marshal", "Marble"]
+    },
+    {
+      "question": "'थियेटर' का Hindi meaning है:",
+      "correct": "रंगमंच",
+      "options": ["रंगमंच", "राजमहल", "रेलगाड़ी", "रसोईघर"]
+    },
+    {
+      "question": "'Gymnasium' का Hindi translation है:",
+      "correct": "व्यायामशाला",
+      "options": ["व्यायामशाला", "विद्यालय", "वैज्ञानिकशाला", "वाचनालय"]
+    },
+    {
+      "question": "'Observatory' का Hindi meaning है:",
+      "correct": "वेधशाला",
+      "options": ["वेधशाला", "विद्यालय", "वैज्ञानिकशाला", "व्यायामशाला"]
+    },
+    {
+      "question": "'Cathedral' का सही Hindi अर्थ है:",
+      "correct": "गिरजाघर",
+      "options": ["गिरजाघर", "गुरुद्वारा", "गुफा", "गोदाम"]
+    },
+    {
+      "question": "'Pharmacy' का Hindi translation है:",
+      "correct": "औषधालय",
+      "options": ["औषधालय", "अस्पताल", "आयुर्वेदशाला", "अनुसंधानशाला"]
+    },
+    {
+      "question": "'Workshop' का Hindi meaning है:",
+      "correct": "कार्यशाला",
+      "options": ["कार्यशाला", "कार्यालय", "कारखाना", "किराना"]
+    },
+    {
+      "question": "'उपकरण' का English translation है:",
+      "correct": "Equipment",
+      "options": ["Equipment", "Environment", "Entertainment", "Employment"]
+    },
+    {
+      "question": "'औज़ार' का correct English word है:",
+      "correct": "Tool",
+      "options": ["Tool", "Toll", "Towel", "Tower"]
+    },
+    {
+      "question": "'यंत्र' का English meaning है:",
+      "correct": "Machine",
+      "options": ["Machine", "Medicine", "Magazine", "Magnetic"]
+    },
+    {
+      "question": "'वाहन' का English translation है:",
+      "correct": "Vehicle",
+      "options": ["Vehicle", "Vegetable", "Venture", "Version"]
+    },
+    {
+      "question": "'फर्नीचर' का English word है:",
+      "correct": "Furniture",
+      "options": ["Furniture", "Future", "Feature", "Fixture"]
+    },
+    {
+      "question": "'सामग्री' का correct English है:",
+      "correct": "Material",
+      "options": ["Material", "Maternal", "Matters", "Manner"]
+    },
+    {
+      "question": "'वस्तु' का English meaning है:",
+      "correct": "Object",
+      "options": ["Object", "Subject", "Project", "Reject"]
+    },
+    {
+      "question": "'सामान' का English translation है:",
+      "correct": "Goods",
+      "options": ["Goods", "Foods", "Woods", "Moods"]
+    },
+    {
+      "question": "'संपत्ति' का English word है:",
+      "correct": "Property",
+      "options": ["Property", "Properly", "Priority", "Privacy"]
+    },
+    {
+      "question": "'Appliance' का Hindi meaning है:",
+      "correct": "उपकरण",
+      "options": ["उपकरण", "उपहार", "उपाय", "उपचार"]
+    },
+    {
+      "question": "'Gadget' का Hindi translation है:",
+      "correct": "यंत्र",
+      "options": ["यंत्र", "यात्रा", "युक्ति", "योजना"]
+    },
+    {
+      "question": "'Instrument' का सही Hindi अर्थ है:",
+      "correct": "साधन",
+      "options": ["साधन", "सामान", "साक्ष्य", "सामग्री"]
+    },
+    {
+      "question": "'Accessory' का Hindi meaning है:",
+      "correct": "सहायक वस्तु",
+      "options": ["सहायक वस्तु", "सजावटी वस्तु", "सामान्य वस्तु", "सुंदर वस्तु"]
+    },
+    {
+      "question": "'Component' का Hindi translation है:",
+      "correct": "घटक",
+      "options": ["घटक", "घटना", "घड़ी", "घर"]
+    },
+    {
+      "question": "'Device' का Hindi meaning है:",
+      "correct": "यंत्र",
+      "options": ["यंत्र", "योजना", "युक्ति", "यात्रा"]
+    },
+    {
+      "question": "'निरीक्षण करना' का English verb है:",
+      "correct": "Inspect",
+      "options": ["Inspect", "Respect", "Aspect", "Expect"]
+    },
+    {
+      "question": "'संशोधन करना' का correct English है:",
+      "correct": "Modify",
+      "options": ["Modify", "Notify", "Qualify", "Specify"]
+    },
+    {
+      "question": "'आकलन करना' का English translation है:",
+      "correct": "Assess",
+      "options": ["Assess", "Access", "Across", "Actress"]
+    },
+    {
+      "question": "'संकलन करना' का English verb है:",
+      "correct": "Compile",
+      "options": ["Compile", "Complete", "Complain", "Compare"]
+    },
+    {
+      "question": "'विश्लेषण करना' का English meaning है:",
+      "correct": "Analyze",
+      "options": ["Analyze", "Advertise", "Advise", "Arise"]
+    },
+    {
+      "question": "'पुनर्निर्माण करना' का correct English है:",
+      "correct": "Reconstruct",
+      "options": ["Reconstruct", "Restructure", "Reproduce", "Represent"]
+    },
+    {
+      "question": "'पुनर्विचार करना' का English verb है:",
+      "correct": "Reconsider",
+      "options": ["Reconsider", "Recommend", "Recognize", "Recover"]
+    },
+    {
+      "question": "'स्थापना करना' का English translation है:",
+      "correct": "Establish",
+      "options": ["Establish", "Estimate", "Eliminate", "Elaborate"]
+    },
+    {
+      "question": "'कार्यान्वयन करना' का English meaning है:",
+      "correct": "Implement",
+      "options": ["Implement", "Improve", "Import", "Impress"]
+    },
+    {
+      "question": "'Supervise' का Hindi meaning है:",
+      "correct": "निरीक्षण करना",
+      "options": ["निरीक्षण करना", "निर्देशन करना", "निर्णय लेना", "निर्माण करना"]
+    },
+    {
+      "question": "'Coordinate' का Hindi translation है:",
+      "correct": "समन्वय करना",
+      "options": ["समन्वय करना", "संपादन करना", "संकलन करना", "संचालन करना"]
+    },
+    {
+      "question": "'Prioritize' का सही Hindi अर्थ है:",
+      "correct": "प्राथमिकता देना",
+      "options": ["प्राथमिकता देना", "प्रशंसा करना", "प्रस्तुत करना", "प्रकाशित करना"]
+    },
+    {
+      "question": "'Optimize' का Hindi meaning है:",
+      "correct": "अनुकूलन करना",
+      "options": ["अनुकूलन करना", "अनुमोदन करना", "अनुसरण करना", "अनुवाद करना"]
+    },
+    {
+      "question": "'Standardize' का Hindi translation है:",
+      "correct": "मानकीकरण करना",
+      "options": ["मानकीकरण करना", "मार्गदर्शन करना", "मूल्यांकन करना", "मतदान करना"]
+    },
+    {
+      "question": "'Customize' का Hindi meaning है:",
+      "correct": "अनुकूलित करना",
+      "options": ["अनुकूलित करना", "आधुनिकीकरण करना", "अभिव्यक्त करना", "आयोजन करना"]
+    },
+    {
+      "question": "'विषयवस्तु' का English translation है:",
+      "correct": "Content",
+      "options": ["Content", "Context", "Contest", "Consent"]
+    },
+    {
+      "question": "'प्रक्रिया' का correct English word है:",
+      "correct": "Process",
+      "options": ["Process", "Progress", "Project", "Protect"]
+    },
+    {
+      "question": "'प्रणाली' का English meaning है:",
+      "correct": "System",
+      "options": ["System", "Symptom", "Symbol", "Synonym"]
+    },
+    {
+      "question": "'ढांचा' का English translation है:",
+      "correct": "Structure",
+      "options": ["Structure", "Struggle", "Strategy", "Standard"]
+    },
+    {
+      "question": "'रूपरेखा' का English word है:",
+      "correct": "Framework",
+      "options": ["Framework", "Homework", "Network", "Teamwork"]
+    },
+    {
+      "question": "'नमूना' का correct English है:",
+      "correct": "Sample",
+      "options": ["Sample", "Simple", "Symbol", "Summon"]
+    },
+    {
+      "question": "'आधार' का English meaning है:",
+      "correct": "Foundation",
+      "options": ["Foundation", "Formation", "Function", "Fraction"]
+    },
+    {
+      "question": "'घटक' का English translation है:",
+      "correct": "Component",
+      "options": ["Component", "Opponent", "Comment", "Moment"]
+    },
+    {
+      "question": "'तत्व' का English word है:",
+      "correct": "Element",
+      "options": ["Element", "Elephant", "Elegant", "Eliminate"]
+    },
+    {
+      "question": "'Methodology' का Hindi meaning है:",
+      "correct": "कार्यप्रणाली",
+      "options": ["कार्यप्रणाली", "कार्यक्रम", "कार्यभार", "कार्यशाला"]
+    },
+    {
+      "question": "'Algorithm' का Hindi translation है:",
+      "correct": "एल्गोरिदम",
+      "options": ["एल्गोरिदम", "गणितीय सूत्र", "गणना पद्धति", "गुणा विभाजन"]
+    },
+    {
+      "question": "'Protocol' का सही Hindi अर्थ है:",
+      "correct": "नियमावली",
+      "options": ["नियमावली", "नीतिगत बात", "न्यायिक प्रक्रिया", "नैतिक मूल्य"]
+    },
+    {
+      "question": "'Format' का Hindi meaning है:",
+      "correct": "प्रारूप",
+      "options": ["प्रारूप", "प्रपत्र", "प्रकार", "प्रणाली"]
+    },
+    {
+      "question": "'Template' का Hindi translation है:",
+      "correct": "टेम्प्लेट",
+      "options": ["टेम्प्लेट", "तालिका", "ढांचा", "नमूना"]
+    },
+    {
+      "question": "'Interface' का Hindi meaning है:",
+      "correct": "अंतरफलक",
+      "options": ["अंतरफलक", "अंतर्राष्ट्रीय", "अंतरिम", "अंतर्गत"]
+    },
+    {
+      "question": "'संचित करना' का English verb है:",
+      "correct": "Accumulate",
+      "options": ["Accumulate", "Accommodate", "Accelerate", "Accurate"]
+    },
+    {
+      "question": "'वितरित करना' का correct English है:",
+      "correct": "Distribute",
+      "options": ["Distribute", "Disturb", "District", "Distinct"]
+    },
+    {
+      "question": "'एकत्रित करना' का English translation है:",
+      "correct": "Collect",
+      "options": ["Collect", "Connect", "Correct", "Complete"]
+    },
+    {
+      "question": "'विभाजित करना' का English verb है:",
+      "correct": "Divide",
+      "options": ["Divide", "Decide", "Desire", "Design"]
+    },
+    {
+      "question": "'गुणा करना' का English meaning है:",
+      "correct": "Multiply",
+      "options": ["Multiply", "Multiple", "Mutual", "Musical"]
+    },
+    {
+      "question": "'घटाना' का correct English है:",
+      "correct": "Subtract",
+      "options": ["Subtract", "Subject", "Submit", "Success"]
+    },
+    {
+      "question": "'जोड़ना' का English verb है:",
+      "correct": "Add",
+      "options": ["Add", "And", "Age", "Ago"]
+    },
+    {
+      "question": "'तुलना करना' का English translation है:",
+      "correct": "Compare",
+      "options": ["Compare", "Complain", "Complete", "Compete"]
+    },
+    {
+      "question": "'अनुपात' का English meaning है:",
+      "correct": "Proportion",
+      "options": ["Proportion", "Position", "Permission", "Provision"]
+    },
+    {
+      "question": "'Calculate' का Hindi meaning है:",
+      "correct": "गणना करना",
+      "options": ["गणना करना", "गुणा करना", "घटाना", "गिनती करना"]
+    },
+    {
+      "question": "'Compute' का Hindi translation है:",
+      "correct": "संगणना करना",
+      "options": ["संगणना करना", "संकलन करना", "संपादन करना", "संचालन करना"]
+    },
+    {
+      "question": "'Estimate' का सही Hindi अर्थ है:",
+      "correct": "अनुमान लगाना",
+      "options": ["अनुमान लगाना", "अनुसरण करना", "अनुकरण करना", "अनुमोदन करना"]
+    },
+    {
+      "question": "'Approximate' का Hindi meaning है:",
+      "correct": "लगभग",
+      "options": ["लगभग", "लक्ष्य", "लाभ", "लागत"]
+    },
+    {
+      "question": "'Calibrate' का Hindi translation है:",
+      "correct": "अंशांकन करना",
+      "options": ["अंशांकन करना", "अंकगणित करना", "अनुकूलन करना", "अभिकलन करना"]
+    },
+    {
+      "question": "'Validate' का Hindi meaning है:",
+      "correct": "प्रमाणित करना",
+      "options": ["प्रमाणित करना", "प्रकाशित करना", "प्रस्तुत करना", "प्रशंसा करना"]
+    },
+    {
+      "question": "'अवधारणा' का English translation है:",
+      "correct": "Concept",
+      "options": ["Concept", "Context", "Content", "Contact"]
+    },
+    {
+      "question": "'सिद्धांत' का correct English word है:",
+      "correct": "Theory",
+      "options": ["Theory", "Therapy", "Thirty", "Thirsty"]
+    },
+    {
+      "question": "'परिकल्पना' का English meaning है:",
+      "correct": "Hypothesis",
+      "options": ["Hypothesis", "Hypnotize", "Hyperlink", "Hyperbole"]
+    },
+    {
+      "question": "'तर्क' का English translation है:",
+      "correct": "Logic",
+      "options": ["Logic", "Login", "Local", "Loyal"]
+    },
+    {
+      "question": "'विधि' का English word है:",
+      "correct": "Method",
+      "options": ["Method", "Mental", "Medal", "Model"]
+    },
+    {
+      "question": "'तकनीक' का correct English है:",
+      "correct": "Technique",
+      "options": ["Technique", "Technology", "Technical", "Technician"]
+    },
+    {
+      "question": "'दृष्टिकोण' का English meaning है:",
+      "correct": "Approach",
+      "options": ["Approach", "Approve", "Appreciate", "Appropriate"]
+    },
+    {
+      "question": "'Strategy' का Hindi meaning है:",
+      "correct": "रणनीति",
+      "options": ["रणनीति", "राजनीति", "रीति-रिवाज", "रक्षा नीति"]
+    },
+    {
+      "question": "'Philosophy' का Hindi translation है:",
+      "correct": "दर्शनशास्त्र",
+      "options": ["दर्शनशास्त्र", "धर्मशास्त्र", "राजनीतिशास्त्र", "समाजशास्त्र"]
+    }
+  ]
+}
