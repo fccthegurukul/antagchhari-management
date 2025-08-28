@@ -1,0 +1,349 @@
+{
+  "questions": [
+    {
+      "question": "Present Simple Tense के Affirmative structure क्या है?",
+      "correct": "Subject + V1/V1+s/es + Object",
+      "options": ["Subject + V1/V1+s/es + Object", "Subject + is/am/are + V1+ing + Object", "Subject + has/have + V3 + Object", "Subject + will + V1 + Object"]
+    },
+    {
+      "question": "Present Simple Tense के Negative structure में कौन सा helping verb use होता है?",
+      "correct": "do/does + not",
+      "options": ["do/does + not", "is/am/are + not", "has/have + not", "will + not"]
+    },
+    {
+      "question": "Present Simple का Interrogative structure है:",
+      "correct": "Do/Does + Subject + V1 + Object?",
+      "options": ["Do/Does + Subject + V1 + Object?", "Is/Am/Are + Subject + V1+ing + Object?", "Has/Have + Subject + V3 + Object?", "Will + Subject + V1 + Object?"]
+    },
+    {
+      "question": "Present Simple के Wh-word structure में question word कहाँ आता है?",
+      "correct": "Wh-word + do/does + Subject + V1 + Object?",
+      "options": ["Wh-word + do/does + Subject + V1 + Object?", "Wh-word + is/am/are + Subject + V1+ing?", "Wh-word + has/have + Subject + V3?", "Wh-word + will + Subject + V1?"]
+    },
+    {
+      "question": "Present Continuous Tense के Affirmative structure में कौन सा verb form use होता है?",
+      "correct": "Subject + is/am/are + V1+ing + Object",
+      "options": ["Subject + is/am/are + V1+ing + Object", "Subject + V1/V1+s/es + Object", "Subject + has/have + V3 + Object", "Subject + had + V3 + Object"]
+    },
+    {
+      "question": "Present Continuous का Negative structure है:",
+      "correct": "Subject + is/am/are + not + V1+ing + Object",
+      "options": ["Subject + is/am/are + not + V1+ing + Object", "Subject + do/does + not + V1 + Object", "Subject + has/have + not + V3 + Object", "Subject + will + not + V1 + Object"]
+    },
+    {
+      "question": "Present Continuous के Interrogative structure में helping verb कहाँ आता है?",
+      "correct": "Is/Am/Are + Subject + V1+ing + Object?",
+      "options": ["Is/Am/Are + Subject + V1+ing + Object?", "Do/Does + Subject + V1+ing + Object?", "Has/Have + Subject + V1+ing + Object?", "Will + Subject + V1+ing + Object?"]
+    },
+    {
+      "question": "Present Continuous के Wh-word structure है:",
+      "correct": "Wh-word + is/am/are + Subject + V1+ing + Object?",
+      "options": ["Wh-word + is/am/are + Subject + V1+ing + Object?", "Wh-word + do/does + Subject + V1+ing + Object?", "Wh-word + has/have + Subject + V1+ing + Object?", "Wh-word + will + Subject + V1+ing + Object?"]
+    },
+    {
+      "question": "Present Perfect Tense में कौन सा verb form use होता है?",
+      "correct": "V3 (Past Participle)",
+      "options": ["V3 (Past Participle)", "V1+ing (Present Participle)", "V1 (Base Form)", "V2 (Past Form)"]
+    },
+    {
+      "question": "Present Perfect का Affirmative structure है:",
+      "correct": "Subject + has/have + V3 + Object",
+      "options": ["Subject + has/have + V3 + Object", "Subject + is/am/are + V3 + Object", "Subject + had + V3 + Object", "Subject + will have + V3 + Object"]
+    },
+    {
+      "question": "Present Perfect के Negative structure में 'not' कहाँ आता है?",
+      "correct": "Subject + has/have + not + V3 + Object",
+      "options": ["Subject + has/have + not + V3 + Object", "Subject + not + has/have + V3 + Object", "Subject + has/have + V3 + not + Object", "Has/Have + not + Subject + V3 + Object"]
+    },
+    {
+      "question": "Present Perfect का Interrogative structure है:",
+      "correct": "Has/Have + Subject + V3 + Object?",
+      "options": ["Has/Have + Subject + V3 + Object?", "Is/Am/Are + Subject + V3 + Object?", "Do/Does + Subject + V3 + Object?", "Will + Subject + have + V3 + Object?"]
+    },
+    {
+      "question": "Present Perfect Continuous का Affirmative structure है:",
+      "correct": "Subject + has/have + been + V1+ing + Object",
+      "options": ["Subject + has/have + been + V1+ing + Object", "Subject + is/am/are + being + V1+ing + Object", "Subject + had + been + V1+ing + Object", "Subject + will + have + been + V1+ing + Object"]
+    },
+    {
+      "question": "Present Perfect Continuous के Negative में 'not' की position है:",
+      "correct": "Subject + has/have + not + been + V1+ing + Object",
+      "options": ["Subject + has/have + not + been + V1+ing + Object", "Subject + not + has/have + been + V1+ing + Object", "Subject + has/have + been + not + V1+ing + Object", "Subject + has/have + been + V1+ing + not + Object"]
+    },
+    {
+      "question": "Present Perfect Continuous का Interrogative structure है:",
+      "correct": "Has/Have + Subject + been + V1+ing + Object?",
+      "options": ["Has/Have + Subject + been + V1+ing + Object?", "Is/Am/Are + Subject + been + V1+ing + Object?", "Had + Subject + been + V1+ing + Object?", "Will + Subject + have + been + V1+ing + Object?"]
+    },
+    {
+      "question": "Present Perfect Continuous के Wh-word structure है:",
+      "correct": "Wh-word + has/have + Subject + been + V1+ing + Object?",
+      "options": ["Wh-word + has/have + Subject + been + V1+ing + Object?", "Wh-word + is/am/are + Subject + been + V1+ing + Object?", "Wh-word + had + Subject + been + V1+ing + Object?", "Wh-word + will + Subject + have + been + V1+ing + Object?"]
+    },
+    {
+      "question": "Past Simple Tense के Affirmative structure में कौन सा verb form use होता है?",
+      "correct": "Subject + V2 + Object",
+      "options": ["Subject + V2 + Object", "Subject + V1 + Object", "Subject + V3 + Object", "Subject + V1+ing + Object"]
+    },
+    {
+      "question": "Past Simple का Negative structure है:",
+      "correct": "Subject + did + not + V1 + Object",
+      "options": ["Subject + did + not + V1 + Object", "Subject + do + not + V1 + Object", "Subject + was/were + not + V1 + Object", "Subject + had + not + V1 + Object"]
+    },
+    {
+      "question": "Past Simple के Interrogative structure में कौन सा helping verb use होता है?",
+      "correct": "Did + Subject + V1 + Object?",
+      "options": ["Did + Subject + V1 + Object?", "Do + Subject + V2 + Object?", "Was/Were + Subject + V2 + Object?", "Had + Subject + V2 + Object?"]
+    },
+    {
+      "question": "Past Simple के Wh-word structure है:",
+      "correct": "Wh-word + did + Subject + V1 + Object?",
+      "options": ["Wh-word + did + Subject + V1 + Object?", "Wh-word + do + Subject + V2 + Object?", "Wh-word + was/were + Subject + V2 + Object?", "Wh-word + had + Subject + V2 + Object?"]
+    },
+    {
+      "question": "Past Continuous का Affirmative structure है:",
+      "correct": "Subject + was/were + V1+ing + Object",
+      "options": ["Subject + was/were + V1+ing + Object", "Subject + is/am/are + V1+ing + Object", "Subject + had + been + V1+ing + Object", "Subject + will + be + V1+ing + Object"]
+    },
+    {
+      "question": "Past Continuous के Negative structure में 'not' कहाँ आता है?",
+      "correct": "Subject + was/were + not + V1+ing + Object",
+      "options": ["Subject + was/were + not + V1+ing + Object", "Subject + not + was/were + V1+ing + Object", "Subject + was/were + V1+ing + not + Object", "Was/Were + not + Subject + V1+ing + Object"]
+    },
+    {
+      "question": "Past Continuous का Interrogative structure है:",
+      "correct": "Was/Were + Subject + V1+ing + Object?",
+      "options": ["Was/Were + Subject + V1+ing + Object?", "Did + Subject + V1+ing + Object?", "Had + Subject + V1+ing + Object?", "Will + Subject + be + V1+ing + Object?"]
+    },
+    {
+      "question": "Past Continuous के Wh-word structure है:",
+      "correct": "Wh-word + was/were + Subject + V1+ing + Object?",
+      "options": ["Wh-word + was/were + Subject + V1+ing + Object?", "Wh-word + did + Subject + V1+ing + Object?", "Wh-word + had + Subject + V1+ing + Object?", "Wh-word + will + Subject + be + V1+ing + Object?"]
+    },
+    {
+      "question": "Past Perfect का Affirmative structure है:",
+      "correct": "Subject + had + V3 + Object",
+      "options": ["Subject + had + V3 + Object", "Subject + has/have + V3 + Object", "Subject + was/were + V3 + Object", "Subject + will + have + V3 + Object"]
+    },
+    {
+      "question": "Past Perfect के Negative structure में helping verb कौन सा है?",
+      "correct": "Subject + had + not + V3 + Object",
+      "options": ["Subject + had + not + V3 + Object", "Subject + has/have + not + V3 + Object", "Subject + did + not + V3 + Object", "Subject + was/were + not + V3 + Object"]
+    },
+    {
+      "question": "Past Perfect का Interrogative structure है:",
+      "correct": "Had + Subject + V3 + Object?",
+      "options": ["Had + Subject + V3 + Object?", "Has/Have + Subject + V3 + Object?", "Did + Subject + V3 + Object?", "Was/Were + Subject + V3 + Object?"]
+    },
+    {
+      "question": "Past Perfect के Wh-word structure है:",
+      "correct": "Wh-word + had + Subject + V3 + Object?",
+      "options": ["Wh-word + had + Subject + V3 + Object?", "Wh-word + has/have + Subject + V3 + Object?", "Wh-word + did + Subject + V3 + Object?", "Wh-word + was/were + Subject + V3 + Object?"]
+    },
+    {
+      "question": "Past Perfect Continuous का Affirmative structure है:",
+      "correct": "Subject + had + been + V1+ing + Object",
+      "options": ["Subject + had + been + V1+ing + Object", "Subject + has/have + been + V1+ing + Object", "Subject + was/were + being + V1+ing + Object", "Subject + will + have + been + V1+ing + Object"]
+    },
+    {
+      "question": "Past Perfect Continuous के Negative structure है:",
+      "correct": "Subject + had + not + been + V1+ing + Object",
+      "options": ["Subject + had + not + been + V1+ing + Object", "Subject + has/have + not + been + V1+ing + Object", "Subject + was/were + not + being + V1+ing + Object", "Subject + will + not + have + been + V1+ing + Object"]
+    },
+    {
+      "question": "Past Perfect Continuous का Interrogative structure है:",
+      "correct": "Had + Subject + been + V1+ing + Object?",
+      "options": ["Had + Subject + been + V1+ing + Object?", "Has/Have + Subject + been + V1+ing + Object?", "Was/Were + Subject + being + V1+ing + Object?", "Will + Subject + have + been + V1+ing + Object?"]
+    },
+    {
+      "question": "Past Perfect Continuous के Wh-word structure है:",
+      "correct": "Wh-word + had + Subject + been + V1+ing + Object?",
+      "options": ["Wh-word + had + Subject + been + V1+ing + Object?", "Wh-word + has/have + Subject + been + V1+ing + Object?", "Wh-word + was/were + Subject + being + V1+ing + Object?", "Wh-word + will + Subject + have + been + V1+ing + Object?"]
+    },
+    {
+      "question": "Future Simple का Affirmative structure है:",
+      "correct": "Subject + will + V1 + Object",
+      "options": ["Subject + will + V1 + Object", "Subject + is/am/are + going to + V1 + Object", "Subject + shall + V1 + Object", "Subject + would + V1 + Object"]
+    },
+    {
+      "question": "Future Simple के Negative structure में 'not' कहाँ आता है?",
+      "correct": "Subject + will + not + V1 + Object",
+      "options": ["Subject + will + not + V1 + Object", "Subject + not + will + V1 + Object", "Subject + will + V1 + not + Object", "Will + not + Subject + V1 + Object"]
+    },
+    {
+      "question": "Future Simple का Interrogative structure है:",
+      "correct": "Will + Subject + V1 + Object?",
+      "options": ["Will + Subject + V1 + Object?", "Do + Subject + will + V1 + Object?", "Is/Am/Are + Subject + will + V1 + Object?", "Shall + Subject + V1 + Object?"]
+    },
+    {
+      "question": "Future Simple के Wh-word structure है:",
+      "correct": "Wh-word + will + Subject + V1 + Object?",
+      "options": ["Wh-word + will + Subject + V1 + Object?", "Wh-word + do + Subject + will + V1 + Object?", "Wh-word + is/am/are + Subject + will + V1 + Object?", "Wh-word + shall + Subject + V1 + Object?"]
+    },
+    {
+      "question": "Future Continuous का Affirmative structure है:",
+      "correct": "Subject + will + be + V1+ing + Object",
+      "options": ["Subject + will + be + V1+ing + Object", "Subject + is/am/are + V1+ing + Object", "Subject + was/were + V1+ing + Object", "Subject + would + be + V1+ing + Object"]
+    },
+    {
+      "question": "Future Continuous के Negative structure है:",
+      "correct": "Subject + will + not + be + V1+ing + Object",
+      "options": ["Subject + will + not + be + V1+ing + Object", "Subject + will + be + not + V1+ing + Object", "Subject + not + will + be + V1+ing + Object", "Subject + will + be + V1+ing + not + Object"]
+    },
+    {
+      "question": "Future Continuous का Interrogative structure है:",
+      "correct": "Will + Subject + be + V1+ing + Object?",
+      "options": ["Will + Subject + be + V1+ing + Object?", "Is/Am/Are + Subject + be + V1+ing + Object?", "Do + Subject + will + be + V1+ing + Object?", "Shall + Subject + be + V1+ing + Object?"]
+    },
+    {
+      "question": "Future Continuous के Wh-word structure है:",
+      "correct": "Wh-word + will + Subject + be + V1+ing + Object?",
+      "options": ["Wh-word + will + Subject + be + V1+ing + Object?", "Wh-word + is/am/are + Subject + be + V1+ing + Object?", "Wh-word + do + Subject + will + be + V1+ing + Object?", "Wh-word + shall + Subject + be + V1+ing + Object?"]
+    },
+    {
+      "question": "Future Perfect का Affirmative structure है:",
+      "correct": "Subject + will + have + V3 + Object",
+      "options": ["Subject + will + have + V3 + Object", "Subject + has/have + V3 + Object", "Subject + had + V3 + Object", "Subject + would + have + V3 + Object"]
+    },
+    {
+      "question": "Future Perfect के Negative structure है:",
+      "correct": "Subject + will + not + have + V3 + Object",
+      "options": ["Subject + will + not + have + V3 + Object", "Subject + will + have + not + V3 + Object", "Subject + not + will + have + V3 + Object", "Subject + will + have + V3 + not + Object"]
+    },
+    {
+      "question": "Future Perfect का Interrogative structure है:",
+      "correct": "Will + Subject + have + V3 + Object?",
+      "options": ["Will + Subject + have + V3 + Object?", "Has/Have + Subject + V3 + Object?", "Had + Subject + V3 + Object?", "Do + Subject + will + have + V3 + Object?"]
+    },
+    {
+      "question": "Future Perfect के Wh-word structure है:",
+      "correct": "Wh-word + will + Subject + have + V3 + Object?",
+      "options": ["Wh-word + will + Subject + have + V3 + Object?", "Wh-word + has/have + Subject + V3 + Object?", "Wh-word + had + Subject + V3 + Object?", "Wh-word + do + Subject + will + have + V3 + Object?"]
+    },
+    {
+      "question": "Future Perfect Continuous का Affirmative structure है:",
+      "correct": "Subject + will + have + been + V1+ing + Object",
+      "options": ["Subject + will + have + been + V1+ing + Object", "Subject + has/have + been + V1+ing + Object", "Subject + had + been + V1+ing + Object", "Subject + would + have + been + V1+ing + Object"]
+    },
+    {
+      "question": "Future Perfect Continuous के Negative structure है:",
+      "correct": "Subject + will + not + have + been + V1+ing + Object",
+      "options": ["Subject + will + not + have + been + V1+ing + Object", "Subject + will + have + not + been + V1+ing + Object", "Subject + will + have + been + not + V1+ing + Object", "Subject + not + will + have + been + V1+ing + Object"]
+    },
+    {
+      "question": "Future Perfect Continuous का Interrogative structure है:",
+      "correct": "Will + Subject + have + been + V1+ing + Object?",
+      "options": ["Will + Subject + have + been + V1+ing + Object?", "Has/Have + Subject + been + V1+ing + Object?", "Had + Subject + been + V1+ing + Object?", "Do + Subject + will + have + been + V1+ing + Object?"]
+    },
+    {
+      "question": "Future Perfect Continuous के Wh-word structure है:",
+      "correct": "Wh-word + will + Subject + have + been + V1+ing + Object?",
+      "options": ["Wh-word + will + Subject + have + been + V1+ing + Object?", "Wh-word + has/have + Subject + been + V1+ing + Object?", "Wh-word + had + Subject + been + V1+ing + Object?", "Wh-word + do + Subject + will + have + been + V1+ing + Object?"]
+    },
+    {
+      "question": "Simple Present में Third Person Singular Subject के साथ Main Verb में क्या change होता है?",
+      "correct": "V1 + s/es",
+      "options": ["V1 + s/es", "V1 + ing", "V1 + ed", "V1 (no change)"]
+    },
+    {
+      "question": "Continuous Tense की पहचान कौन से verb form से होती है?",
+      "correct": "V1+ing (Present Participle)",
+      "options": ["V1+ing (Present Participle)", "V2 (Past Form)", "V3 (Past Participle)", "V1 (Base Form)"]
+    },
+    {
+      "question": "Perfect Tense में हमेशा कौन सा verb form use होता है?",
+      "correct": "V3 (Past Participle)",
+      "options": ["V3 (Past Participle)", "V1+ing (Present Participle)", "V2 (Past Form)", "V1 (Base Form)"]
+    },
+    {
+      "question": "Perfect Continuous Tense का पूरा verb structure है:",
+      "correct": "have/has/had + been + V1+ing",
+      "options": ["have/has/had + been + V1+ing", "is/am/are/was/were + V1+ing", "have/has/had + V3", "will + V1"]
+    },
+    {
+      "question": "Negative sentences में 'not' की सही position कौन सी है?",
+      "correct": "Helping verb + not + Main verb",
+      "options": ["Helping verb + not + Main verb", "Not + Helping verb + Main verb", "Helping verb + Main verb + not", "Subject + not + Helping verb + Main verb"]
+    },
+    {
+      "question": "Interrogative sentences में Subject की position कहाँ होती है?",
+      "correct": "Helping verb + Subject + Main verb",
+      "options": ["Helping verb + Subject + Main verb", "Subject + Helping verb + Main verb", "Main verb + Subject + Helping verb", "Subject + Main verb + Helping verb"]
+    },
+    {
+      "question": "Wh-questions में Question word की position कहाँ होती है?",
+      "correct": "Question word + Helping verb + Subject + Main verb",
+      "options": ["Question word + Helping verb + Subject + Main verb", "Helping verb + Question word + Subject + Main verb", "Subject + Question word + Helping verb + Main verb", "Question word + Subject + Helping verb + Main verb"]
+    },
+    {
+      "question": "Present Tense में 'I' और 'You' के साथ कौन सा 'be' verb आता है?",
+      "correct": "I - am, You - are",
+      "options": ["I - am, You - are", "I - is, You - are", "I - are, You - am", "I - am, You - is"]
+    },
+    {
+      "question": "Past Tense में सभी subjects के साथ कौन सा helping verb आता है?",
+      "correct": "did (for Simple Past)",
+      "options": ["did (for Simple Past)", "do/does (for Simple Past)", "have/has (for Simple Past)", "will (for Simple Past)"]
+    },
+    {
+      "question": "Future Tense में मुख्यतः कौन सा helping verb use होता है?",
+      "correct": "will",
+      "options": ["will", "shall", "would", "should"]
+    },
+    {
+      "question": "Perfect tenses में कौन से helping verbs use होते हैं?",
+      "correct": "have/has/had",
+      "options": ["have/has/had", "is/am/are/was/were", "do/does/did", "will/would/shall/should"]
+    },
+    {
+      "question": "Continuous tenses में कौन से helping verbs use होते हैं?",
+      "correct": "is/am/are/was/were",
+      "options": ["is/am/are/was/were", "have/has/had", "do/does/did", "will/would/shall/should"]
+    },
+    {
+      "question": "किस structure में V1 (base form) use होती है?",
+      "correct": "Simple Present (except 3rd person singular), Simple Future, after helping verbs",
+      "options": ["Simple Present (except 3rd person singular), Simple Future, after helping verbs", "Only in Simple Present", "Only in Future Tense", "Only after modal verbs"]
+    },
+    {
+      "question": "V2 (Past form) कब use होती है?",
+      "correct": "केवल Simple Past के Affirmative sentences में",
+      "options": ["केवल Simple Past के Affirmative sentences में", "सभी Past tenses में", "Past Perfect में", "Past Continuous में"]
+    },
+    {
+      "question": "Present Perfect में Subject 'He/She/It' के साथ कौन सा helping verb आता है?",
+      "correct": "has",
+      "options": ["has", "have", "had", "having"]
+    },
+    {
+      "question": "Past Perfect में सभी subjects के साथ कौन सा helping verb आता है?",
+      "correct": "had",
+      "options": ["had", "have", "has", "having"]
+    },
+    {
+      "question": "Future Perfect का complete structure identify करें:",
+      "correct": "Subject + will + have + V3 + Object",
+      "options": ["Subject + will + have + V3 + Object", "Subject + will + be + V3 + Object", "Subject + will + V3 + Object", "Subject + have + will + V3 + Object"]
+    },
+    {
+      "question": "सबसे complex tense structure कौन सा है?",
+      "correct": "Future Perfect Continuous",
+      "options": ["Future Perfect Continuous", "Present Perfect Continuous", "Past Perfect Continuous", "Simple Present"]
+    },
+    {
+      "question": "Time expressions के साथ कौन सा tense structure सबसे ज्यादा use होता है?",
+      "correct": "Perfect Continuous (for duration)",
+      "options": ["Perfect Continuous (for duration)", "Simple tenses", "Perfect tenses", "Continuous tenses"]
+    },
+    {
+      "question": "Modal verbs (can, may, must) के साथ कौन सा verb form आता है?",
+      "correct": "V1 (Base form)",
+      "options": ["V1 (Base form)", "V1+ing", "V2", "V3"]
+    },
+    {
+      "question": "Passive Voice में कौन सा verb form main verb के रूप में use होता है?",
+      "correct": "V3 (Past Participle)",
+      "options": ["V3 (Past Participle)", "V1+ing", "V1", "V2"]
+    }
+  ]
+}
