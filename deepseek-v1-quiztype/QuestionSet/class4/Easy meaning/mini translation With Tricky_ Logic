@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "question": "'सुनना' का मतलब है ears से, लेकिन English में कौन सा सही है?",
+      "correct": "Listen",
+      "options": ["Listen", "Hear", "Sound", "Music"]
+    },
+    {
+      "question": "Tricky! 'देखना' और 'दिखाना' - कौन सा 'See' है?",
+      "correct": "देखना = See",
+      "options": ["देखना = See", "दिखाना = See", "दोनों = See", "कोई नहीं = See"]
+    },
+    {
+      "question": "'Hot' का opposite 'Cold' है, लेकिन 'गर्म' का opposite क्या है?",
+      "correct": "ठंडा",
+      "options": ["ठंडा", "सर्द", "बर्फीला", "ठंडक"]
+    },
+    {
+      "question": "Common mistake! 'I am come' गलत है, सही क्या है?",
+      "correct": "I am coming",
+      "options": ["I am coming", "I am come", "I come am", "I coming am"]
+    },
+    {
+      "question": "Confusing! 'बड़ा' Big है, तो 'लंबा' क्या है?",
+      "correct": "Tall/Long",
+      "options": ["Tall/Long", "Big", "Large", "Huge"]
+    },
+    {
+      "question": "Ulta question! 'Good morning' कब नहीं कहते?",
+      "correct": "रात में",
+      "options": ["रात में", "सुबह में", "दिन में", "शाम में"]
+    },
+    {
+      "question": "Trick! 'सोना' के दो meanings हैं - कौन से?",
+      "correct": "Sleep और Gold",
+      "options": ["Sleep और Gold", "Sleep और Silver", "Gold और Money", "Rest और Metal"]
+    },
+    {
+      "question": "'Bread' रोटी है, लेकिन 'Red' क्या है?",
+      "correct": "लाल रंग",
+      "options": ["लाल रंग", "रोटी", "पढ़ना", "बिस्तर"]
+    },
+    {
+      "question": "Common error! 'I have 10 years' गलत है, सही कैसे कहें?",
+      "correct": "I am 10 years old",
+      "options": ["I am 10 years old", "I have 10 years", "I am 10 years", "My age 10 years"]
+    },
+    {
+      "question": "Opposite game! 'आना' Come है, तो 'जाना' क्या है?",
+      "correct": "Go",
+      "options": ["Go", "Come", "Move", "Walk"]
+    },
+    {
+      "question": "Confusing words! 'House' और 'Home' में क्या फर्क है?",
+      "correct": "House = मकान, Home = घर",
+      "options": ["House = मकान, Home = घर", "दोनों same हैं", "House बड़ा, Home छोटा", "कोई फर्क नहीं"]
+    },
+    {
+      "question": "Tricky! 'खुश' Happy है, लेकिन 'खुशी' क्या है?",
+      "correct": "Happiness",
+      "options": ["Happiness", "Happy", "Glad", "Joy"]
+    },
+    {
+      "question": "Grammar trick! 'She don't know' गलत है, सही क्या है?",
+      "correct": "She doesn't know",
+      "options": ["She doesn't know", "She don't know", "She not know", "She no know"]
+    },
+    {
+      "question": "उल्टा सवाल! 'Good' का opposite 'Bad' है, लेकिन 'अच्छा' का opposite?",
+      "correct": "बुरा",
+      "options": ["बुरा", "खराब", "गलत", "बेकार"]
+    },
+    {
+      "question": "Spelling trap! 'Right' सही है, लेकिन 'Write' क्या है?",
+      "correct": "लिखना",
+      "options": ["लिखना", "सही", "दाहिना", "अधिकार"]
+    },
+    {
+      "question": "Common mistake! 'What is your good name?' के बजाय क्या कहें?",
+      "correct": "What is your name?",
+      "options": ["What is your name?", "What is your good name?", "What your name?", "Your name what?"]
+    },
+    {
+      "question": "Tricky meaning! 'Time' समय है, लेकिन 'Times' क्या है?",
+      "correct": "बार (जैसे 2 times)",
+      "options": ["बार (जैसे 2 times)", "समय", "घड़ी", "दिन"]
+    },
+    {
+      "question": "Opposite thinking! 'Up' ऊपर है, तो 'Down' कहाँ है?",
+      "correct": "नीचे",
+      "options": ["नीचे", "ऊपर", "आगे", "पीछे"]
+    },
+    {
+      "question": "Common error! 'I am understanding' गलत है, सही क्या है?",
+      "correct": "I understand",
+      "options": ["I understand", "I am understanding", "I can understand", "I understanding"]
+    },
+    {
+      "question": "Confusing! 'Chicken' मुर्गा है या मुर्गी?",
+      "correct": "दोनों हो सकते हैं",
+      "options": ["दोनों हो सकते हैं", "सिर्फ मुर्गा", "सिर्फ मुर्गी", "बच्चा मुर्गा"]
+    },
+    {
+      "question": "Sound alike! 'Too' और 'Two' - कौन सा '2' है?",
+      "correct": "Two",
+      "options": ["Two", "Too", "To", "दोनों"]
+    },
+    {
+      "question": "Grammar trap! 'I have to go' का मतलब क्या है?",
+      "correct": "मुझे जाना है",
+      "options": ["मुझे जाना है", "मेरे पास जाना है", "मैं गया हूँ", "मैं जा रहा हूँ"]
+    },
+    {
+      "question": "Opposite game! 'Black' काला है, तो 'White' क्या है?",
+      "correct": "सफेद",
+      "options": ["सफेद", "काला", "धूसर", "रंगहीन"]
+    },
+    {
+      "question": "Tricky! 'मैं भूखा हूँ' को English में कैसे कहें?",
+      "correct": "I am hungry",
+      "options": ["I am hungry", "I am hunger", "I have hungry", "I feel hungry"]
+    },
+    {
+      "question": "Common mistake! 'How do you do?' का जवाब क्या है?",
+      "correct": "How do you do?",
+      "options": ["How do you do?", "I am fine", "I do good", "Very well"]
+    },
+    {
+      "question": "Confusing pair! 'Teach' सिखाना है, तो 'Learn' क्या है?",
+      "correct": "सीखना",
+      "options": ["सीखना", "सिखाना", "पढ़ना", "जानना"]
+    },
+    {
+      "question": "Spelling confusion! 'There' वहाँ है, तो 'Their' क्या है?",
+      "correct": "उनका",
+      "options": ["उनका", "वहाँ", "वे हैं", "यहाँ"]
+    },
+    {
+      "question": "Grammar trick! 'I am having a car' गलत है, सही क्या है?",
+      "correct": "I have a car",
+      "options": ["I have a car", "I am having a car", "I having a car", "I am have a car"]
+    },
+    {
+      "question": "Opposite thinking! 'Fast' तेज़ है, तो 'Last' क्या है?",
+      "correct": "अंतिम",
+      "options": ["अंतिम", "धीमा", "पहला", "तेज़"]
+    },
+    {
+      "question": "Tricky meaning! 'I see' का मतलब क्या है?",
+      "correct": "मैं समझता हूँ",
+      "options": ["मैं समझता हूँ", "मैं देखता हूँ", "मैं जानता हूँ", "मैं सुनता हूँ"]
+    },
+    {
+      "question": "Common error! 'She is more beautiful' में क्या गलत है?",
+      "correct": "कुछ भी गलत नहीं है",
+      "options": ["कुछ भी गलत नहीं है", "More नहीं आएगा", "Beautiful गलत है", "She is गलत है"]
+    },
+    {
+      "question": "Confusing! 'I am going to go' में कितने 'go' हैं?",
+      "correct": "2",
+      "options": ["2", "1", "3", "0"]
+    },
+    {
+      "question": "Sound trap! 'Son' बेटा है, तो 'Sun' क्या है?",
+      "correct": "सूरज",
+      "options": ["सूरज", "बेटा", "आवाज़", "मज़ा"]
+    },
+    {
+      "question": "Grammar puzzle! 'I want to' के बाद क्या आता है?",
+      "correct": "V1 (Base form)",
+      "options": ["V1 (Base form)", "V2 (Past form)", "V3 (Past participle)", "Ving"]
+    },
+    {
+      "question": "Opposite game! 'Open' खुला है, तो 'Close' क्या है?",
+      "correct": "बंद",
+      "options": ["बंद", "खुला", "पास", "दूर"]
+    },
+    {
+      "question": "Tricky question! 'No problem' का मतलब क्या है?",
+      "correct": "कोई बात नहीं",
+      "options": ["कोई बात नहीं", "कोई समस्या नहीं", "समस्या है", "मना है"]
+    },
+    {
+      "question": "Common mistake! 'I am agree' गलत है, सही क्या है?",
+      "correct": "I agree",
+      "options": ["I agree", "I am agree", "I am agreed", "I agreeing"]
+    },
+    {
+      "question": "Confusing words! 'Lose' हारना है, तो 'Loose' क्या है?",
+      "correct": "ढीला",
+      "options": ["ढीला", "हारना", "खोना", "छोड़ना"]
+    },
+    {
+      "question": "Spelling trap! 'Four' 4 है, तो 'For' क्या है?",
+      "correct": "के लिए",
+      "options": ["के लिए", "चार", "से पहले", "के बाद"]
+    },
+    {
+      "question": "Grammar trick! 'She can sings' में क्या गलत है?",
+      "correct": "Sings के बजाय Sing होगा",
+      "options": ["Sings के बजाय Sing होगा", "Can गलत है", "She गलत है", "कुछ गलत नहीं"]
+    },
+    {
+      "question": "Opposite thinking! 'Rich' अमीर है, तो 'Poor' क्या है?",
+      "correct": "गरीब",
+      "options": ["गरीब", "अमीर", "कम", "बुरा"]
+    },
+    {
+      "question": "Tricky meaning! 'Break' का दो meanings में से कौन सा सही है?",
+      "correct": "तोड़ना और आराम दोनों",
+      "options": ["तोड़ना और आराम दोनों", "सिर्फ तोड़ना", "सिर्फ आराम", "न तोड़ना न आराम"]
+    },
+    {
+      "question": "Common error! 'I am knowing him' गलत है, सही क्या है?",
+      "correct": "I know him",
+      "options": ["I know him", "I am knowing him", "I knowing him", "I am know him"]
+    },
+    {
+      "question": "Confusing pair! 'Buy' खरीदना है, तो 'By' क्या है?",
+      "correct": "के द्वारा",
+      "options": ["के द्वारा", "खरीदना", "के पास", "के साथ"]
+    },
+    {
+      "question": "Sound alike! 'Ate' खाया है, तो 'Eight' क्या है?",
+      "correct": "आठ",
+      "options": ["आठ", "खाया", "देर", "वजन"]
+    },
+    {
+      "question": "Grammar puzzle! 'I have been' के बाद क्या आता है?",
+      "correct": "Ving (Present participle)",
+      "options": ["Ving (Present participle)", "V1 (Base form)", "V2 (Past form)", "V3 (Past participle)"]
+    },
+    {
+      "question": "Opposite game! 'Heavy' भारी है, तो 'Light' क्या है?",
+      "correct": "हल्का",
+      "options": ["हल्का", "भारी", "उजला", "तेज़"]
+    },
+    {
+      "question": "Tricky question! 'Mind your language' का मतलब क्या है?",
+      "correct": "अपनी भाषा संभाल कर बोलो",
+      "options": ["अपनी भाषा संभाल कर बोलो", "अपनी भाषा सीखो", "भाषा पर ध्यान दो", "भाषा मत भूलना"]
+    },
+    {
+      "question": "Common mistake! 'I am born in 1990' गलत है, सही क्या है?",
+      "correct": "I was born in 1990",
+      "options": ["I was born in 1990", "I am born in 1990", "I born in 1990", "I am birth in 1990"]
+    },
+    {
+      "question": "Confusing words! 'Accept' स्वीकार करना है, तो 'Except' क्या है?",
+      "correct": "के अलावा",
+      "options": ["के अलावा", "स्वीकार करना", "अपेक्षा करना", "छोड़ देना"]
+    },
+    {
+      "question": "Spelling trap! 'Peace' शांति है, तो 'Piece' क्या है?",
+      "correct": "टुकड़ा",
+      "options": ["टुकड़ा", "शांति", "स्थान", "समय"]
+    }
+  ]
+}
