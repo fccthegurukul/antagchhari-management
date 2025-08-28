@@ -1,0 +1,369 @@
+{
+  "questions": [
+    {
+      "question": "मैं रोज स्कूल जाता हूँ।",
+      "correct": "I go to school daily.",
+      "options": ["I go to school daily.", "I am going to school daily.", "I went to school daily.", "I will go to school daily."]
+    },
+    {
+      "question": "मैं स्कूल नहीं जाता हूँ।",
+      "correct": "I do not go to school.",
+      "options": ["I do not go to school.", "I am not going to school.", "I did not go to school.", "I will not go to school."]
+    },
+    {
+      "question": "क्या तुम स्कूल जाते हो?",
+      "correct": "Do you go to school?",
+      "options": ["Do you go to school?", "Are you going to school?", "Did you go to school?", "Will you go to school?"]
+    },
+    {
+      "question": "तुम कहाँ जाते हो?",
+      "correct": "Where do you go?",
+      "options": ["Where do you go?", "Where are you going?", "Where did you go?", "Where will you go?"]
+    },
+    {
+      "question": "She ___ English every day.",
+      "correct": "speaks",
+      "options": ["speaks", "is speaking", "spoke", "will speak"]
+    },
+    {
+      "question": "वह अभी पढ़ रहा है।",
+      "correct": "He is reading now.",
+      "options": ["He is reading now.", "He reads now.", "He read now.", "He will read now."]
+    },
+    {
+      "question": "बच्चे खेल नहीं रहे हैं।",
+      "correct": "Children are not playing.",
+      "options": ["Children are not playing.", "Children do not play.", "Children did not play.", "Children will not play."]
+    },
+    {
+      "question": "क्या वे काम कर रहे हैं?",
+      "correct": "Are they working?",
+      "options": ["Are they working?", "Do they work?", "Did they work?", "Will they work?"]
+    },
+    {
+      "question": "तुम क्या कर रहे हो?",
+      "correct": "What are you doing?",
+      "options": ["What are you doing?", "What do you do?", "What did you do?", "What will you do?"]
+    },
+    {
+      "question": "It ___ heavily right now.",
+      "correct": "is raining",
+      "options": ["is raining", "rains", "rained", "will rain"]
+    },
+    {
+      "question": "मैंने यह काम किया है।",
+      "correct": "I have done this work.",
+      "options": ["I have done this work.", "I am doing this work.", "I did this work.", "I will do this work."]
+    },
+    {
+      "question": "उसने अभी तक खाना नहीं खाया है।",
+      "correct": "He has not eaten food yet.",
+      "options": ["He has not eaten food yet.", "He is not eating food yet.", "He did not eat food yet.", "He will not eat food yet."]
+    },
+    {
+      "question": "क्या तुमने होमवर्क किया है?",
+      "correct": "Have you done homework?",
+      "options": ["Have you done homework?", "Are you doing homework?", "Did you do homework?", "Will you do homework?"]
+    },
+    {
+      "question": "तुमने कितनी किताबें पढ़ी हैं?",
+      "correct": "How many books have you read?",
+      "options": ["How many books have you read?", "How many books are you reading?", "How many books did you read?", "How many books will you read?"]
+    },
+    {
+      "question": "They ___ this movie before.",
+      "correct": "have watched",
+      "options": ["have watched", "are watching", "watched", "will watch"]
+    },
+    {
+      "question": "वह दो घंटे से पढ़ रहा है।",
+      "correct": "He has been reading for two hours.",
+      "options": ["He has been reading for two hours.", "He is reading for two hours.", "He read for two hours.", "He will read for two hours."]
+    },
+    {
+      "question": "बारिश तीन दिन से नहीं हो रही है।",
+      "correct": "It has not been raining for three days.",
+      "options": ["It has not been raining for three days.", "It is not raining for three days.", "It did not rain for three days.", "It will not rain for three days."]
+    },
+    {
+      "question": "क्या तुम सुबह से इंतज़ार कर रहे हो?",
+      "correct": "Have you been waiting since morning?",
+      "options": ["Have you been waiting since morning?", "Are you waiting since morning?", "Did you wait since morning?", "Will you wait since morning?"]
+    },
+    {
+      "question": "वे कितने समय से यहाँ रह रहे हैं?",
+      "correct": "How long have they been living here?",
+      "options": ["How long have they been living here?", "How long are they living here?", "How long did they live here?", "How long will they live here?"]
+    },
+    {
+      "question": "She ___ for her friend for an hour.",
+      "correct": "has been waiting",
+      "options": ["has been waiting", "is waiting", "waited", "will wait"]
+    },
+    {
+      "question": "मैंने कल किताब पढ़ी।",
+      "correct": "I read a book yesterday.",
+      "options": ["I read a book yesterday.", "I am reading a book yesterday.", "I have read a book yesterday.", "I will read a book yesterday."]
+    },
+    {
+      "question": "उन्होंने पार्टी में डांस नहीं किया।",
+      "correct": "They did not dance at the party.",
+      "options": ["They did not dance at the party.", "They are not dancing at the party.", "They have not danced at the party.", "They will not dance at the party."]
+    },
+    {
+      "question": "क्या तुमने फिल्म देखी?",
+      "correct": "Did you watch the movie?",
+      "options": ["Did you watch the movie?", "Are you watching the movie?", "Have you watched the movie?", "Will you watch the movie?"]
+    },
+    {
+      "question": "तुम कल कहाँ गए थे?",
+      "correct": "Where did you go yesterday?",
+      "options": ["Where did you go yesterday?", "Where are you going yesterday?", "Where have you gone yesterday?", "Where will you go yesterday?"]
+    },
+    {
+      "question": "He ___ his homework last night.",
+      "correct": "finished",
+      "options": ["finished", "is finishing", "has finished", "will finish"]
+    },
+    {
+      "question": "जब मैं आया, वे खेल रहे थे।",
+      "correct": "When I came, they were playing.",
+      "options": ["When I came, they were playing.", "When I came, they play.", "When I came, they have played.", "When I came, they will play."]
+    },
+    {
+      "question": "बच्चे सो नहीं रहे थे।",
+      "correct": "Children were not sleeping.",
+      "options": ["Children were not sleeping.", "Children do not sleep.", "Children have not slept.", "Children will not sleep."]
+    },
+    {
+      "question": "क्या तुम पढ़ रहे थे?",
+      "correct": "Were you studying?",
+      "options": ["Were you studying?", "Do you study?", "Have you studied?", "Will you study?"]
+    },
+    {
+      "question": "तुम क्या कर रहे थे?",
+      "correct": "What were you doing?",
+      "options": ["What were you doing?", "What do you do?", "What have you done?", "What will you do?"]
+    },
+    {
+      "question": "It ___ when we reached home.",
+      "correct": "was raining",
+      "options": ["was raining", "rains", "has rained", "will rain"]
+    },
+    {
+      "question": "ट्रेन आने से पहले वह स्टेशन पहुँच गया था।",
+      "correct": "He had reached the station before the train arrived.",
+      "options": ["He had reached the station before the train arrived.", "He is reaching the station before the train arrived.", "He reached the station before the train arrived.", "He will reach the station before the train arrived."]
+    },
+    {
+      "question": "मैंने खाना नहीं खाया था।",
+      "correct": "I had not eaten food.",
+      "options": ["I had not eaten food.", "I am not eating food.", "I did not eat food.", "I will not eat food."]
+    },
+    {
+      "question": "क्या तुमने काम खत्म किया था?",
+      "correct": "Had you finished the work?",
+      "options": ["Had you finished the work?", "Are you finishing the work?", "Did you finish the work?", "Will you finish the work?"]
+    },
+    {
+      "question": "तुमने क्या किया था?",
+      "correct": "What had you done?",
+      "options": ["What had you done?", "What are you doing?", "What did you do?", "What will you do?"]
+    },
+    {
+      "question": "She ___ before I arrived.",
+      "correct": "had left",
+      "options": ["had left", "is leaving", "left", "will leave"]
+    },
+    {
+      "question": "वे दो घंटे से इंतज़ार कर रहे थे।",
+      "correct": "They had been waiting for two hours.",
+      "options": ["They had been waiting for two hours.", "They are waiting for two hours.", "They waited for two hours.", "They will wait for two hours."]
+    },
+    {
+      "question": "बारिश सुबह से नहीं हो रही थी।",
+      "correct": "It had not been raining since morning.",
+      "options": ["It had not been raining since morning.", "It is not raining since morning.", "It did not rain since morning.", "It will not rain since morning."]
+    },
+    {
+      "question": "क्या तुम घंटों से पढ़ रहे थे?",
+      "correct": "Had you been studying for hours?",
+      "options": ["Had you been studying for hours?", "Are you studying for hours?", "Did you study for hours?", "Will you study for hours?"]
+    },
+    {
+      "question": "तुम कब से यहाँ रह रहे थे?",
+      "correct": "How long had you been living here?",
+      "options": ["How long had you been living here?", "How long are you living here?", "How long did you live here?", "How long will you live here?"]
+    },
+    {
+      "question": "He ___ for three hours when I met him.",
+      "correct": "had been working",
+      "options": ["had been working", "is working", "worked", "will work"]
+    },
+    {
+      "question": "मैं कल दिल्ली जाऊंगा।",
+      "correct": "I will go to Delhi tomorrow.",
+      "options": ["I will go to Delhi tomorrow.", "I am going to Delhi tomorrow.", "I went to Delhi tomorrow.", "I go to Delhi tomorrow."]
+    },
+    {
+      "question": "वह परीक्षा पास नहीं करेगा।",
+      "correct": "He will not pass the exam.",
+      "options": ["He will not pass the exam.", "He is not passing the exam.", "He did not pass the exam.", "He does not pass the exam."]
+    },
+    {
+      "question": "क्या तुम मेरी मदद करोगे?",
+      "correct": "Will you help me?",
+      "options": ["Will you help me?", "Are you helping me?", "Did you help me?", "Do you help me?"]
+    },
+    {
+      "question": "तुम कल कहाँ जाओगे?",
+      "correct": "Where will you go tomorrow?",
+      "options": ["Where will you go tomorrow?", "Where are you going tomorrow?", "Where did you go tomorrow?", "Where do you go tomorrow?"]
+    },
+    {
+      "question": "They ___ the project next month.",
+      "correct": "will complete",
+      "options": ["will complete", "are completing", "completed", "complete"]
+    },
+    {
+      "question": "कल इस समय मैं पढ़ रहा होऊंगा।",
+      "correct": "I will be studying at this time tomorrow.",
+      "options": ["I will be studying at this time tomorrow.", "I am studying at this time tomorrow.", "I was studying at this time tomorrow.", "I study at this time tomorrow."]
+    },
+    {
+      "question": "वे काम नहीं कर रहे होंगे।",
+      "correct": "They will not be working.",
+      "options": ["They will not be working.", "They are not working.", "They were not working.", "They do not work."]
+    },
+    {
+      "question": "क्या तुम सो रहे होगे?",
+      "correct": "Will you be sleeping?",
+      "options": ["Will you be sleeping?", "Are you sleeping?", "Were you sleeping?", "Do you sleep?"]
+    },
+    {
+      "question": "तुम क्या कर रहे होगे?",
+      "correct": "What will you be doing?",
+      "options": ["What will you be doing?", "What are you doing?", "What were you doing?", "What do you do?"]
+    },
+    {
+      "question": "She ___ for her exam this evening.",
+      "correct": "will be preparing",
+      "options": ["will be preparing", "is preparing", "was preparing", "prepares"]
+    },
+    {
+      "question": "अगले महीने तक मैंने यह काम पूरा कर लिया होगा।",
+      "correct": "I will have completed this work by next month.",
+      "options": ["I will have completed this work by next month.", "I am completing this work by next month.", "I completed this work by next month.", "I complete this work by next month."]
+    },
+    {
+      "question": "ट्रेन आने तक वह नहीं पहुंचा होगा।",
+      "correct": "He will not have reached by the time the train arrives.",
+      "options": ["He will not have reached by the time the train arrives.", "He is not reaching by the time the train arrives.", "He did not reach by the time the train arrives.", "He does not reach by the time the train arrives."]
+    },
+    {
+      "question": "क्या तुमने काम खत्म किया होगा?",
+      "correct": "Will you have finished the work?",
+      "options": ["Will you have finished the work?", "Are you finishing the work?", "Did you finish the work?", "Do you finish the work?"]
+    },
+    {
+      "question": "तुमने क्या किया होगा?",
+      "correct": "What will you have done?",
+      "options": ["What will you have done?", "What are you doing?", "What did you do?", "What do you do?"]
+    },
+    {
+      "question": "By 2025, they ___ their degree.",
+      "correct": "will have completed",
+      "options": ["will have completed", "are completing", "completed", "complete"]
+    },
+    {
+      "question": "शाम तक वे तीन घंटे से खेल रहे होंगे।",
+      "correct": "They will have been playing for three hours by evening.",
+      "options": ["They will have been playing for three hours by evening.", "They are playing for three hours by evening.", "They played for three hours by evening.", "They play for three hours by evening."]
+    },
+    {
+      "question": "अगले साल तक वह यहाँ काम नहीं कर रहा होगा।",
+      "correct": "He will not have been working here by next year.",
+      "options": ["He will not have been working here by next year.", "He is not working here by next year.", "He did not work here by next year.", "He does not work here by next year."]
+    },
+    {
+      "question": "क्या तुम घंटों से पढ़ रहे होगे?",
+      "correct": "Will you have been studying for hours?",
+      "options": ["Will you have been studying for hours?", "Are you studying for hours?", "Did you study for hours?", "Do you study for hours?"]
+    },
+    {
+      "question": "तुम कितने समय से इंतज़ार कर रहे होगे?",
+      "correct": "How long will you have been waiting?",
+      "options": ["How long will you have been waiting?", "How long are you waiting?", "How long did you wait?", "How long do you wait?"]
+    },
+    {
+      "question": "By next month, she ___ here for five years.",
+      "correct": "will have been living",
+      "options": ["will have been living", "is living", "lived", "lives"]
+    },
+    {
+      "question": "Choose the correct tense: I ___ my breakfast every day at 8 AM.",
+      "correct": "have",
+      "options": ["have", "am having", "had", "will have"]
+    },
+    {
+      "question": "Identify the tense: 'She was cooking when I arrived.'",
+      "correct": "Past Continuous",
+      "options": ["Past Continuous", "Present Continuous", "Past Perfect", "Simple Past"]
+    },
+    {
+      "question": "Convert to negative: 'They play football.'",
+      "correct": "They do not play football.",
+      "options": ["They do not play football.", "They are not playing football.", "They did not play football.", "They will not play football."]
+    },
+    {
+      "question": "Make interrogative: 'He has finished his work.'",
+      "correct": "Has he finished his work?",
+      "options": ["Has he finished his work?", "Is he finishing his work?", "Did he finish his work?", "Will he finish his work?"]
+    },
+    {
+      "question": "Fill in the blank: She ___ to music right now.",
+      "correct": "is listening",
+      "options": ["is listening", "listens", "listened", "will listen"]
+    },
+    {
+      "question": "Choose correct form: By the time you arrive, I ___ cooking.",
+      "correct": "will have finished",
+      "options": ["will have finished", "am finishing", "finished", "finish"]
+    },
+    {
+      "question": "Translate: 'उसने पत्र लिखा है।'",
+      "correct": "He has written a letter.",
+      "options": ["He has written a letter.", "He is writing a letter.", "He wrote a letter.", "He will write a letter."]
+    },
+    {
+      "question": "Select the tense: 'I had been waiting for two hours.'",
+      "correct": "Past Perfect Continuous",
+      "options": ["Past Perfect Continuous", "Present Perfect Continuous", "Past Continuous", "Past Perfect"]
+    },
+    {
+      "question": "Complete: Tomorrow at 5 PM, we ___ dinner.",
+      "correct": "will be having",
+      "options": ["will be having", "are having", "had", "have"]
+    },
+    {
+      "question": "Convert to Wh-question: 'She goes to school by bus.'",
+      "correct": "How does she go to school?",
+      "options": ["How does she go to school?", "Where does she go?", "When does she go?", "Why does she go?"]
+    },
+    {
+      "question": "Choose correct: They ___ in this house since 2010.",
+      "correct": "have been living",
+      "options": ["have been living", "are living", "lived", "will live"]
+    },
+    {
+      "question": "Identify tense: 'The train will have left by then.'",
+      "correct": "Future Perfect",
+      "options": ["Future Perfect", "Future Continuous", "Simple Future", "Future Perfect Continuous"]
+    },
+    {
+      "question": "Make negative: 'I was reading a book.'",
+      "correct": "I was not reading a book.",
+      "options": ["I was not reading a book.", "I do not read a book.", "I did not read a book.", "I will not read a book."]
+    }
+  ]
+}
