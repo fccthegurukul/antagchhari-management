@@ -1,0 +1,524 @@
+{
+  "questions": [
+    {
+      "question": "मैं आम खाता हूँ।",
+      "correct": "I eat mango.",
+      "options": ["I eat mango.", "I am eat mango.", "I eats mango.", "I mango eat."]
+    },
+    {
+      "question": "वह किताब पढ़ती है।",
+      "correct": "She reads a book.",
+      "options": ["She reads a book.", "She read a book.", "She reading a book.", "She book reads."]
+    },
+    {
+      "question": "हम स्कूल जाते हैं।",
+      "correct": "We go to school.",
+      "options": ["We go to school.", "We going school.", "We are go school.", "We school go."]
+    },
+    {
+      "question": "बच्चे पार्क में खेल रहे हैं।",
+      "correct": "Children are playing in the park.",
+      "options": ["Children are playing in the park.", "Children playing in park.", "Children play in park.", "Children are play in park."]
+    },
+    {
+      "question": "मेरा नाम राज है।",
+      "correct": "My name is Raj.",
+      "options": ["My name is Raj.", "My name Raj is.", "My is name Raj.", "Name my is Raj."]
+    },
+    {
+      "question": "यह मेरी गाड़ी है।",
+      "correct": "This is my car.",
+      "options": ["This is my car.", "This my car is.", "This car my is.", "My car this is."]
+    },
+    {
+      "question": "वे दिल्ली से आते हैं।",
+      "correct": "They come from Delhi.",
+      "options": ["They come from Delhi.", "They coming from Delhi.", "They are come from Delhi.", "From Delhi they come."]
+    },
+    {
+      "question": "मैंने खाना खाया है।",
+      "correct": "I have eaten food.",
+      "options": ["I have eaten food.", "I have eat food.", "I eaten food have.", "Food I have eaten."]
+    },
+    {
+      "question": "बारिश हो रही है।",
+      "correct": "It is raining.",
+      "options": ["It is raining.", "Rain is happening.", "Rain happening is.", "It rain is."]
+    },
+    {
+      "question": "मुझे पानी चाहिए।",
+      "correct": "I need water.",
+      "options": ["I need water.", "I want water.", "Water I want.", "To me water want."]
+    },
+    {
+      "question": "तुम कहाँ रहते हो?",
+      "correct": "Where do you live?",
+      "options": ["Where do you live?", "Where you live?", "You where live?", "You live where?"]
+    },
+    {
+      "question": "वह बहुत अच्छा गाता है।",
+      "correct": "He sings very well.",
+      "options": ["He sings very well.", "He sings very good.", "He very good sings.", "Very well he sings."]
+    },
+    {
+      "question": "मैं कल आऊंगा।",
+      "correct": "I will come tomorrow.",
+      "options": ["I will come tomorrow.", "Tomorrow I will come.", "I come will tomorrow.", "Come I will tomorrow."]
+    },
+    {
+      "question": "उसके पास पैसे नहीं हैं।",
+      "correct": "He doesn't have money.",
+      "options": ["He doesn't have money.", "He don't have money.", "Money he doesn't have.", "He not have money."]
+    },
+    {
+      "question": "हमें जल्दी जाना है।",
+      "correct": "We have to go quickly.",
+      "options": ["We have to go quickly.", "We have go quickly.", "Quickly we have to go.", "Go quickly we have to."]
+    },
+    {
+      "question": "यह फूल बहुत सुंदर है।",
+      "correct": "This flower is very beautiful.",
+      "options": ["This flower is very beautiful.", "This flower very beautiful is.", "Very beautiful this flower is.", "Beautiful very this flower is."]
+    },
+    {
+      "question": "मैं रोज़ाना योग करता हूँ।",
+      "correct": "I do yoga daily.",
+      "options": ["I do yoga daily.", "Daily I do yoga.", "Yoga I do daily.", "I daily do yoga."]
+    },
+    {
+      "question": "उसका भाई डॉक्टर है।",
+      "correct": "His brother is a doctor.",
+      "options": ["His brother is a doctor.", "His brother doctor is.", "His brother is doctor.", "Doctor his brother is."]
+    },
+    {
+      "question": "मैंने यह फिल्म देखी है।",
+      "correct": "I have seen this movie.",
+      "options": ["I have seen this movie.", "I have see this movie.", "This movie I have seen.", "Seen I have this movie."]
+    },
+    {
+      "question": "वह अंग्रेजी बोल सकता है।",
+      "correct": "He can speak English.",
+      "options": ["He can speak English.", "English he can speak.", "He speak English can.", "Can speak English he."]
+    },
+    {
+      "question": "I love my family.",
+      "correct": "मैं अपने परिवार से प्यार करता हूँ।",
+      "options": ["मैं अपने परिवार से प्यार करता हूँ।", "मैं प्यार करता हूँ अपने परिवार से।", "अपने परिवार मैं प्यार करता हूँ।", "प्यार मैं करता हूँ अपने परिवार से।"]
+    },
+    {
+      "question": "She is a teacher.",
+      "correct": "वह एक अध्यापिका है।",
+      "options": ["वह एक अध्यापिका है।", "वह अध्यापिका एक है।", "एक अध्यापिका वह है।", "अध्यापिका वह एक है।"]
+    },
+    {
+      "question": "The sun rises in the east.",
+      "correct": "सूरज पूर्व में उगता है।",
+      "options": ["सूरज पूर्व में उगता है।", "पूर्व में सूरज उगता है।", "सूरज उगता है पूर्व में।", "उगता है सूरज पूर्व में।"]
+    },
+    {
+      "question": "We are going to the market.",
+      "correct": "हम बाज़ार जा रहे हैं।",
+      "options": ["हम बाज़ार जा रहे हैं।", "बाज़ार हम जा रहे हैं।", "जा रहे हैं हम बाज़ार।", "हम जा रहे बाज़ार हैं।"]
+    },
+    {
+      "question": "He doesn't like coffee.",
+      "correct": "उसे कॉफी पसंद नहीं है।",
+      "options": ["उसे कॉफी पसंद नहीं है।", "कॉफी उसे पसंद नहीं है।", "पसंद नहीं है उसे कॉफी।", "उसे पसंद कॉफी नहीं है।"]
+    },
+    {
+      "question": "मेरी माँ खाना बना रही है।",
+      "correct": "My mother is cooking food.",
+      "options": ["My mother is cooking food.", "My mother cooking food is.", "Food my mother is cooking.", "Cooking food my mother is."]
+    },
+    {
+      "question": "बच्चा रो रहा है।",
+      "correct": "The child is crying.",
+      "options": ["The child is crying.", "Child crying is.", "The child crying is.", "Crying the child is."]
+    },
+    {
+      "question": "हमारे पास समय नहीं है।",
+      "correct": "We don't have time.",
+      "options": ["We don't have time.", "Time we don't have.", "We not have time.", "Don't have time we."]
+    },
+    {
+      "question": "वह बस से आया है।",
+      "correct": "He has come by bus.",
+      "options": ["He has come by bus.", "He came by bus.", "By bus he came.", "Bus by he came."]
+    },
+    {
+      "question": "मुझे नींद आ रही है।",
+      "correct": "I am feeling sleepy.",
+      "options": ["I am feeling sleepy.", "Sleep coming to me is.", "I feeling sleepy am.", "Sleepy I am feeling."]
+    },
+    {
+      "question": "The children are playing outside.",
+      "correct": "बच्चे बाहर खेल रहे हैं।",
+      "options": ["बच्चे बाहर खेल रहे हैं।", "बाहर बच्चे खेल रहे हैं।", "खेल रहे हैं बच्चे बाहर।", "बच्चे खेल बाहर रहे हैं।"]
+    },
+    {
+      "question": "I have finished my work.",
+      "correct": "मैंने अपना काम समाप्त किया है।",
+      "options": ["मैंने अपना काम समाप्त किया है।", "अपना काम मैंने समाप्त किया है।", "समाप्त किया है मैंने अपना काम।", "मैंने समाप्त अपना काम किया है।"]
+    },
+    {
+      "question": "She can speak three languages.",
+      "correct": "वह तीन भाषाएं बोल सकती है।",
+      "options": ["वह तीन भाषाएं बोल सकती है।", "तीन भाषाएं वह बोल सकती है।", "बोल सकती है वह तीन भाषाएं।", "वह बोल तीन भाषाएं सकती है।"]
+    },
+    {
+      "question": "आज मौसम अच्छा है।",
+      "correct": "The weather is good today.",
+      "options": ["The weather is good today.", "Today weather good is.", "Weather today is good.", "Good weather today is."]
+    },
+    {
+      "question": "वे लोग बहुत शोर मचा रहे हैं।",
+      "correct": "Those people are making a lot of noise.",
+      "options": ["Those people are making a lot of noise.", "Those people making much noise are.", "A lot of noise those people are making.", "Making noise those people are."]
+    },
+    {
+      "question": "मैं तुम्हारा इंतज़ार कर रहा था।",
+      "correct": "I was waiting for you.",
+      "options": ["I was waiting for you.", "I waiting for you was.", "For you I was waiting.", "Waiting I was for you."]
+    },
+    {
+      "question": "उसने मुझसे सवाल पूछा।",
+      "correct": "He asked me a question.",
+      "options": ["He asked me a question.", "He asked me question.", "Question he asked me.", "Asked question he me."]
+    },
+    {
+      "question": "हमें घर वापस जाना चाहिए।",
+      "correct": "We should go back home.",
+      "options": ["We should go back home.", "Home back we should go.", "Should go home back we.", "Go back home we should."]
+    },
+    {
+      "question": "This book is very interesting.",
+      "correct": "यह किताब बहुत दिलचस्प है।",
+      "options": ["यह किताब बहुत दिलचस्प है।", "बहुत दिलचस्प यह किताब है।", "यह दिलचस्प किताब बहुत है।", "दिलचस्प बहुत यह किताब है।"]
+    },
+    {
+      "question": "They live in a big house.",
+      "correct": "वे एक बड़े घर में रहते हैं।",
+      "options": ["वे एक बड़े घर में रहते हैं।", "एक बड़े घर में वे रहते हैं।", "रहते हैं वे एक बड़े घर में।", "वे रहते एक बड़े घर में हैं।"]
+    },
+    {
+      "question": "यह काम बहुत कठिन है।",
+      "correct": "This work is very difficult.",
+      "options": ["This work is very difficult.", "This work very difficult is.", "Very difficult this work is.", "Difficult very this work is."]
+    },
+    {
+      "question": "मैं अपने दोस्त से मिला।",
+      "correct": "I met my friend.",
+      "options": ["I met my friend.", "I meet my friend.", "My friend I met.", "Met I my friend."]
+    },
+    {
+      "question": "वह हमेशा सच बोलता है।",
+      "correct": "He always speaks the truth.",
+      "options": ["He always speaks the truth.", "He always speak truth.", "Always he speaks truth.", "Truth he always speaks."]
+    },
+    {
+      "question": "मुझे यह जगह पसंद है।",
+      "correct": "I like this place.",
+      "options": ["I like this place.", "This place I like.", "Like this place I.", "I this place like."]
+    },
+    {
+      "question": "I want to learn Hindi.",
+      "correct": "मैं हिंदी सीखना चाहता हूँ।",
+      "options": ["मैं हिंदी सीखना चाहता हूँ।", "हिंदी मैं सीखना चाहता हूँ।", "सीखना चाहता हूँ मैं हिंदी।", "मैं चाहता हिंदी सीखना हूँ।"]
+    },
+    {
+      "question": "The weather is very hot today.",
+      "correct": "आज मौसम बहुत गर्म है।",
+      "options": ["आज मौसम बहुत गर्म है।", "बहुत गर्म आज मौसम है।", "आज गर्म मौसम बहुत है।", "मौसम आज बहुत गर्म है।"]
+    },
+    {
+      "question": "आपका क्या नाम है?",
+      "correct": "What is your name?",
+      "options": ["What is your name?", "What your name is?", "Your name what is?", "Name what is your?"]
+    },
+    {
+      "question": "वह अपनी गलती मान गया।",
+      "correct": "He accepted his mistake.",
+      "options": ["He accepted his mistake.", "He accept his mistake.", "His mistake he accepted.", "Accepted he his mistake."]
+    },
+    {
+      "question": "मैं आपकी मदद कर सकता हूँ।",
+      "correct": "I can help you.",
+      "options": ["I can help you.", "Help you I can.", "I help can you.", "Can I help you."]
+    },
+    {
+      "question": "उन्होंने हमें खाने पर बुलाया।",
+      "correct": "They invited us for dinner.",
+      "options": ["They invited us for dinner.", "They invite us for dinner.", "For dinner they invited us.", "Invited for dinner they us."]
+    },
+    {
+      "question": "He will come tomorrow morning.",
+      "correct": "वह कल सुबह आएगा।",
+      "options": ["वह कल सुबह आएगा।", "कल सुबह वह आएगा।", "आएगा वह कल सुबह।", "वह आएगा कल सुबह।"]
+    },
+    {
+      "question": "My father works in an office.",
+      "correct": "मेरे पिता एक दफ़्तर में काम करते हैं।",
+      "options": ["मेरे पिता एक दफ़्तर में काम करते हैं।", "एक दफ़्तर में मेरे पिता काम करते हैं।", "काम करते हैं मेरे पिता एक दफ़्तर में।", "मेरे पिता काम एक दफ़्तर में करते हैं।"]
+    },
+    {
+      "question": "यह सड़क बहुत चौड़ी है।",
+      "correct": "This road is very wide.",
+      "options": ["This road is very wide.", "This road very wide is.", "Very wide this road is.", "Wide very this road is."]
+    },
+    {
+      "question": "मैंने उसे पहले कभी नहीं देखा।",
+      "correct": "I have never seen him before.",
+      "options": ["I have never seen him before.", "I never saw him before.", "Never I saw him before.", "Him I never saw before."]
+    },
+    {
+      "question": "We had dinner at a restaurant.",
+      "correct": "हमने एक रेस्टोरेंट में खाना खाया।",
+      "options": ["हमने एक रेस्टोरेंट में खाना खाया।", "एक रेस्टोरेंट में हमने खाना खाया।", "खाना खाया हमने एक रेस्टोरेंट में।", "हमने खाना एक रेस्टोरेंट में खाया।"]
+    },
+    {
+      "question": "She always helps her friends.",
+      "correct": "वह हमेशा अपने दोस्तों की मदद करती है।",
+      "options": ["वह हमेशा अपने दोस्तों की मदद करती है।", "हमेशा वह अपने दोस्तों की मदद करती है।", "अपने दोस्तों की मदद वह हमेशा करती है।", "वह अपने दोस्तों की हमेशा मदद करती है।"]
+    },
+    {
+      "question": "मेरी बहन खाना बना रही है।",
+      "correct": "My sister is cooking food.",
+      "options": ["My sister is cooking food.", "My sister cooking food is.", "Food my sister is cooking.", "Cooking food my sister is."]
+    },
+    {
+      "question": "वह रोज़ाना व्यायाम करता है।",
+      "correct": "He exercises daily.",
+      "options": ["He exercises daily.", "Daily he exercises.", "Exercises he daily.", "He daily exercises."]
+    },
+    {
+      "question": "The train arrived late.",
+      "correct": "ट्रेन देर से आई।",
+      "options": ["ट्रेन देर से आई।", "देर से ट्रेन आई।", "आई ट्रेन देर से।", "ट्रेन आई देर से।"]
+    },
+    {
+      "question": "I need to buy some vegetables.",
+      "correct": "मुझे कुछ सब्जियां खरीदनी हैं।",
+      "options": ["मुझे कुछ सब्जियां खरीदनी हैं।", "कुछ सब्जियां मुझे खरीदनी हैं।", "खरीदनी हैं मुझे कुछ सब्जियां।", "मुझे खरीदनी कुछ सब्जियां हैं।"]
+    },
+    {
+      "question": "बच्चों को खेलना पसंद है।",
+      "correct": "Children like to play.",
+      "options": ["Children like to play.", "Children likes to play.", "To play children like.", "Like to play children."]
+    },
+    {
+      "question": "मैं किताब पढ़ रहा हूँ।",
+      "correct": "I am reading a book.",
+      "options": ["I am reading a book.", "I reading a book am.", "A book I am reading.", "Reading I am a book."]
+    },
+    {
+      "question": "They are watching television.",
+      "correct": "वे टेलीविजन देख रहे हैं।",
+      "options": ["वे टेलीविजन देख रहे हैं।", "टेलीविजन वे देख रहे हैं।", "देख रहे हैं वे टेलीविजन।", "वे देख टेलीविजन रहे हैं।"]
+    },
+    {
+      "question": "The flowers in the garden are beautiful.",
+      "correct": "बगीचे में फूल सुंदर हैं।",
+      "options": ["बगीचे में फूल सुंदर हैं।", "फूल बगीचे में सुंदर हैं।", "सुंदर हैं बगीचे में फूल।", "बगीचे में सुंदर फूल हैं।"]
+    },
+    {
+      "question": "उसका छोटा भाई पढ़ाई कर रहा है।",
+      "correct": "His younger brother is studying.",
+      "options": ["His younger brother is studying.", "His younger brother studying is.", "Studying his younger brother is.", "His brother younger is studying."]
+    },
+    {
+      "question": "हमें बस का इंतज़ार करना है।",
+      "correct": "We have to wait for the bus.",
+      "options": ["We have to wait for the bus.", "We have wait for the bus.", "For the bus we have to wait.", "Wait for the bus we have to."]
+    },
+    {
+      "question": "I have been waiting for an hour.",
+      "correct": "मैं एक घंटे से इंतज़ार कर रहा हूँ।",
+      "options": ["मैं एक घंटे से इंतज़ार कर रहा हूँ।", "एक घंटे से मैं इंतज़ार कर रहा हूँ।", "इंतज़ार कर रहा हूँ मैं एक घंटे से।", "मैं इंतज़ार एक घंटे से कर रहा हूँ।"]
+    },
+    {
+      "question": "She forgot her keys at home.",
+      "correct": "वह अपनी चाबियाँ घर भूल गई।",
+      "options": ["वह अपनी चाबियाँ घर भूल गई।", "अपनी चाबियाँ वह घर भूल गई।", "घर भूल गई वह अपनी चाबियाँ।", "वह घर अपनी चाबियाँ भूल गई।"]
+    },
+    {
+      "question": "डॉक्टर मरीज़ को देख रहा है।",
+      "correct": "The doctor is examining the patient.",
+      "options": ["The doctor is examining the patient.", "Doctor examining the patient is.", "The patient doctor is examining.", "Examining the patient doctor is."]
+    },
+    {
+      "question": "मैं अपने माता-पिता से बात कर रहा था।",
+      "correct": "I was talking to my parents.",
+      "options": ["I was talking to my parents.", "I talking to my parents was.", "To my parents I was talking.", "Talking I was to my parents."]
+    },
+    {
+      "question": "The students are studying for exams.",
+      "correct": "छात्र परीक्षा के लिए पढ़ाई कर रहे हैं।",
+      "options": ["छात्र परीक्षा के लिए पढ़ाई कर रहे हैं।", "परीक्षा के लिए छात्र पढ़ाई कर रहे हैं।", "पढ़ाई कर रहे हैं छात्र परीक्षा के लिए।", "छात्र पढ़ाई परीक्षा के लिए कर रहे हैं।"]
+    },
+    {
+      "question": "My car broke down yesterday.",
+      "correct": "मेरी गाड़ी कल खराब हो गई।",
+      "options": ["मेरी गाड़ी कल खराब हो गई।", "कल मेरी गाड़ी खराब हो गई।", "खराब हो गई मेरी गाड़ी कल।", "मेरी गाड़ी खराब कल हो गई।"]
+    },
+    {
+      "question": "वह नई नौकरी की तलाश कर रहा है।",
+      "correct": "He is looking for a new job.",
+      "options": ["He is looking for a new job.", "He looking for a new job is.", "A new job he is looking for.", "Looking for a new job he is."]
+    },
+    {
+      "question": "बारिश के कारण खेल रद्द हो गया।",
+      "correct": "The game was cancelled due to rain.",
+      "options": ["The game was cancelled due to rain.", "Due to rain the game was cancelled.", "The game cancelled was due to rain.", "Cancelled the game was due to rain."]
+    },
+    {
+      "question": "He is learning to drive.",
+      "correct": "वह गाड़ी चलाना सीख रहा है।",
+      "options": ["वह गाड़ी चलाना सीख रहा है।", "गाड़ी चलाना वह सीख रहा है।", "सीख रहा है वह गाड़ी चलाना।", "वह सीख गाड़ी चलाना रहा है।"]
+    },
+    {
+      "question": "We visited the museum last week.",
+      "correct": "हमने पिछले सप्ताह संग्रहालय देखा।",
+      "options": ["हमने पिछले सप्ताह संग्रहालय देखा।", "पिछले सप्ताह हमने संग्रहालय देखा।", "संग्रहालय देखा हमने पिछले सप्ताह।", "हमने संग्रहालय पिछले सप्ताह देखा।"]
+    },
+    {
+      "question": "मुझे अपने दोस्त का फोन आया।",
+      "correct": "I got a call from my friend.",
+      "options": ["I got a call from my friend.", "A call I got from my friend.", "From my friend I got a call.", "Got a call I from my friend."]
+    },
+    {
+      "question": "बच्चे बगीचे में दौड़ रहे हैं।",
+      "correct": "Children are running in the garden.",
+      "options": ["Children are running in the garden.", "Children running in the garden are.", "In the garden children are running.", "Running children are in the garden."]
+    },
+    {
+      "question": "The baby is sleeping peacefully.",
+      "correct": "बच्चा शांति से सो रहा है।",
+      "options": ["बच्चा शांति से सो रहा है।", "शांति से बच्चा सो रहा है।", "सो रहा है बच्चा शांति से।", "बच्चा सो शांति से रहा है।"]
+    },
+    {
+      "question": "I don't understand this question.",
+      "correct": "मुझे यह सवाल समझ नहीं आता।",
+      "options": ["मुझे यह सवाल समझ नहीं आता।", "यह सवाल मुझे समझ नहीं आता।", "समझ नहीं आता मुझे यह सवाल।", "मुझे समझ यह सवाल नहीं आता।"]
+    },
+    {
+      "question": "उसने अपना होमवर्क पूरा कर लिया।",
+      "correct": "He completed his homework.",
+      "options": ["He completed his homework.", "His homework he completed.", "Completed he his homework.", "He his homework completed."]
+    },
+    {
+      "question": "मैं रोज़ाना सुबह जल्दी उठता हूँ।",
+      "correct": "I wake up early every morning.",
+      "options": ["I wake up early every morning.", "Every morning I wake up early.", "Early I wake up every morning.", "I early wake up every morning."]
+    },
+    {
+      "question": "They have moved to a new city.",
+      "correct": "वे एक नए शहर में चले गए हैं।",
+      "options": ["वे एक नए शहर में चले गए हैं।", "एक नए शहर में वे चले गए हैं।", "चले गए हैं वे एक नए शहर में।", "वे चले एक नए शहर में गए हैं।"]
+    },
+    {
+      "question": "The door is locked.",
+      "correct": "दरवाज़ा बंद है।",
+      "options": ["दरवाज़ा बंद है।", "बंद है दरवाज़ा।", "दरवाज़ा है बंद।", "है दरवाज़ा बंद।"]
+    },
+    {
+      "question": "हमारे स्कूल में एक बड़ा खेल का मैदान है।",
+      "correct": "Our school has a big playground.",
+      "options": ["Our school has a big playground.", "A big playground our school has.", "Our school a big playground has.", "Has our school a big playground."]
+    },
+    {
+      "question": "वह अपनी माँ के साथ बाज़ार गई।",
+      "correct": "She went to the market with her mother.",
+      "options": ["She went to the market with her mother.", "With her mother she went to the market.", "To the market she went with her mother.", "She with her mother went to the market."]
+    },
+    {
+      "question": "I prefer tea over coffee.",
+      "correct": "मैं कॉफी से ज्यादा चाय पसंद करता हूँ।",
+      "options": ["मैं कॉफी से ज्यादा चाय पसंद करता हूँ।", "कॉफी से ज्यादा मैं चाय पसंद करता हूँ।", "चाय पसंद करता हूँ मैं कॉफी से ज्यादा।", "मैं चाय कॉफी से ज्यादा पसंद करता हूँ।"]
+    },
+    {
+      "question": "She is preparing for her interview.",
+      "correct": "वह अपने इंटरव्यू की तैयारी कर रही है।",
+      "options": ["वह अपने इंटरव्यू की तैयारी कर रही है।", "अपने इंटरव्यू की वह तैयारी कर रही है।", "तैयारी कर रही है वह अपने इंटरव्यू की।", "वह तैयारी अपने इंटरव्यू की कर रही है।"]
+    },
+    {
+      "question": "मैं अपने दादाजी से मिलने गया था।",
+      "correct": "I went to meet my grandfather.",
+      "options": ["I went to meet my grandfather.", "To meet my grandfather I went.", "I to meet went my grandfather.", "Went I to meet my grandfather."]
+    },
+    {
+      "question": "बच्चे स्कूल से घर आ गए हैं।",
+      "correct": "Children have come home from school.",
+      "options": ["Children have come home from school.", "From school children have come home.", "Home children have come from school.", "Children from school have come home."]
+    },
+    {
+      "question": "The phone is ringing.",
+      "correct": "फोन की घंटी बज रही है।",
+      "options": ["फोन की घंटी बज रही है।", "घंटी फोन की बज रही है।", "बज रही है फोन की घंटी।", "फोन की बज घंटी रही है।"]
+    },
+    {
+      "question": "We celebrate festivals together.",
+      "correct": "हम मिलकर त्योहार मनाते हैं।",
+      "options": ["हम मिलकर त्योहार मनाते हैं।", "मिलकर हम त्योहार मनाते हैं।", "त्योहार मनाते हैं हम मिलकर।", "हम त्योहार मिलकर मनाते हैं।"]
+    },
+    {
+      "question": "मेरे पिता अखबार पढ़ रहे हैं।",
+      "correct": "My father is reading the newspaper.",
+      "options": ["My father is reading the newspaper.", "My father reading the newspaper is.", "The newspaper my father is reading.", "Reading the newspaper my father is."]
+    },
+    {
+      "question": "गर्मियों में हमें बहुत पसीना आता है।",
+      "correct": "We sweat a lot in summer.",
+      "options": ["We sweat a lot in summer.", "In summer we sweat a lot.", "A lot we sweat in summer.", "Sweat we a lot in summer."]
+    },
+    {
+      "question": "He lost his wallet.",
+      "correct": "उसका बटुआ खो गया।",
+      "options": ["उसका बटुआ खो गया।", "बटुआ उसका खो गया।", "खो गया उसका बटुआ।", "उसका खो बटुआ गया।"]
+    },
+    {
+      "question": "The medicine is very bitter.",
+      "correct": "दवा बहुत कड़वी है।",
+      "options": ["दवा बहुत कड़वी है।", "बहुत कड़वी दवा है।", "दवा कड़वी बहुत है।", "कड़वी बहुत दवा है।"]
+    },
+    {
+      "question": "रात में तारे चमकते हैं।",
+      "correct": "Stars shine at night.",
+      "options": ["Stars shine at night.", "At night stars shine.", "Shine stars at night.", "Stars at night shine."]
+    },
+    {
+      "question": "मैं अपने कमरे की सफाई कर रहा हूँ।",
+      "correct": "I am cleaning my room.",
+      "options": ["I am cleaning my room.", "My room I am cleaning.", "Cleaning my room I am.", "I cleaning am my room."]
+    },
+    {
+      "question": "I am learning to cook.",
+      "correct": "मैं खाना बनाना सीख रहा हूँ।",
+      "options": ["मैं खाना बनाना सीख रहा हूँ।", "खाना बनाना मैं सीख रहा हूँ।", "सीख रहा हूँ मैं खाना बनाना।", "मैं सीख खाना बनाना रहा हूँ।"]
+    },
+    {
+      "question": "The birds are singing in the trees.",
+      "correct": "पेड़ों पर पंछी गा रहे हैं।",
+      "options": ["पेड़ों पर पंछी गा रहे हैं।", "पंछी पेड़ों पर गा रहे हैं।", "गा रहे हैं पंछी पेड़ों पर।", "पेड़ों पर गा पंछी रहे हैं।"]
+    },
+    {
+      "question": "वह अपनी बहन के साथ फिल्म देखने गई।",
+      "correct": "She went to watch a movie with her sister.",
+      "options": ["She went to watch a movie with her sister.", "With her sister she went to watch a movie.", "To watch a movie she went with her sister.", "She with her sister went to watch a movie."]
+    },
+    {
+      "question": "हमने अपने मित्रों को जन्मदिन की पार्टी में बुलाया।",
+      "correct": "We invited our friends to the birthday party.",
+      "options": ["We invited our friends to the birthday party.", "Our friends we invited to the birthday party.", "To the birthday party we invited our friends.", "We to the birthday party invited our friends."]
+    },
+    {
+      "question": "My sister is getting married next month.",
+      "correct": "मेरी बहन अगले महीने शादी कर रही है।",
+      "options": ["मेरी बहन अगले महीने शादी कर रही है।", "अगले महीने मेरी बहन शादी कर रही है।", "शादी कर रही है मेरी बहन अगले महीने।", "मेरी बहन शादी अगले महीने कर रही है।"]
+    },
+    {
+      "question": "The water is too cold.",
+      "correct": "पानी बहुत ठंडा है।",
+      "options": ["पानी बहुत ठंडा है।", "बहुत ठंडा पानी है।", "पानी ठंडा बहुत है।", "ठंडा बहुत पानी है।"]
+    }
+  ]
+}
