@@ -11,142 +11,214 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-shapes"></div>
-    <div class="game-container">
-        
-        <div class="screen active" id="setup-screen">
-            <div class="card setup-card">
-                <h1 class="title"><i class="fas fa-cogs shine"></i> गेम सेटअप</h1>
-                
-                <div class="settings-section">
-                    <h3><i class="fas fa-sliders-h"></i> गेम सेटिंग्स</h3>
-                    <div class="settings-grid">
-                        <div class="setting-item">
-                            <label for="ttsToggle" class="setting-label">
-                                <i class="fas fa-volume-up"></i> नाम उच्चारण
-                            </label>
-                            <div class="toggle-switch">
-                                <input type="checkbox" id="ttsToggle" checked>
-                                <label for="ttsToggle" class="toggle-slider"></label>
-                            </div>
-                        </div>
-                        <div class="setting-item">
-                            <label for="teamCount" class="setting-label">
-                                <i class="fas fa-users"></i> कुल टीमें
-                            </label>
-                            <select id="teamCount">
-                                <option value="3">3 टीमें</option>
-                                <option value="4">4 टीमें</option>
-                                <option value="5" selected>5 टीमें</option>
-                                <option value="6">6 टीमें</option>
-                                <option value="8">8 टीमें</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+  <div class="background-shapes"></div>
+  <div class="game-container">
 
-                <div class="input-group">
-                    <i class="fas fa-user-plus input-icon"></i>
-                    <input type="text" id="playerName" placeholder="खिलाड़ी का नाम...">
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-users input-icon"></i>
-                    <select id="groupSelect">
-                        </select>
-                </div>
-                <button onclick="addPlayer()" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> खिलाड़ी जोड़ें</button>
-                <div class="game-options">
-                    <label for="turnOrderSelect">प्रश्न पूछने का क्रम:</label>
-                    <select id="turnOrderSelect">
-                        <option value="round-robin">एक-एक करके (Round Robin)</option>
-                        <option value="group-by-group">एक-एक टीम (Group by Group)</option>
-                    </select>
-                </div>
-                <button onclick="startGame()" class="btn btn-start btn-block"><i class="fas fa-play"></i> गेम शुरू करें</button>
+    <!-- SETUP SCREEN -->
+    <div class="screen active" id="setup-screen">
+      <div class="card setup-card">
+        <h1 class="title"><i class="fas fa-cogs shine"></i> गेम सेटअप</h1>
+
+        <div class="settings-section">
+          <h3><i class="fas fa-sliders-h"></i> गेम सेटिंग्स</h3>
+          <div class="settings-grid">
+            <div class="setting-item">
+              <label for="ttsToggle" class="setting-label">
+                <i class="fas fa-volume-up"></i> नाम उच्चारण
+              </label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="ttsToggle" checked>
+                <label for="ttsToggle" class="toggle-slider"></label>
+              </div>
             </div>
-            
-            <div id="leaderboard-preview-container" class="card">
-                <h2 class="preview-title"><i class="fas fa-users-viewfinder"></i> खिलाड़ी सूची</h2>
-                <div id="leaderboardContentPreview" class="leaderboard-content"></div>
+
+            <div class="setting-item">
+              <label for="teamCount" class="setting-label">
+                <i class="fas fa-users"></i> कुल टीमें
+              </label>
+              <select id="teamCount">
+                <option value="3">3 टीमें</option>
+                <option value="4">4 टीमें</option>
+                <option value="5" selected>5 टीमें</option>
+                <option value="6">6 टीमें</option>
+                <option value="8">8 टीमें</option>
+              </select>
             </div>
+
+            <div class="setting-item">
+              <label for="lifelineCount" class="setting-label">
+                <i class="fas fa-life-ring"></i> प्रति छात्र लाइफलाइन
+              </label>
+              <select id="lifelineCount">
+                <option value="0">0</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
         </div>
-        
-        <div class="screen" id="game-screen">
-            <div class="game-header">
-                <div class="player-info-card card">
-                    <div class="current-player-section">
-                        <div id="currentGroup" class="player-group">ग्रुप A</div>
-                        <div id="currentPlayerName" class="player-name">Player Name</div>
-                    </div>
-                    <div class="live-leaderboard">
-                        <div class="live-section live-players-section">
-                            <h4><i class="fas fa-trophy"></i> टॉप 10 खिलाड़ी</h4>
-                            <div class="live-players-grid">
-                                <div id="liveTopPlayersCol1" class="live-list players-list"></div>
-                                <div id="liveTopPlayersCol2" class="live-list players-list"></div>
-                            </div>
-                        </div>
-                        <div class="live-section live-teams-section">
-                            <h4><i class="fas fa-users"></i> टॉप 4 टीम</h4>
-                            <div id="liveTopTeams" class="live-list teams-list"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="timerContainer" class="timer-container">
-                    <svg class="timer-svg" viewbox="0 0 60 60">
-                        <circle class="timer-bg" cx="30" cy="30" r="28"></circle>
-                        <circle class="timer-progress" cx="30" cy="30" r="28"></circle>
-                    </svg>
-                    <div class="timer-text">20</div>
-                </div>
-            </div>
-            
-            <div id="game-progress-container">
-                <div id="game-progress-bar"></div>
-            </div>
-            <div class="question-container">
-                <div class="question-box" id="question">प्रश्न यहाँ लोड होगा...</div>
-                <div id="feedbackMessage"></div>
-            </div>
-            <div class="answer-grid" id="answers">
-                </div>
-            <div class="game-footer">
-                <div class="answer-type-selector">
-                    <div class="shortcut-hint">'T' दबाकर स्विच करें</div>
-                    <div class="answer-type-buttons">
-                        <button id="memberAnswerBtn" class="answer-type-btn active" onclick="setAnswerType('member', this)"><i class="fas fa-user"></i> सदस्य (10)</button>
-                        <button id="teamAnswerBtn" class="answer-type-btn" onclick="setAnswerType('team', this)"><i class="fas fa-users"></i> टीम (5)</button>
-                    </div>
-                </div>
-                <button onclick="endGame()" class="btn btn-danger-outline btn-compact"><i class="fas fa-flag-checkered"></i> समाप्त</button>
-            </div>
+
+        <!-- Manage Players button to open modal -->
+        <button id="openPlayersModalBtn" class="btn btn-primary btn-block"><i class="fas fa-user-gear"></i> खिलाड़ी प्रबंधन</button>
+
+        <!-- Optional manual add (fallback) -->
+        <div class="input-group">
+          <i class="fas fa-user-plus input-icon"></i>
+          <input type="text" id="playerName" placeholder="खिलाड़ी का नाम...">
         </div>
-        
-        <div class="screen" id="leaderboard-screen">
-            <div class="card leaderboard-card">
-                <h2 id="final-winner"></h2>
-                <div class="leaderboard-title-bar">
-                    <h1 class="title"><i class="fas fa-trophy shine"></i> लीडरबोर्ड</h1>
-                    <div class="leaderboard-actions">
-                        <button class="btn-icon" onclick="printLeaderboard()" title="प्रिंट करें"><i class="fas fa-print"></i></button>
-                        <button class="btn-icon" onclick="downloadLeaderboardCSV()" title="CSV डाउनलोड करें"><i class="fas fa-download"></i></button>
-                        <button class="btn btn-secondary" onclick="restartGameSetup()"><i class="fas fa-redo"></i> नया गेम</button>
-                    </div>
-                </div>
-                <div id="leaderboardFilters">
-                    <button class="btn-filter active" onclick="setLeaderboardView('individual', this)">व्यक्तिगत</button>
-                    <button class="btn-filter" onclick="setLeaderboardView('team', this)">टीम</button>
-                </div>
-                <div class="leaderboard-header" id="leaderboardHeader"></div>
-                <div class="leaderboard-content-wrapper" id="leaderboardContentWrapper">
-                    <div id="leaderboardContent"></div>
-                </div>
-            </div>
+        <div class="input-group">
+          <i class="fas fa-users input-icon"></i>
+          <label for="groupSelect" class="visually-hidden">समूह चुनें</label>
+          <select id="groupSelect" title="समूह चुनें"></select>
         </div>
+        <button onclick="addPlayer()" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> खिलाड़ी जोड़ें</button>
+
+        <div class="game-options">
+          <label for="turnOrderSelect">प्रश्न पूछने का क्रम:</label>
+          <select id="turnOrderSelect">
+            <option value="round-robin">एक-एक करके (Round Robin)</option>
+            <option value="group-by-group">एक-एक टीम (Group by Group)</option>
+          </select>
+        </div>
+
+        <button onclick="startGame()" class="btn btn-start btn-block"><i class="fas fa-play"></i> गेम शुरू करें</button>
+      </div>
+
+      <div id="leaderboard-preview-container" class="card">
+        <h2 class="preview-title"><i class="fas fa-users-viewfinder"></i> खिलाड़ी सूची</h2>
+        <div id="leaderboardContentPreview" class="leaderboard-content"></div>
+      </div>
     </div>
-    <audio id="correctSound" src="sounds/correct-answer.mp3" preload="auto"></audio>
-    <audio id="incorrectSound" src="sounds/incorect.mp3" preload="auto"></audio>
-    <audio id="tickSound" src="sounds/tick.mp3" preload="auto"></audio>
-    <script src="script.js"></script>
+
+    <!-- GAME SCREEN -->
+    <div class="screen" id="game-screen">
+      <div class="game-header">
+        <div class="player-info-card card">
+          <div class="current-player-section">
+            <div id="currentGroup" class="player-group">ग्रुप A</div>
+            <div id="currentPlayerName" class="player-name">Player Name</div>
+            <div id="lifelineInfo" class="lifeline-chip" title="लाइफलाइन शेष">
+              <i class="fas fa-life-ring"></i> <span id="lifelineCountText">0</span>
+            </div>
+          </div>
+
+          <div class="live-leaderboard">
+            <div class="live-section live-players-section">
+              <h4><i class="fas fa-trophy"></i> टॉप 10 खिलाड़ी</h4>
+              <div class="live-players-grid">
+                <div id="liveTopPlayersCol1" class="live-list players-list"></div>
+                <div id="liveTopPlayersCol2" class="live-list players-list"></div>
+              </div>
+            </div>
+            <div class="live-section live-teams-section">
+              <h4><i class="fas fa-users"></i> टॉप 4 टीम</h4>
+              <div id="liveTopTeams" class="live-list teams-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="timerContainer" class="timer-container">
+          <svg class="timer-svg" viewbox="0 0 60 60">
+            <circle class="timer-bg" cx="30" cy="30" r="28"></circle>
+            <circle class="timer-progress" cx="30" cy="30" r="28"></circle>
+          </svg>
+          <div class="timer-text">20</div>
+        </div>
+      </div>
+
+      <div id="game-progress-container">
+        <div id="game-progress-bar"></div>
+      </div>
+
+      <div class="question-container" style="position: relative;">
+        <div class="pause-overlay" id="pauseOverlay"><div class="pause-badge">Paused</div></div>
+        <div class="question-box" id="question">प्रश्न यहाँ लोड होगा...</div>
+        <div id="feedbackMessage"></div>
+      </div>
+
+      <div class="answer-grid" id="answers"></div>
+
+      <div class="game-footer">
+        <div class="answer-type-selector">
+          <div class="shortcut-hint">'T' दबाकर स्विच करें | a/s/d/f से उत्तर चुनें</div>
+          <div class="answer-type-buttons">
+            <button id="memberAnswerBtn" class="answer-type-btn active" onclick="setAnswerType('member', this)">
+              <i class="fas fa-user"></i> सदस्य (10)
+            </button>
+            <button id="teamAnswerBtn" class="answer-type-btn" onclick="setAnswerType('team', this)">
+              <i class="fas fa-users"></i> टीम (5)
+            </button>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button id="lifelineBtn" class="btn btn-secondary btn-compact"><i class="fas fa-life-ring"></i> लाइफलाइन</button>
+          <button id="pauseBtn" class="btn btn-secondary btn-compact"><i class="fas fa-pause"></i> Pause</button>
+          <button onclick="endGame()" class="btn btn-danger-outline btn-compact"><i class="fas fa-flag-checkered"></i> समाप्त</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEADERBOARD SCREEN -->
+    <div class="screen" id="leaderboard-screen">
+      <div class="card leaderboard-card">
+        <h2 id="final-winner"></h2>
+        <div class="leaderboard-title-bar">
+          <h1 class="title"><i class="fas fa-trophy shine"></i> लीडरबोर्ड</h1>
+          <div class="leaderboard-actions">
+            <button class="btn-icon" onclick="printLeaderboard()" title="प्रिंट करें"><i class="fas fa-print"></i></button>
+            <button class="btn-icon" onclick="downloadLeaderboardCSV()" title="CSV डाउनलोड करें"><i class="fas fa-download"></i></button>
+            <button class="btn btn-secondary" onclick="restartGameSetup()"><i class="fas fa-redo"></i> नया गेम</button>
+          </div>
+        </div>
+        <div id="leaderboardFilters">
+          <button class="btn-filter active" onclick="setLeaderboardView('individual', this)">व्यक्तिगत</button>
+          <button class="btn-filter" onclick="setLeaderboardView('team', this)">टीम</button>
+        </div>
+        <div class="leaderboard-header" id="leaderboardHeader"></div>
+        <div class="leaderboard-content-wrapper" id="leaderboardContentWrapper">
+          <div id="leaderboardContent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Players Modal -->
+  <div id="playersModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="playersModalTitle">
+      <div class="modal-head">
+        <div class="modal-title" id="playersModalTitle"><i class="fas fa-user-gear"></i> खिलाड़ी प्रबंधन</div>
+        <button class="btn-icon-plain" onclick="closePlayersModal()" title="Close (Esc)"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <i class="fas fa-layer-group input-icon"></i>
+          <select id="classSelect"></select>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-search input-icon"></i>
+          <input type="text" id="studentSearch" placeholder="छात्र खोजें...">
+        </div>
+
+        <div class="assign-actions" style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+          <div id="assignButtons" style="display:flex; gap:6px; flex-wrap:wrap;"></div>
+          <button id="selectAllBtn" class="btn btn-compact btn-secondary">सब चुनें</button>
+          <button id="clearSelBtn" class="btn btn-compact btn-primary">क्लियर</button>
+        </div>
+
+        <div id="studentList" class="student-list"></div>
+      </div>
+      <div class="modal-foot">
+        <button id="autoBalanceBtn" class="btn btn-compact btn-primary"><i class="fas fa-random"></i> Auto-balance</button>
+        <button id="loadSelectedBtn" class="btn btn-start"><i class="fas fa-user-check"></i> चुने हुए जोड़ें</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="correctSound" src="sounds/correct-answer.mp3" preload="auto"></audio>
+  <audio id="incorrectSound" src="sounds/incorect.mp3" preload="auto"></audio>
+  <audio id="tickSound" src="sounds/tick.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
 </body>
 </html>
