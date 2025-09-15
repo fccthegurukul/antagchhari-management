@@ -170,6 +170,7 @@
             <button class="btn-icon" onclick="printLeaderboard()" title="प्रिंट करें"><i class="fas fa-print"></i></button>
             <button class="btn-icon" onclick="downloadLeaderboardCSV()" title="CSV डाउनलोड करें"><i class="fas fa-download"></i></button>
             <button class="btn btn-secondary" onclick="restartGameSetup()"><i class="fas fa-redo"></i> नया गेम</button>
+            <button id="downloadDataBtn">Data Download</button>
           </div>
         </div>
         <div id="leaderboardFilters">
@@ -219,6 +220,8 @@
   <audio id="correctSound" src="sounds/correct-answer.mp3" preload="auto"></audio>
   <audio id="incorrectSound" src="sounds/incorect.mp3" preload="auto"></audio>
   <audio id="tickSound" src="sounds/tick.mp3" preload="auto"></audio>
+  <audio id="lifeline-chip-sound" src="sounds/lifeline_music.mp3" preload="auto"></audio>
+  
   <script src="script.js"></script>
 </body>
 </html>

@@ -5,10 +5,13 @@ let gameSettings = {
   lifelinesPerStudent: 2
 };
 
+
 // === Timer & Pause state ===
 let globalTimerInterval = null;      // replaces GameManager.timerInterval for clarity
 let globalTimeLeft = 20;             // seconds left
 let isPaused = false;
+let startTime; // For tracking answer time
+
 
 // === Modal controls ===
 function openPlayersModal() {
@@ -22,18 +25,49 @@ function closePlayersModal() {
   modal.setAttribute('aria-hidden', 'true');
 }
 
+
 // === TTS ===
 function speakPlayerName(name) {
-  if (!gameSettings.ttsEnabled || !('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  const utt = new SpeechSynthesisUtterance(name);
-  utt.lang = 'hi-IN'; utt.rate = 0.6; utt.pitch = 1.1; utt.volume = 0.8;
-  const voices = speechSynthesis.getVoices();
-  const hi = voices.find(v => v.lang.includes('hi') && (v.name.includes('Google') || v.name.includes('Microsoft')))
-        || voices.find(v => v.lang.includes('hi')) || voices;
-  if (hi) utt.voice = hi;
-  speechSynthesis.speak(utt);
+    if (!gameSettings.ttsEnabled || !('speechSynthesis' in window)) {
+        console.warn('TTS disabled or not supported in this browser.');
+        return;
+    }
+    
+    // Cancel any ongoing speech
+    speechSynthesis.cancel();
+    
+    const utterance = new SpeechSynthesisUtterance(name);
+    
+    // Enhanced TTS settings for crisp and slow speech
+    utterance.lang = 'hi-IN';
+    utterance.rate = 0.8; // Slower rate for clarity
+    utterance.pitch = 1.1; // Slightly higher pitch
+    utterance.volume = 0.8; // Good volume level
+    
+    // Try to find the best Male Hindi voice
+    const voices = speechSynthesis.getVoices();
+    const maleHindiVoice = voices.find(voice => 
+        voice.lang.includes('hi') && 
+        (voice.name.includes('Google हिन्दी') || // Often male
+         voice.name.includes('Microsoft Ravi') || // Male voice
+         voice.name.toLowerCase().includes('male')) // General male check
+    ) || voices.find(voice => voice.lang.includes('hi')) || voices[0]; // Fallback
+    
+    if (maleHindiVoice) {
+        utterance.voice = maleHindiVoice;
+    } else {
+        console.warn('No suitable male Hindi voice found. Using default.');
+    }
+    
+    // Error handling for speech
+    utterance.onerror = (event) => {
+        console.error('TTS error:', event.error);
+    };
+    
+    speechSynthesis.speak(utterance);
 }
+
+
 
 // === Team options for manual add ===
 function generateTeamOptions() {
@@ -48,12 +82,14 @@ function generateTeamOptions() {
   }
 }
 
+
 // === Live leaderboard ===
 function updateLiveLeaderboard() {
   const col1 = document.getElementById('liveTopPlayersCol1');
   const col2 = document.getElementById('liveTopPlayersCol2');
   const topTeamsEl = document.getElementById('liveTopTeams');
   if (!col1 || !col2 || !topTeamsEl) return;
+
 
   const sortedPlayers = [...GameManager.players].sort((a,b)=>b.score-a.score).slice(0,10);
   const c1 = sortedPlayers.slice(0,5);
@@ -65,8 +101,10 @@ function updateLiveLeaderboard() {
       <span class="score">${p.score}</span>
     </div>`;
 
+
   col1.innerHTML = c1.map(item).join('');
   col2.innerHTML = c2.map((p,i)=>item(p,i+5)).join('');
+
 
   const teams = {};
   GameManager.players.forEach(p=>{
@@ -76,6 +114,7 @@ function updateLiveLeaderboard() {
     teams[p.group].correct += p.history.filter(h=>h.isCorrect).length;
     teams[p.group].wrong += p.history.filter(h=>!h.isCorrect).length;
   });
+
 
   const sortedTeams = Object.entries(teams).sort(([,a],[,b])=>b.score-a.score).slice(0,4);
   topTeamsEl.innerHTML = sortedTeams.map(([g,d],i)=>`
@@ -90,9 +129,11 @@ function updateLiveLeaderboard() {
   `).join('');
 }
 
+
 // === Student Registry + Selection (Modal) ===
 const REGISTRY_KEY = 'studentRegistry';
 const TEAM_LETTERS = ['A','B','C','D','E','F','G','H'];
+
 
 const DEFAULT_STUDENT_REGISTRY = {
 classes: {
@@ -105,9 +146,11 @@ classes: {
 }
 };
 
+
 let StudentRegistry = null;
 let selectedStudents = new Set();
 let assignmentMap = {};
+
 
 function loadRegistry() {
   const json = localStorage.getItem(REGISTRY_KEY);
@@ -197,6 +240,7 @@ function loadSelectedToGame() {
   else GameManager.showNotification(`${added} छात्र जोड़े गए`, 'success');
 }
 
+
 // === GameManager (enhanced with lifelines, pause, keyboard mapping) ===
 const GameManager = {
   players: [],
@@ -218,11 +262,13 @@ const GameManager = {
   currentTurnIndex: -1,
   lifelineUsedThisQuestion: false,
 
+
   addPlayer(name, group, opts={}) {
     if (!name?.trim()) { alert("कृपया खिलाड़ी का नाम दर्ज करें!"); return; }
     const exists = this.players.find(p=>p.name.toLowerCase()===name.toLowerCase() && p.group===group);
     if (exists) { alert("यह खिलाड़ी पहले से मौजूद है!"); return; }
     const lifelines = typeof opts.initLifelines === 'number' ? opts.initLifelines : gameSettings.lifelinesPerStudent;
+
 
     this.players.push({
       id: Date.now(),
@@ -230,8 +276,10 @@ const GameManager = {
       group,
       score: 0,
       history: [],
-      lifelinesRemaining: lifelines
+      lifelinesRemaining: lifelines,
+      totalTime: 0 // New: Total time for answers
     });
+
 
     this.saveState();
     showLeaderboard();
@@ -239,10 +287,12 @@ const GameManager = {
     this.showNotification(`${name} को ग्रुप ${group} में जोड़ा गया!`, 'success');
   },
 
+
   removePlayer(id){
     this.players = this.players.filter(p=>p.id!==id);
     this.saveState(); showLeaderboard(); updateLiveLeaderboard();
   },
+
 
   generateTurnOrder() {
     this.masterTurnList = [];
@@ -256,14 +306,20 @@ const GameManager = {
     }
   },
 
+
   startGame() {
     if (this.players.length===0) { alert("कम से कम एक खिलाड़ी जोड़ें!"); return; }
     gameSettings.ttsEnabled = document.getElementById('ttsToggle').checked;
     gameSettings.teamCount = parseInt(document.getElementById('teamCount').value);
     gameSettings.lifelinesPerStudent = parseInt(document.getElementById('lifelineCount').value);
 
-    // Ensure every player has proper lifelines at game start
-    this.players.forEach(p => { p.lifelinesRemaining = gameSettings.lifelinesPerStudent; });
+
+    // Ensure every player has proper lifelines and totalTime at game start
+    this.players.forEach(p => { 
+      p.lifelinesRemaining = gameSettings.lifelinesPerStudent;
+      p.totalTime = 0; // Reset time
+    });
+
 
     this.turnOrderMode = document.getElementById('turnOrderSelect').value;
     this.generateTurnOrder();
@@ -272,14 +328,18 @@ const GameManager = {
     this.lifelineUsedThisQuestion = false;
     isPaused = false;
 
+
     showScreen('game-screen');
     document.getElementById('pauseOverlay')?.classList.remove('show');
     document.getElementById('pauseBtn').innerHTML = `<i class="fas fa-pause"></i> Pause`;
 
+
     this.nextTurn();
   },
 
+
   getCurrentPlayer(){ return this.masterTurnList[this.currentTurnIndex]; },
+
 
   nextTurn() {
     if (this.usedQuestionIndices.length >= this.questions.length) { endGame(); return; }
@@ -290,6 +350,7 @@ const GameManager = {
     this.usedQuestionIndices.push(qIdx);
     this.lifelineUsedThisQuestion = false;
 
+
     this.displayQuestion();
     startTimer(20); // reset and start timer
     updateProgressBar();
@@ -297,19 +358,24 @@ const GameManager = {
     updateLifelineUI();
   },
 
+
   getGroups(){ return [...new Set(this.players.map(p=>p.group))].sort(); },
+
 
   displayQuestion() {
     const player = this.getCurrentPlayer();
     if (!player) { endGame(); return; }
 
+
     document.getElementById('currentGroup').textContent = `ग्रुप ${player.group}`;
     document.getElementById('currentPlayerName').textContent = player.name;
     speakPlayerName(player.name);
 
+
     const qBox = document.getElementById('question');
     qBox.textContent = this.currentQuestion.question;
     qBox.classList.remove('animate-in'); void qBox.offsetWidth; qBox.classList.add('animate-in');
+
 
     const answers = document.getElementById('answers');
     answers.innerHTML = '';
@@ -324,17 +390,28 @@ const GameManager = {
       answers.appendChild(btn);
       void btn.offsetWidth; btn.classList.add('animate-in');
     });
+
+
+    startTime = Date.now(); // Start timing for this answer
   },
+
 
   checkAnswer(selectedAnswer, btn) {
     if (isPaused) return;
     stopTimer();
-    const isCorrect = selectedAnswer === this.currentQuestion.correct;
+    const endTime = Date.now();
+    const timeTaken = (endTime - startTime) / 1000;
     const player = this.getCurrentPlayer();
+    player.totalTime += timeTaken; // Add to total time
+
+
+    const isCorrect = selectedAnswer === this.currentQuestion.correct;
     const points = isCorrect ? (this.answerType==='member'?10:5) : -5;
+
 
     player.score += points;
     player.history.push({ isCorrect, points, question: this.currentQuestion.question });
+
 
     Array.from(document.getElementById('answers').children).forEach(b=>{
       b.disabled = true;
@@ -342,18 +419,27 @@ const GameManager = {
       if (text === this.currentQuestion.correct) b.classList.add('highlight-correct','is-correct-final');
     });
 
+
     if (!isCorrect) btn.classList.add('highlight-wrong','is-wrong-final');
     else btn.classList.add('is-correct-final');
+
 
     showFeedback(isCorrect, points);
     this.saveState();
     setTimeout(()=>this.nextTurn(), 2500);
   },
 
+
   timeUp() {
+    const endTime = Date.now();
+    const timeTaken = (endTime - startTime) / 1000;
     const player = this.getCurrentPlayer();
+    player.totalTime += timeTaken; // Add to total time even on time up
+
+
     player.score -= 5;
     player.history.push({ isCorrect:false, points:-5, question:this.currentQuestion.question });
+
 
     Array.from(document.getElementById('answers').children).forEach(b=>{
       b.disabled = true;
@@ -361,10 +447,12 @@ const GameManager = {
       if (text===this.currentQuestion.correct) b.classList.add('highlight-correct','is-correct-final');
     });
 
+
     showFeedback(false, -5, "समय समाप्त!");
     this.saveState();
     setTimeout(()=>this.nextTurn(), 2500);
   },
+
 
   getUnusedQuestionIndex() {
     const avail = this.questions.map((_,i)=>i).filter(i=>!this.usedQuestionIndices.includes(i));
@@ -372,7 +460,8 @@ const GameManager = {
     return avail[Math.floor(Math.random()*avail.length)];
   },
 
-  // Lifeline: 50-50
+
+  // Lifeline: 50-50 (with animation and local music)
   useLifeline() {
     if (isPaused) return;
     const player = this.getCurrentPlayer();
@@ -380,24 +469,35 @@ const GameManager = {
     if (player.lifelinesRemaining<=0) { this.showNotification('लाइफलाइन शेष नहीं', 'info'); return; }
     if (this.lifelineUsedThisQuestion) { this.showNotification('इस प्रश्न पर लाइफलाइन हो चुकी है', 'info'); return; }
 
+
     const btns = Array.from(document.getElementById('answers').children);
     const correct = this.currentQuestion.correct;
     const wrongBtns = btns.filter(b => b.querySelector('.option-text').textContent !== correct);
     if (wrongBtns.length < 2) return;
 
-    // Keep 1 random wrong + 1 correct, hide others
+
+    // Keep 1 random wrong + 1 correct, hide others with animation
     const keepWrong = wrongBtns[Math.floor(Math.random()*wrongBtns.length)];
     btns.forEach(b=>{
       const text = b.querySelector('.option-text').textContent;
       const shouldKeep = (text===correct) || (b===keepWrong);
-      if (!shouldKeep) b.classList.add('hidden-option');
+      if (!shouldKeep) {
+        b.classList.add('hidden-option'); // Trigger blur-hide animation
+      }
     });
+
+
+    // Play local music
+    const lifelineAudio = new Audio('../deepseek-v1-quiztype/sounds/lifeline.mp3'); // Your local file
+    lifelineAudio.play();
+
 
     player.lifelinesRemaining--;
     this.lifelineUsedThisQuestion = true;
     updateLifelineUI();
     this.showNotification('50-50 लागू हुआ', 'success');
   },
+
 
   // Notifications & Persistence
   showNotification(message, type='info') {
@@ -409,6 +509,7 @@ const GameManager = {
     setTimeout(()=>{ n.classList.remove('show'); setTimeout(()=>document.body.removeChild(n),300); }, 3000);
   },
 
+
   saveState() {
     localStorage.setItem('tenseTranslationGameState', JSON.stringify({
       players: this.players,
@@ -416,6 +517,7 @@ const GameManager = {
       gameSettings: gameSettings
     }));
   },
+
 
   loadState() {
     const saved = localStorage.getItem('tenseTranslationGameState');
@@ -426,6 +528,7 @@ const GameManager = {
     }
   }
 };
+
 
 // === Pause/Resume & Timer ===
 function startTimer(seconds=20) {
@@ -438,6 +541,7 @@ function startTimer(seconds=20) {
   const tickSound = document.getElementById('tickSound');
   const circleLength = 2 * Math.PI * 28;
 
+
   if (timerContainer) timerContainer.classList.remove('half-time');
   if (timerProgress) {
     timerProgress.style.strokeDasharray = circleLength;
@@ -445,11 +549,13 @@ function startTimer(seconds=20) {
   }
   if (timerText) timerText.textContent = globalTimeLeft;
 
+
   globalTimerInterval = setInterval(()=>{
     if (isPaused) return;
     globalTimeLeft--;
     if (timerText) timerText.textContent = globalTimeLeft;
     if (timerProgress) timerProgress.style.strokeDashoffset = ((20 - globalTimeLeft) / 20) * circleLength;
+
 
     if (globalTimeLeft <= 5 && globalTimeLeft > 0) {
       if (timerContainer) timerContainer.classList.add('half-time');
@@ -481,6 +587,7 @@ function togglePause() {
   }
 }
 
+
 // === UI helpers ===
 function updateLifelineUI() {
   const player = GameManager.getCurrentPlayer?.();
@@ -488,10 +595,12 @@ function updateLifelineUI() {
   if (player && el) el.textContent = player.lifelinesRemaining ?? 0;
 }
 
+
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
+
 
 function addPlayer() {
   const name = document.getElementById('playerName');
@@ -501,6 +610,7 @@ function addPlayer() {
     name.value=''; name.focus();
   }
 }
+
 
 function startGame(){ GameManager.startGame(); }
 function endGame(){
@@ -516,6 +626,7 @@ function restartGameSetup(){
   document.getElementById('final-winner').textContent='';
 }
 
+
 // Answer type
 function setAnswerType(type, el){
   GameManager.answerType = type;
@@ -523,7 +634,8 @@ function setAnswerType(type, el){
   el.classList.add('active');
 }
 
-// Leaderboard (unchanged structure)
+
+// Leaderboard (updated with total time column in individual view)
 let currentLeaderboardView='individual';
 function setLeaderboardView(view, el){
   currentLeaderboardView=view;
@@ -555,7 +667,12 @@ function showLeaderboard(isFinal=false){
   const preview = document.getElementById('leaderboardContentPreview');
   if (!content) return;
 
-  const sorted = [...GameManager.players].sort((a,b)=>b.score-a.score);
+  // Updated Sorting: Score descending, then totalTime ascending (faster time wins on tie)
+  const sorted = [...GameManager.players].sort((a,b) => {
+    if (b.score !== a.score) return b.score - a.score; // Higher score first
+    return a.totalTime - b.totalTime; // Lower time first on tie
+  });
+
   const playerHtml = sorted.map((p,i)=>`
     <div class="leaderboard-item individual ${i<3?`rank-${i+1}`:''}">
       <div class="rank-cell">${i+1}</div>
@@ -563,6 +680,7 @@ function showLeaderboard(isFinal=false){
       <div class="group-cell"><span class="badge group-${p.group}">ग्रुप ${p.group}</span></div>
       <div class="correct-cell">${p.history.filter(h=>h.isCorrect).length}</div>
       <div class="wrong-cell">${p.history.filter(h=>!h.isCorrect).length}</div>
+      <div class="time-cell">${p.totalTime.toFixed(2)} सेकंड</div>
       <div class="score-cell"><b>${p.score}</b></div>
       <div class="action-cell">
         <button class="btn-icon-small" onclick="GameManager.removePlayer(${p.id})" title="हटाएं">
@@ -572,6 +690,7 @@ function showLeaderboard(isFinal=false){
     </div>
   `).join('');
 
+  // Preview remains the same
   if (preview){
     preview.innerHTML = sorted.length>0
       ? sorted.map(p=>`
@@ -585,9 +704,10 @@ function showLeaderboard(isFinal=false){
   content.innerHTML = '';
   if (currentLeaderboardView==='individual'){
     header.className='leaderboard-header individual';
-    header.innerHTML = `<div>#</div><div>नाम</div><div>ग्रुप</div><div>सही</div><div>गलत</div><div>कुल स्कोर</div><div>कार्य</div>`;
+    header.innerHTML = `<div>#</div><div>नाम</div><div>ग्रुप</div><div>सही</div><div>गलत</div><div>समय</div><div>कुल स्कोर</div><div>कार्य</div>`;
     content.innerHTML = playerHtml;
   } else {
+    // Team view remains the same (no time tiebreaker for teams)
     header.className='leaderboard-header team';
     header.innerHTML = `<div>#</div><div>ग्रुप</div><div>कुल सही</div><div>कुल गलत</div><div>खिलाड़ी</div><div>कुल स्कोर</div>`;
     const teams={};
@@ -614,16 +734,17 @@ function showLeaderboard(isFinal=false){
   if (isFinal){
     const wEl = document.getElementById('final-winner');
     let winnerName='';
-    if (currentLeaderboardView==='individual' && sorted.length>0) winnerName = sorted.name;
+    if (currentLeaderboardView==='individual' && sorted.length>0) winnerName = sorted[0].name;
     else {
       const teams={};
       GameManager.players.forEach(p=>{ if(!teams[p.group]) teams[p.group]={score:0}; teams[p.group].score+=p.score; });
-      const top = Object.entries(teams).sort(([,a],[,b])=>b.score-a.score);
-      if (top) winnerName = `ग्रुप ${top}`;
+      const top = Object.entries(teams).sort(([,a],[,b])=>b.score-a.score)[0];
+      if (top) winnerName = `ग्रुप ${top[0]}`;
     }
     if (winnerName) wEl.textContent = `🏆 विजेता: ${winnerName}! 🏆`;
   }
 }
+
 function printLeaderboard(){ window.print(); }
 function downloadLeaderboardCSV(){
   let csv = "data:text/csv;charset=utf-8,"; let rows=[];
@@ -636,20 +757,44 @@ function downloadLeaderboardCSV(){
     });
     Object.entries(teams).sort(([,a],[,b])=>b.score-a.score).forEach(([g,d],i)=>rows.push([i+1,`ग्रुप ${g}`,d.correct,d.wrong,d.players,d.score]));
   } else {
-    rows.push(["#","नाम","ग्रुप","सही","गलत","कुल स्कोर"]);
-    [...GameManager.players].sort((a,b)=>b.score-a.score).forEach((p,i)=>{
+    rows.push(["#","नाम","ग्रुप","सही","गलत","समय","कुल स्कोर"]);
+    // Updated Sorting for CSV
+    const sortedPlayers = [...GameManager.players].sort((a,b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.totalTime - b.totalTime;
+    });
+    sortedPlayers.forEach((p,i)=>{
       const c=p.history.filter(h=>h.isCorrect).length; const w=p.history.filter(h=>!h.isCorrect).length; const nm=`"${p.name.replace(/"/g,'""')}"`;
-      rows.push([i+1,nm,p.group,c,w,p.score]);
+      rows.push([i+1,nm,p.group,c,w,p.totalTime.toFixed(2),p.score]);
     });
   }
   csv += rows.map(r=>r.join(",")).join("\n");
   const a=document.createElement('a'); a.href=encodeURI(csv); a.download=`leaderboard_${currentLeaderboardView}.csv`; document.body.appendChild(a); a.click(); document.body.removeChild(a);
 }
 
+
+// === New: Download All Data ===
+function downloadAllData() {
+  const data = {
+    questions: GameManager.questions,
+    players: GameManager.players,
+    scores: GameManager.players.map(p => ({ name: p.name, score: p.score, totalTime: p.totalTime })) // Simplified scores with time
+  };
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
+  const downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", "quizData.json");
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
+}
+
+
 // === Keyboard Shortcuts ===
-// a/s/d/f => answer A/B/C/D, p => pause/resume, Esc => close modal
+// a/s/d/f => answer A/B/C/D, p => pause/resume, Esc => close modal, g => lifeline, space => pause/play, v => TTS question
 document.addEventListener('keydown',(e)=>{
   const key = e.key.toLowerCase();
+
 
   // Close modal on ESC
   if (key==='escape'){
@@ -657,8 +802,10 @@ document.addEventListener('keydown',(e)=>{
     if (modal.classList.contains('show')) { e.preventDefault(); closePlayersModal(); return; }
   }
 
+
   // Handle in game only
   const gameActive = document.getElementById('game-screen').classList.contains('active');
+
 
   // Toggle answer type by T (existing)
   if (key==='t' && gameActive){
@@ -668,19 +815,69 @@ document.addEventListener('keydown',(e)=>{
     if (document.querySelector('.answer-type-btn.active')?.id === 'memberAnswerBtn') teamBtn.click(); else memberBtn.click();
   }
 
-  // Pause/Resume by P
-  if (key==='p' && gameActive){
+
+  // Pause/Resume by P (existing) or Spacebar (new)
+  if ((key==='p' || key===' ') && gameActive){
     e.preventDefault();
     togglePause();
     return;
   }
 
-  // Lifeline by H (optional quick key)
-  if (key==='h' && gameActive){
+
+  // Lifeline by H (existing) or G (new)
+  if ((key==='h' || key==='g') && gameActive){
     e.preventDefault();
     GameManager.useLifeline();
     return;
   }
+
+// Inside document.addEventListener('keydown', ...)
+if (key==='v' && gameActive){
+    e.preventDefault();
+    const questionText = document.getElementById('question')?.textContent;
+    if (questionText) {
+        if (!gameSettings.ttsEnabled || !('speechSynthesis' in window)) {
+            console.warn('TTS disabled or not supported in this browser.');
+            return;
+        }
+        
+        // Cancel any ongoing speech
+        speechSynthesis.cancel();
+        
+        const utterance = new SpeechSynthesisUtterance(questionText);
+        
+        // Enhanced TTS settings for crisp and slow speech
+        utterance.lang = 'hi-IN';
+        utterance.rate = 0.8; // Slower rate for clarity
+        utterance.pitch = 1.1; // Slightly higher pitch
+        utterance.volume = 0.8; // Good volume level
+        
+        // Try to find the best Male Hindi voice
+        const voices = speechSynthesis.getVoices();
+        const maleHindiVoice = voices.find(voice => 
+            voice.lang.includes('hi') && 
+            (voice.name.includes('Google हिन्दी') || // Often male
+             voice.name.includes('Microsoft Ravi') || // Male voice
+             voice.name.toLowerCase().includes('male')) // General male check
+        ) || voices.find(voice => voice.lang.includes('hi')) || voices[0]; // Fallback
+        
+        if (maleHindiVoice) {
+            utterance.voice = maleHindiVoice;
+        } else {
+            console.warn('No suitable male Hindi voice found. Using default.');
+        }
+        
+        // Error handling for speech
+        utterance.onerror = (event) => {
+            console.error('TTS error:', event.error);
+        };
+        
+        speechSynthesis.speak(utterance);
+    }
+    return;
+}
+
+
 
   // Answer keys a/s/d/f
   if (gameActive && !isPaused && ['a','s','d','f'].includes(key)){
@@ -695,12 +892,14 @@ document.addEventListener('keydown',(e)=>{
     btn.click();
   }
 
+
   // Enter to add player (manual) on setup
   if (e.key === 'Enter' && document.getElementById('setup-screen').classList.contains('active')) {
     const playerNameInput = document.getElementById('playerName');
     if (document.activeElement === playerNameInput) addPlayer();
   }
 });
+
 
 // === DOM wiring ===
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -716,8 +915,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const ttsToggle = document.getElementById('ttsToggle');
   if (ttsToggle) ttsToggle.addEventListener('change', e=> gameSettings.ttsEnabled = e.target.checked);
 
+
   const lifelineSelect = document.getElementById('lifelineCount');
   if (lifelineSelect) lifelineSelect.addEventListener('change', e=> gameSettings.lifelinesPerStudent = parseInt(e.target.value));
+
 
   // Modal open/close
   document.getElementById('openPlayersModalBtn')?.addEventListener('click', openPlayersModal);
@@ -726,9 +927,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.getElementById('autoBalanceBtn')?.addEventListener('click', (e)=>{ e.preventDefault(); autoBalanceSelectedIntoTeams(); });
   document.getElementById('loadSelectedBtn')?.addEventListener('click', (e)=>{ e.preventDefault(); loadSelectedToGame(); });
 
+
   // Lifeline and Pause buttons
   document.getElementById('lifelineBtn')?.addEventListener('click', ()=> GameManager.useLifeline());
   document.getElementById('pauseBtn')?.addEventListener('click', ()=> togglePause());
+
+
+  // New: Download button listener (add <button id="downloadDataBtn">Download Data</button> in HTML)
+  document.getElementById('downloadDataBtn')?.addEventListener('click', downloadAllData);
+
 
   // Registry UI init
   loadRegistry();
@@ -737,6 +944,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   renderStudentList();
 });
 
+
 // === Init ===
 window.addEventListener('load', ()=>{
   GameManager.loadState();
@@ -744,13 +952,16 @@ window.addEventListener('load', ()=>{
   document.getElementById('teamCount').value = gameSettings.teamCount;
   document.getElementById('lifelineCount').value = gameSettings.lifelinesPerStudent;
 
+
   generateTeamOptions();
   renderAssignButtons();
   renderStudentList();
 
+
   showScreen('setup-screen');
   showLeaderboard();
   updateLiveLeaderboard();
+
 
   if ('speechSynthesis' in window) {
     speechSynthesis.onvoiceschanged = ()=>{};
