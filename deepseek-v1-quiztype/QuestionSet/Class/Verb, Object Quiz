@@ -1,0 +1,564 @@
+{
+  "questions": [
+    {
+      "question": "वाक्य में क्रिया कौन सी है: 'मैं खाता हूँ।' (Identify the verb in the sentence)",
+      "correct": "खाता",
+      "options": ["खाता", "मैं", "हूँ", "में"]
+    },
+    {
+      "question": "Identify the verb in: 'I eat.'",
+      "correct": "eat",
+      "options": ["eat", "I", "food", "now"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन सा है: 'वह किताब पढ़ता है।' (Identify the object in the sentence)",
+      "correct": "किताब",
+      "options": ["किताब", "वह", "पढ़ता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'He reads a book.'",
+      "correct": "book",
+      "options": ["book", "He", "reads", "a"]
+    },
+    {
+      "question": "क्रिया 'run' का हिंदी अर्थ क्या है?",
+      "correct": "दौड़ना",
+      "options": ["दौड़ना", "खाना", "पीना", "सोना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'sleep'?",
+      "correct": "सोना",
+      "options": ["सोना", "दौड़ना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'बच्चा खेलता है।'",
+      "correct": "खेलता",
+      "options": ["खेलता", "बच्चा", "है", "में"]
+    },
+    {
+      "question": "Identify the verb in: 'Child plays.'",
+      "correct": "plays",
+      "options": ["plays", "Child", "toy", "now"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'मैं पानी पीता हूँ।'",
+      "correct": "पानी",
+      "options": ["पानी", "मैं", "पीता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'I drink water.'",
+      "correct": "water",
+      "options": ["water", "I", "drink", "cold"]
+    },
+    {
+      "question": "क्रिया 'eat' का हिंदी अर्थ क्या है?",
+      "correct": "खाना",
+      "options": ["खाना", "दौड़ना", "सोना", "पढ़ना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'drink'?",
+      "correct": "पीना",
+      "options": ["पीना", "खाना", "दौड़ना", "खेलना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन है: 'वह दौड़ता है।'",
+      "correct": "दौड़ता",
+      "options": ["दौड़ता", "वह", "है", "तेज"]
+    },
+    {
+      "question": "Identify the verb in: 'She runs.'",
+      "correct": "runs",
+      "options": ["runs", "She", "fast", "park"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन है: 'बच्चे गेंद खेलते हैं।'",
+      "correct": "गेंद",
+      "options": ["गेंद", "बच्चे", "खेलते", "हैं"]
+    },
+    {
+      "question": "Identify the object in: 'Children play ball.'",
+      "correct": "ball",
+      "options": ["ball", "Children", "play", "big"]
+    },
+    {
+      "question": "क्रिया 'play' का हिंदी अर्थ क्या है?",
+      "correct": "खेलना",
+      "options": ["खेलना", "खाना", "पीना", "सोना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'read'?",
+      "correct": "पढ़ना",
+      "options": ["पढ़ना", "दौड़ना", "खेलना", "खाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'मैं सोता हूँ।'",
+      "correct": "सोता",
+      "options": ["सोता", "मैं", "हूँ", "रात"]
+    },
+    {
+      "question": "Identify the verb in: 'I sleep.'",
+      "correct": "sleep",
+      "options": ["sleep", "I", "bed", "night"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह फल खाता है।'",
+      "correct": "फल",
+      "options": ["फल", "वह", "खाता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'He eats fruit.'",
+      "correct": "fruit",
+      "options": ["fruit", "He", "eats", "sweet"]
+    },
+    {
+      "question": "क्रिया 'write' का हिंदी अर्थ क्या है?",
+      "correct": "लिखना",
+      "options": ["लिखना", "खाना", "पीना", "दौड़ना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'jump'?",
+      "correct": "कूदना",
+      "options": ["कूदना", "सोना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन सी है: 'पक्षी उड़ते हैं।'",
+      "correct": "उड़ते",
+      "options": ["उड़ते", "पक्षी", "हैं", "आकाश"]
+    },
+    {
+      "question": "Identify the verb in: 'Birds fly.'",
+      "correct": "fly",
+      "options": ["fly", "Birds", "sky", "high"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन सा है: 'मैं पत्र लिखता हूँ।'",
+      "correct": "पत्र",
+      "options": ["पत्र", "मैं", "लिखता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'I write letter.'",
+      "correct": "letter",
+      "options": ["letter", "I", "write", "long"]
+    },
+    {
+      "question": "क्रिया 'sing' का हिंदी अर्थ क्या है?",
+      "correct": "गाना",
+      "options": ["गाना", "खाना", "पीना", "सोना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'dance'?",
+      "correct": "नाचना",
+      "options": ["नाचना", "दौड़ना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'वह गाता है।'",
+      "correct": "गाता",
+      "options": ["गाता", "वह", "है", "गाना"]
+    },
+    {
+      "question": "Identify the verb in: 'She sings.'",
+      "correct": "sings",
+      "options": ["sings", "She", "song", "beautiful"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'बच्चा दूध पीता है।'",
+      "correct": "दूध",
+      "options": ["दूध", "बच्चा", "पीता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Child drinks milk.'",
+      "correct": "milk",
+      "options": ["milk", "Child", "drinks", "hot"]
+    },
+    {
+      "question": "क्रिया 'walk' का हिंदी अर्थ क्या है?",
+      "correct": "चलना",
+      "options": ["चलना", "खाना", "पीना", "कूदना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'talk'?",
+      "correct": "बात करना",
+      "options": ["बात करना", "सोना", "खेलना", "गाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन है: 'मैं चलता हूँ।'",
+      "correct": "चलता",
+      "options": ["चलता", "मैं", "हूँ", "धीरे"]
+    },
+    {
+      "question": "Identify the verb in: 'I walk.'",
+      "correct": "walk",
+      "options": ["walk", "I", "road", "slow"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन है: 'वह कहानी सुनाता है।'",
+      "correct": "कहानी",
+      "options": ["कहानी", "वह", "सुनाता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'He tells story.'",
+      "correct": "story",
+      "options": ["story", "He", "tells", "interesting"]
+    },
+    {
+      "question": "क्रिया 'laugh' का हिंदी अर्थ क्या है?",
+      "correct": "हँसना",
+      "options": ["हँसना", "खाना", "पीना", "दौड़ना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'cry'?",
+      "correct": "रोना",
+      "options": ["रोना", "नाचना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'बच्चे हँसते हैं।'",
+      "correct": "हँसते",
+      "options": ["हँसते", "बच्चे", "हैं", "जोर से"]
+    },
+    {
+      "question": "Identify the verb in: 'Children laugh.'",
+      "correct": "laugh",
+      "options": ["laugh", "Children", "loud", "happy"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'मैं घर बनाता हूँ।'",
+      "correct": "घर",
+      "options": ["घर", "मैं", "बनाता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'I build house.'",
+      "correct": "house",
+      "options": ["house", "I", "build", "big"]
+    },
+    {
+      "question": "क्रिया 'swim' का हिंदी अर्थ क्या है?",
+      "correct": "तैरना",
+      "options": ["तैरना", "खाना", "पीना", "सोना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'climb'?",
+      "correct": "चढ़ना",
+      "options": ["चढ़ना", "दौड़ना", "खेलना", "गाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन सी है: 'वह तैरता है।'",
+      "correct": "तैरता",
+      "options": ["तैरता", "वह", "है", "नदी"]
+    },
+    {
+      "question": "Identify the verb in: 'He swims.'",
+      "correct": "swims",
+      "options": ["swims", "He", "river", "fast"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन सा है: 'बच्चा खिलौना तोड़ता है।'",
+      "correct": "खिलौना",
+      "options": ["खिलौना", "बच्चा", "तोड़ता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Child breaks toy.'",
+      "correct": "toy",
+      "options": ["toy", "Child", "breaks", "new"]
+    },
+    {
+      "question": "क्रिया 'draw' का हिंदी अर्थ क्या है?",
+      "correct": "चित्र बनाना",
+      "options": ["चित्र बनाना", "खाना", "पीना", "कूदना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'paint'?",
+      "correct": "रंगना",
+      "options": ["रंगना", "सोना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'मैं चित्र बनाता हूँ।'",
+      "correct": "बनाता",
+      "options": ["बनाता", "मैं", "चित्र", "हूँ"]
+    },
+    {
+      "question": "Identify the verb in: 'I draw.'",
+      "correct": "draw",
+      "options": ["draw", "I", "picture", "beautiful"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह गाना गाती है।'",
+      "correct": "गाना",
+      "options": ["गाना", "वह", "गाती", "है"]
+    },
+    {
+      "question": "Identify the object in: 'She sings song.'",
+      "correct": "song",
+      "options": ["song", "She", "sings", "sweet"]
+    },
+    {
+      "question": "क्रिया 'fly' का हिंदी अर्थ क्या है?",
+      "correct": "उड़ना",
+      "options": ["उड़ना", "खाना", "पीना", "दौड़ना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'drive'?",
+      "correct": "चलाना",
+      "options": ["चलाना", "नाचना", "खेलना", "गाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन है: 'पक्षी उड़ता है।'",
+      "correct": "उड़ता",
+      "options": ["उड़ता", "पक्षी", "है", "ऊँचा"]
+    },
+    {
+      "question": "Identify the verb in: 'Bird flies.'",
+      "correct": "flies",
+      "options": ["flies", "Bird", "sky", "high"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन है: 'मैं कार चलाता हूँ।'",
+      "correct": "कार",
+      "options": ["कार", "मैं", "चलाता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'I drive car.'",
+      "correct": "car",
+      "options": ["car", "I", "drive", "fast"]
+    },
+    {
+      "question": "क्रिया 'cook' का हिंदी अर्थ क्या है?",
+      "correct": "पकाना",
+      "options": ["पकाना", "खाना", "पीना", "सोना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'wash'?",
+      "correct": "धोना",
+      "options": ["धोना", "दौड़ना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'माँ खाना पकाती है।'",
+      "correct": "पकाती",
+      "options": ["पकाती", "माँ", "खाना", "है"]
+    },
+    {
+      "question": "Identify the verb in: 'Mother cooks.'",
+      "correct": "cooks",
+      "options": ["cooks", "Mother", "food", "tasty"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह कपड़े धोता है।'",
+      "correct": "कपड़े",
+      "options": ["कपड़े", "वह", "धोता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'He washes clothes.'",
+      "correct": "clothes",
+      "options": ["clothes", "He", "washes", "clean"]
+    },
+    {
+      "question": "क्रिया 'buy' का हिंदी अर्थ क्या है?",
+      "correct": "खरीदना",
+      "options": ["खरीदना", "खाना", "पीना", "कूदना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'sell'?",
+      "correct": "बेचना",
+      "options": ["बेचना", "सोना", "खेलना", "गाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन सी है: 'मैं किताब खरीदता हूँ।'",
+      "correct": "खरीदता",
+      "options": ["खरीदता", "मैं", "किताब", "हूँ"]
+    },
+    {
+      "question": "Identify the verb in: 'I buy book.'",
+      "correct": "buy",
+      "options": ["buy", "I", "book", "new"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन सा है: 'दुकानदार फल बेचता है।'",
+      "correct": "फल",
+      "options": ["फल", "दुकानदार", "बेचता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Shopkeeper sells fruit.'",
+      "correct": "fruit",
+      "options": ["fruit", "Shopkeeper", "sells", "fresh"]
+    },
+    {
+      "question": "क्रिया 'learn' का हिंदी अर्थ क्या है?",
+      "correct": "सीखना",
+      "options": ["सीखना", "खाना", "पीना", "दौड़ना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'teach'?",
+      "correct": "सिखाना",
+      "options": ["सिखाना", "नाचना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'छात्र पढ़ता है।'",
+      "correct": "पढ़ता",
+      "options": ["पढ़ता", "छात्र", "है", "किताब"]
+    },
+    {
+      "question": "Identify the verb in: 'Student learns.'",
+      "correct": "learns",
+      "options": ["learns", "Student", "lesson", "quick"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'शिक्षक पाठ सिखाता है।'",
+      "correct": "पाठ",
+      "options": ["पाठ", "शिक्षक", "सिखाता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Teacher teaches lesson.'",
+      "correct": "lesson",
+      "options": ["lesson", "Teacher", "teaches", "new"]
+    },
+    {
+      "question": "क्रिया 'open' का हिंदी अर्थ क्या है?",
+      "correct": "खोलना",
+      "options": ["खोलना", "खाना", "पीना", "सोना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'close'?",
+      "correct": "बंद करना",
+      "options": ["बंद करना", "दौड़ना", "खेलना", "गाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन है: 'वह दरवाजा खोलता है।'",
+      "correct": "खोलता",
+      "options": ["खोलता", "वह", "दरवाजा", "है"]
+    },
+    {
+      "question": "Identify the verb in: 'He opens door.'",
+      "correct": "opens",
+      "options": ["opens", "He", "door", "wooden"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन है: 'मैं खिड़की बंद करता हूँ।'",
+      "correct": "खिड़की",
+      "options": ["खिड़की", "मैं", "बंद करता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'I close window.'",
+      "correct": "window",
+      "options": ["window", "I", "close", "big"]
+    },
+    {
+      "question": "क्रिया 'give' का हिंदी अर्थ क्या है?",
+      "correct": "देना",
+      "options": ["देना", "खाना", "पीना", "कूदना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'take'?",
+      "correct": "लेना",
+      "options": ["लेना", "सोना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'मैं उपहार देता हूँ।'",
+      "correct": "देता",
+      "options": ["देता", "मैं", "उपहार", "हूँ"]
+    },
+    {
+      "question": "Identify the verb in: 'I give gift.'",
+      "correct": "give",
+      "options": ["give", "I", "gift", "nice"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह किताब लेता है।'",
+      "correct": "किताब",
+      "options": ["किताब", "वह", "लेता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'He takes book.'",
+      "correct": "book",
+      "options": ["book", "He", "takes", "old"]
+    },
+    {
+      "question": "क्रिया 'see' का हिंदी अर्थ क्या है?",
+      "correct": "देखना",
+      "options": ["देखना", "खाना", "पीना", "दौड़ना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'hear'?",
+      "correct": "सुनना",
+      "options": ["सुनना", "नाचना", "खेलना", "गाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन सी है: 'मैं फिल्म देखता हूँ।'",
+      "correct": "देखता",
+      "options": ["देखता", "मैं", "फिल्म", "हूँ"]
+    },
+    {
+      "question": "Identify the verb in: 'I see movie.'",
+      "correct": "see",
+      "options": ["see", "I", "movie", "good"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह संगीत सुनता है।'",
+      "correct": "संगीत",
+      "options": ["संगीत", "वह", "सुनता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'He hears music.'",
+      "correct": "music",
+      "options": ["music", "He", "hears", "loud"]
+    },
+    {
+      "question": "क्रिया 'make' का हिंदी अर्थ क्या है?",
+      "correct": "बनाना",
+      "options": ["बनाना", "खाना", "पीना", "सोना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'break'?",
+      "correct": "तोड़ना",
+      "options": ["तोड़ना", "दौड़ना", "खेलना", "पढ़ना"]
+    },
+    {
+      "question": "वाक्य में क्रिया पहचानो: 'मैं केक बनाता हूँ।'",
+      "correct": "बनाता",
+      "options": ["बनाता", "मैं", "केक", "हूँ"]
+    },
+    {
+      "question": "Identify the verb in: 'I make cake.'",
+      "correct": "make",
+      "options": ["make", "I", "cake", "tasty"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'बच्चा गिलास तोड़ता है।'",
+      "correct": "गिलास",
+      "options": ["गिलास", "बच्चा", "तोड़ता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Child breaks glass.'",
+      "correct": "glass",
+      "options": ["glass", "Child", "breaks", "fragile"]
+    },
+    {
+      "question": "क्रिया 'find' का हिंदी अर्थ क्या है?",
+      "correct": "ढूंढना",
+      "options": ["ढूंढना", "खाना", "पीना", "कूदना"]
+    },
+    {
+      "question": "What is the Hindi meaning of the verb 'lose'?",
+      "correct": "खोना",
+      "options": ["खोना", "सोना", "खेलना", "गाना"]
+    },
+    {
+      "question": "वाक्य में क्रिया कौन है: 'मैं चाबी ढूंढता हूँ।'",
+      "correct": "ढूंढता",
+      "options": ["ढूंढता", "मैं", "चाबी", "हूँ"]
+    },
+    {
+      "question": "Identify the verb in: 'I find key.'",
+      "correct": "find",
+      "options": ["find", "I", "key", "lost"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह पेन खोता है।'",
+      "correct": "पेन",
+      "options": ["पेन", "वह", "खोता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'He loses pen.'",
+      "correct": "pen",
+      "options": ["pen", "He", "loses", "blue"]
+    }
+  ]
+}
