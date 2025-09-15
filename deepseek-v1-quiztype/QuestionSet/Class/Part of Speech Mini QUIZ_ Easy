@@ -1,0 +1,494 @@
+{
+  "questions": [
+    {
+      "question": "वाक्य में संज्ञा कौन सी है: 'राम खेलता है।'",
+      "correct": "राम",
+      "options": ["राम", "खेलता", "है", "में"]
+    },
+    {
+      "question": "Identify the noun in: 'The cat sleeps.'",
+      "correct": "cat",
+      "options": ["cat", "sleeps", "the", "in"]
+    },
+    {
+      "question": "वाक्य में सर्वनाम कौन सा है: 'वह आया।'",
+      "correct": "वह",
+      "options": ["वह", "आया", "में", "है"]
+    },
+    {
+      "question": "Identify the pronoun in: 'She runs.'",
+      "correct": "She",
+      "options": ["She", "runs", "the", "fast"]
+    },
+    {
+      "question": "वाक्य में विशेषण कौन सा है: 'बड़ा घर।'",
+      "correct": "बड़ा",
+      "options": ["बड़ा", "घर", "में", "है"]
+    },
+    {
+      "question": "Identify the adjective in: 'Red apple.'",
+      "correct": "Red",
+      "options": ["Red", "apple", "the", "eat"]
+    },
+    {
+      "question": "वाक्य में क्रिया-विशेषण कौन सा है: 'तेज़ दौड़ता है।'",
+      "correct": "तेज़",
+      "options": ["तेज़", "दौड़ता", "है", "में"]
+    },
+    {
+      "question": "Identify the adverb in: 'Runs quickly.'",
+      "correct": "quickly",
+      "options": ["quickly", "runs", "he", "slow"]
+    },
+    {
+      "question": "वाक्य में समुच्चयबोधक कौन सा है: 'राम और श्याम।'",
+      "correct": "और",
+      "options": ["और", "राम", "श्याम", "है"]
+    },
+    {
+      "question": "Identify the conjunction in: 'Tea and coffee.'",
+      "correct": "and",
+      "options": ["and", "tea", "coffee", "drink"]
+    },
+    {
+      "question": "वाक्य में कर्ता कौन सा है: 'लड़का पढ़ता है।'",
+      "correct": "लड़का",
+      "options": ["लड़का", "पढ़ता", "है", "में"]
+    },
+    {
+      "question": "Identify the subject in: 'Dog barks.'",
+      "correct": "Dog",
+      "options": ["Dog", "barks", "loudly", "at"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन सा है: 'मैं किताब पढ़ता हूँ।'",
+      "correct": "किताब",
+      "options": ["किताब", "मैं", "पढ़ता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'Eats apple.'",
+      "correct": "apple",
+      "options": ["apple", "eats", "he", "red"]
+    },
+    {
+      "question": "वाक्य में संज्ञा पहचानो: 'दिल्ली शहर है।'",
+      "correct": "दिल्ली",
+      "options": ["दिल्ली", "शहर", "है", "में"]
+    },
+    {
+      "question": "Identify the noun in: 'Bird flies.'",
+      "correct": "Bird",
+      "options": ["Bird", "flies", "high", "sky"]
+    },
+    {
+      "question": "वाक्य में सर्वनाम पहचानो: 'यह अच्छा है।'",
+      "correct": "यह",
+      "options": ["यह", "अच्छा", "है", "में"]
+    },
+    {
+      "question": "Identify the pronoun in: 'It rains.'",
+      "correct": "It",
+      "options": ["It", "rains", "now", "outside"]
+    },
+    {
+      "question": "वाक्य में विशेषण पहचानो: 'सुंदर फूल।'",
+      "correct": "सुंदर",
+      "options": ["सुंदर", "फूल", "में", "है"]
+    },
+    {
+      "question": "Identify the adjective in: 'Tall tree.'",
+      "correct": "Tall",
+      "options": ["Tall", "tree", "green", "big"]
+    },
+    {
+      "question": "वाक्य में क्रिया-विशेषण पहचानो: 'धीरे बोलो।'",
+      "correct": "धीरे",
+      "options": ["धीरे", "बोलो", "में", "है"]
+    },
+    {
+      "question": "Identify the adverb in: 'Walks slowly.'",
+      "correct": "slowly",
+      "options": ["slowly", "walks", "he", "fast"]
+    },
+    {
+      "question": "वाक्य में समुच्चयबोधक पहचानो: 'लेकिन वह आया।'",
+      "correct": "लेकिन",
+      "options": ["लेकिन", "वह", "आया", "में"]
+    },
+    {
+      "question": "Identify the conjunction in: 'But happy.'",
+      "correct": "But",
+      "options": ["But", "happy", "he", "is"]
+    },
+    {
+      "question": "वाक्य में कर्ता पहचानो: 'बच्चे खेलते हैं।'",
+      "correct": "बच्चे",
+      "options": ["बच्चे", "खेलते", "हैं", "में"]
+    },
+    {
+      "question": "Identify the subject in: 'Children play.'",
+      "correct": "Children",
+      "options": ["Children", "play", "now", "park"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह गेंद फेंकता है।'",
+      "correct": "गेंद",
+      "options": ["गेंद", "वह", "फेंकता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Throws ball.'",
+      "correct": "ball",
+      "options": ["ball", "throws", "he", "far"]
+    },
+    {
+      "question": "वाक्य में संज्ञा कौन है: 'स्कूल बड़ा है।'",
+      "correct": "स्कूल",
+      "options": ["स्कूल", "बड़ा", "है", "में"]
+    },
+    {
+      "question": "Identify the noun in: 'School big.'",
+      "correct": "School",
+      "options": ["School", "big", "is", "the"]
+    },
+    {
+      "question": "वाक्य में सर्वनाम कौन है: 'वे जाते हैं।'",
+      "correct": "वे",
+      "options": ["वे", "जाते", "हैं", "में"]
+    },
+    {
+      "question": "Identify the pronoun in: 'They go.'",
+      "correct": "They",
+      "options": ["They", "go", "now", "home"]
+    },
+    {
+      "question": "वाक्य में विशेषण कौन है: 'मीठा फल।'",
+      "correct": "मीठा",
+      "options": ["मीठा", "फल", "में", "है"]
+    },
+    {
+      "question": "Identify the adjective in: 'Sweet fruit.'",
+      "correct": "Sweet",
+      "options": ["Sweet", "fruit", "eat", "red"]
+    },
+    {
+      "question": "वाक्य में क्रिया-विशेषण कौन है: 'जल्दी आओ।'",
+      "correct": "जल्दी",
+      "options": ["जल्दी", "आओ", "में", "है"]
+    },
+    {
+      "question": "Identify the adverb in: 'Come soon.'",
+      "correct": "soon",
+      "options": ["soon", "come", "please", "now"]
+    },
+    {
+      "question": "वाक्य में समुच्चयबोधक कौन है: 'या तो आओ या जाओ।'",
+      "correct": "या",
+      "options": ["या", "आओ", "जाओ", "तो"]
+    },
+    {
+      "question": "Identify the conjunction in: 'Or go.'",
+      "correct": "Or",
+      "options": ["Or", "go", "stay", "here"]
+    },
+    {
+      "question": "वाक्य में कर्ता कौन है: 'पक्षी उड़ते हैं।'",
+      "correct": "पक्षी",
+      "options": ["पक्षी", "उड़ते", "हैं", "में"]
+    },
+    {
+      "question": "Identify the subject in: 'Birds fly.'",
+      "correct": "Birds",
+      "options": ["Birds", "fly", "high", "sky"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन है: 'मैं पानी पीता हूँ।'",
+      "correct": "पानी",
+      "options": ["पानी", "मैं", "पीता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'Drinks water.'",
+      "correct": "water",
+      "options": ["water", "drinks", "he", "cold"]
+    },
+    {
+      "question": "वाक्य में संज्ञा पहचानो: 'कुत्ता भौंकता है।'",
+      "correct": "कुत्ता",
+      "options": ["कुत्ता", "भौंकता", "है", "में"]
+    },
+    {
+      "question": "Identify the noun in: 'Dog barks.'",
+      "correct": "Dog",
+      "options": ["Dog", "barks", "loud", "night"]
+    },
+    {
+      "question": "वाक्य में सर्वनाम पहचानो: 'हम पढ़ते हैं।'",
+      "correct": "हम",
+      "options": ["हम", "पढ़ते", "हैं", "में"]
+    },
+    {
+      "question": "Identify the pronoun in: 'We read.'",
+      "correct": "We",
+      "options": ["We", "read", "book", "now"]
+    },
+    {
+      "question": "वाक्य में विशेषण पहचानो: 'छोटा बच्चा।'",
+      "correct": "छोटा",
+      "options": ["छोटा", "बच्चा", "में", "है"]
+    },
+    {
+      "question": "Identify the adjective in: 'Small child.'",
+      "correct": "Small",
+      "options": ["Small", "child", "plays", "happy"]
+    },
+    {
+      "question": "वाक्य में क्रिया-विशेषण पहचानो: 'अच्छे से पढ़ो।'",
+      "correct": "अच्छे से",
+      "options": ["अच्छे से", "पढ़ो", "में", "है"]
+    },
+    {
+      "question": "Identify the adverb in: 'Read well.'",
+      "correct": "well",
+      "options": ["well", "read", "book", "now"]
+    },
+    {
+      "question": "वाक्य में समुच्चयबोधक पहचानो: 'क्योंकि वह थका है।'",
+      "correct": "क्योंकि",
+      "options": ["क्योंकि", "वह", "थका", "है"]
+    },
+    {
+      "question": "Identify the conjunction in: 'Because tired.'",
+      "correct": "Because",
+      "options": ["Because", "tired", "he", "is"]
+    },
+    {
+      "question": "वाक्य में कर्ता पहचानो: 'फूल खिलते हैं।'",
+      "correct": "फूल",
+      "options": ["फूल", "खिलते", "हैं", "में"]
+    },
+    {
+      "question": "Identify the subject in: 'Flowers bloom.'",
+      "correct": "Flowers",
+      "options": ["Flowers", "bloom", "beautiful", "garden"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह पत्र लिखता है।'",
+      "correct": "पत्र",
+      "options": ["पत्र", "वह", "लिखता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Writes letter.'",
+      "correct": "letter",
+      "options": ["letter", "writes", "she", "long"]
+    },
+    {
+      "question": "वाक्य में संज्ञा कौन सी है: 'पेड़ हरा है।'",
+      "correct": "पेड़",
+      "options": ["पेड़", "हरा", "है", "में"]
+    },
+    {
+      "question": "Identify the noun in: 'Tree green.'",
+      "correct": "Tree",
+      "options": ["Tree", "green", "tall", "is"]
+    },
+    {
+      "question": "वाक्य में सर्वनाम कौन सा है: 'तुम अच्छे हो।'",
+      "correct": "तुम",
+      "options": ["तुम", "अच्छे", "हो", "में"]
+    },
+    {
+      "question": "Identify the pronoun in: 'You are.'",
+      "correct": "You",
+      "options": ["You", "are", "good", "friend"]
+    },
+    {
+      "question": "वाक्य में विशेषण कौन सा है: 'काला कुत्ता।'",
+      "correct": "काला",
+      "options": ["काला", "कुत्ता", "में", "है"]
+    },
+    {
+      "question": "Identify the adjective in: 'Black dog.'",
+      "correct": "Black",
+      "options": ["Black", "dog", "barks", "loud"]
+    },
+    {
+      "question": "वाक्य में क्रिया-विशेषण कौन सा है: 'उच्च स्वर में गाओ।'",
+      "correct": "उच्च स्वर में",
+      "options": ["उच्च स्वर में", "गाओ", "में", "है"]
+    },
+    {
+      "question": "Identify the adverb in: 'Sing loudly.'",
+      "correct": "loudly",
+      "options": ["loudly", "sing", "song", "now"]
+    },
+    {
+      "question": "वाक्य में समुच्चयबोधक कौन सा है: 'और खेलो।'",
+      "correct": "और",
+      "options": ["और", "खेलो", "में", "है"]
+    },
+    {
+      "question": "Identify the conjunction in: 'And play.'",
+      "correct": "And",
+      "options": ["And", "play", "game", "now"]
+    },
+    {
+      "question": "वाक्य में कर्ता कौन सा है: 'सूरज चमकता है।'",
+      "correct": "सूरज",
+      "options": ["सूरज", "चमकता", "है", "में"]
+    },
+    {
+      "question": "Identify the subject in: 'Sun shines.'",
+      "correct": "Sun",
+      "options": ["Sun", "shines", "bright", "day"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन सा है: 'मैं फल खाता हूँ।'",
+      "correct": "फल",
+      "options": ["फल", "मैं", "खाता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'Eats fruit.'",
+      "correct": "fruit",
+      "options": ["fruit", "eats", "sweet", "he"]
+    },
+    {
+      "question": "वाक्य में संज्ञा पहचानो: 'नदी बहती है।'",
+      "correct": "नदी",
+      "options": ["नदी", "बहती", "है", "में"]
+    },
+    {
+      "question": "Identify the noun in: 'River flows.'",
+      "correct": "River",
+      "options": ["River", "flows", "fast", "water"]
+    },
+    {
+      "question": "वाक्य में सर्वनाम पहचानो: 'यह मेरा है।'",
+      "correct": "यह",
+      "options": ["यह", "मेरा", "है", "में"]
+    },
+    {
+      "question": "Identify the pronoun in: 'This mine.'",
+      "correct": "This",
+      "options": ["This", "mine", "is", "book"]
+    },
+    {
+      "question": "वाक्य में विशेषण पहचानो: 'गर्म पानी।'",
+      "correct": "गर्म",
+      "options": ["गर्म", "पानी", "में", "है"]
+    },
+    {
+      "question": "Identify the adjective in: 'Hot water.'",
+      "correct": "Hot",
+      "options": ["Hot", "water", "drink", "cold"]
+    },
+    {
+      "question": "वाक्य में क्रिया-विशेषण पहचानो: 'धीमी गति से चलो।'",
+      "correct": "धीमी गति से",
+      "options": ["धीमी गति से", "चलो", "में", "है"]
+    },
+    {
+      "question": "Identify the adverb in: 'Walk slowly.'",
+      "correct": "slowly",
+      "options": ["slowly", "walk", "road", "now"]
+    },
+    {
+      "question": "वाक्य में समुच्चयबोधक पहचानो: 'क्योंकि भूख लगी है।'",
+      "correct": "क्योंकि",
+      "options": ["क्योंकि", "भूख", "लगी", "है"]
+    },
+    {
+      "question": "Identify the conjunction in: 'Because hungry.'",
+      "correct": "Because",
+      "options": ["Because", "hungry", "eat", "now"]
+    },
+    {
+      "question": "वाक्य में कर्ता पहचानो: 'बादल गरजते हैं।'",
+      "correct": "बादल",
+      "options": ["बादल", "गरजते", "हैं", "में"]
+    },
+    {
+      "question": "Identify the subject in: 'Clouds thunder.'",
+      "correct": "Clouds",
+      "options": ["Clouds", "thunder", "rain", "sky"]
+    },
+    {
+      "question": "वाक्य में कर्म पहचानो: 'वह गाना गाता है।'",
+      "correct": "गाना",
+      "options": ["गाना", "वह", "गाता", "है"]
+    },
+    {
+      "question": "Identify the object in: 'Sings song.'",
+      "correct": "song",
+      "options": ["song", "sings", "beautiful", "she"]
+    },
+    {
+      "question": "वाक्य में संज्ञा कौन है: 'घोड़ा दौड़ता है।'",
+      "correct": "घोड़ा",
+      "options": ["घोड़ा", "दौड़ता", "है", "में"]
+    },
+    {
+      "question": "Identify the noun in: 'Horse runs.'",
+      "correct": "Horse",
+      "options": ["Horse", "runs", "fast", "field"]
+    },
+    {
+      "question": "वाक्य में सर्वनाम कौन है: 'मैं जाता हूँ।'",
+      "correct": "मैं",
+      "options": ["मैं", "जाता", "हूँ", "में"]
+    },
+    {
+      "question": "Identify the pronoun in: 'I go.'",
+      "correct": "I",
+      "options": ["I", "go", "school", "now"]
+    },
+    {
+      "question": "वाक्य में विशेषण कौन है: 'नीला आकाश।'",
+      "correct": "नीला",
+      "options": ["नीला", "आकाश", "में", "है"]
+    },
+    {
+      "question": "Identify the adjective in: 'Blue sky.'",
+      "correct": "Blue",
+      "options": ["Blue", "sky", "clear", "day"]
+    },
+    {
+      "question": "वाक्य में क्रिया-विशेषण कौन है: 'जोर से चिल्लाओ।'",
+      "correct": "जोर से",
+      "options": ["जोर से", "चिल्लाओ", "में", "है"]
+    },
+    {
+      "question": "Identify the adverb in: 'Shout loudly.'",
+      "correct": "loudly",
+      "options": ["loudly", "shout", "now", "help"]
+    },
+    {
+      "question": "वाक्य में समुच्चयबोधक कौन है: 'या पानी पियो।'",
+      "correct": "या",
+      "options": ["या", "पानी", "पियो", "में"]
+    },
+    {
+      "question": "Identify the conjunction in: 'Or drink.'",
+      "correct": "Or",
+      "options": ["Or", "drink", "water", "tea"]
+    },
+    {
+      "question": "वाक्य में कर्ता कौन है: 'बारिश होती है।'",
+      "correct": "बारिश",
+      "options": ["बारिश", "होती", "है", "में"]
+    },
+    {
+      "question": "Identify the subject in: 'Rain falls.'",
+      "correct": "Rain",
+      "options": ["Rain", "falls", "heavy", "today"]
+    },
+    {
+      "question": "वाक्य में कर्म कौन है: 'मैं घर बनाता हूँ।'",
+      "correct": "घर",
+      "options": ["घर", "मैं", "बनाता", "हूँ"]
+    },
+    {
+      "question": "Identify the object in: 'Builds house.'",
+      "correct": "house",
+      "options": ["house", "builds", "big", "he"]
+    }
+  ]
+}
