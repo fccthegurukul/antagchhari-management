@@ -1,0 +1,271 @@
+this.questions = [
+  { 
+    question: "Hindi → English: मैं रोज स्कूल जाता हूँ।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:I go to school daily.]</p><p><em>संकेत:</em> आदत/रोजमर्रा = Simple Present.</p>"
+  },
+  { 
+    question: "Hindi → English: वे खाना खा रहे हैं।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:They are eating food.]</p><p><em>संकेत:</em> अभी हो रहा है = am/is/are + V1+ing.</p>"
+  },
+  { 
+    question: "Hindi → English: उसने काम कर लिया है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:He has finished the work.]</p><p><em>संकेत:</em> पूरा हो चुका प्रभाव सहित = has/have + V3.</p>"
+  },
+  { 
+    question: "Hindi → English: वह किताब पढ़ती है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:She reads a book.]</p><p><em>संकेत:</em> He/She/It के साथ V1+s/es.</p>"
+  },
+  { 
+    question: "Hindi → English: बच्चे पार्क में खेलते हैं।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Children play in the park.]</p><p><em>संकेत:</em> plural subject पर V1 (बिना s/es).</p>"
+  },
+  { 
+    question: "Hindi → English: मैं अभी पढ़ रहा हूँ।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:I am studying now.]</p><p><em>संकेत:</em> I + am + V1+ing.</p>"
+  },
+  { 
+    question: "Hindi → English: हम टीवी देख रहे हैं।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:We are watching TV.]</p><p><em>संकेत:</em> We/You/They + are + V1+ing.</p>"
+  },
+  { 
+    question: "Hindi → English: उसने पत्र लिख दिया है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:She has written a letter.]</p><p><em>संकेत:</em> has + V3 (written).</p>"
+  },
+  { 
+    question: "Hindi → English: वे स्कूल जा चुके हैं।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:They have gone to school.]</p><p><em>संकेत:</em> plural + have + V3.</p>"
+  },
+  { 
+    question: "Hindi → English: क्या तुम पानी पीते हो?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Do you drink water?]</p><p><em>संकेत:</em> Do/Does + Sub + V1?</p>"
+  },
+
+  { 
+    question: "English → Hindi: [translate:He plays cricket.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह क्रिकेट खेलता है।</p><p><em>संकेत:</em> Simple Present = आदत/नियमित कार्य।</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:She is cooking food.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह खाना पका रही है।</p><p><em>संकेत:</em> is + V1+ing = अभी हो रहा है।</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:They have finished homework.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>उन्होंने होमवर्क खत्म कर लिया है।</p><p><em>संकेत:</em> has/have + V3 = चुका/चुकी/चुके।</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:I read every day.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मैं रोज पढ़ता हूँ।</p><p><em>संकेत:</em> daily/adverb → Simple Present.</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:The children are playing.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>बच्चे खेल रहे हैं।</p><p><em>संकेत:</em> plural + are + V1+ing.</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:We have seen that movie.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>हम वह फिल्म देख चुके हैं।</p><p><em>संकेत:</em> have + V3 (seen).</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:Is she reading a book?]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>क्या वह किताब पढ़ रही है?</p><p><em>संकेत:</em> Is + Sub + V1+ing?</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:Does he like tea?]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>क्या वह चाय पसंद करता है?</p><p><em>संकेत:</em> Does + Sub + V1?</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:Have they come?]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>क्या वे आ चुके हैं?</p><p><em>संकेत:</em> Have + Sub + V3?</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:I am learning English.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मैं अंग्रेज़ी सीख रहा हूँ।</p><p><em>संकेत:</em> am + V1+ing.</p>"
+  },
+
+  { 
+    question: "Hindi → English: क्या वह चाय पसंद करता है?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Does he like tea?]</p><p><em>संकेत:</em> Does + he + V1.</p>"
+  },
+  { 
+    question: "Hindi → English: क्या वे स्कूल जा रहे हैं?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Are they going to school?]</p><p><em>संकेत:</em> Are + they + V1+ing?</p>"
+  },
+  { 
+    question: "Hindi → English: क्या उसने खाना खा लिया है?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Has he eaten food?]</p><p><em>संकेत:</em> Has + Sub + V3.</p>"
+  },
+  { 
+    question: "Hindi → English: वह रोज सुबह उठती है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:She gets up early every morning.]</p><p><em>संकेत:</em> habit → Simple Present.</p>"
+  },
+  { 
+    question: "Hindi → English: हम अभी खेल रहे हैं।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:We are playing now.]</p><p><em>संकेत:</em> are + V1+ing.</p>"
+  },
+  { 
+    question: "Hindi → English: मैं अपना काम कर चुका हूँ।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:I have done my work.]</p><p><em>संकेत:</em> have + V3 (done).</p>"
+  },
+  { 
+    question: "Hindi → English: वे कभी झूठ नहीं बोलते।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:They never tell lies.]</p><p><em>संकेत:</em> plural + V1.</p>"
+  },
+  { 
+    question: "Hindi → English: वह दूध नहीं पीता है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:He does not drink milk.]</p><p><em>संकेत:</em> Does not + V1.</p>"
+  },
+  { 
+    question: "Hindi → English: हमनें वह किताब पढ़ ली है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:We have read that book.]</p><p><em>संकेत:</em> have + V3 (read).</p>"
+  },
+  { 
+    question: "Hindi → English: क्या तुम अभी पढ़ रहे हो?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Are you studying now?]</p><p><em>संकेत:</em> Are + you + V1+ing?</p>"
+  },
+
+  { 
+    question: "English → Hindi: [translate:She does not read newspapers.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह अखबार नहीं पढ़ती है।</p><p><em>संकेत:</em> Does not + V1.</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:We are not watching TV.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>हम टीवी नहीं देख रहे हैं।</p><p><em>संकेत:</em> am/is/are + not + V1+ing.</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:Has she written the answer?]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>क्या उसने उत्तर लिख दिया है?</p><p><em>संकेत:</em> Has + Sub + V3?</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:They have not finished the work.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>उन्होंने काम खत्म नहीं किया है।</p><p><em>संकेत:</em> have/has + not + V3.</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:Is he going home?]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>क्या वह घर जा रहा है?</p><p><em>संकेत:</em> Is + he + V1+ing?</p>"
+  },
+
+  { 
+    question: "Fill in the blank (Simple Present): He ___ tea. (like/likes)",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:likes]</p><p><em>नियम:</em> He/She/It → V1+s/es.</p>"
+  },
+  { 
+    question: "Fill in the blank (Simple Present): They ___ early. (wake/wakes)",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:wake]</p><p><em>नियम:</em> plural subject → V1.</p>"
+  },
+  { 
+    question: "Fill in the blank (Present Continuous): I ___ to school. (am/is/are + go)",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:am going]</p><p><em>नियम:</em> I + am + V1+ing.</p>"
+  },
+  { 
+    question: "Fill in the blank (Present Continuous): She ___ a song. (am/is/are + sing)",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:is singing]</p><p><em>נियम:</em> She + is + V1+ing.</p>"
+  },
+  { 
+    question: "Fill in the blank (Present Perfect): We ___ the work. (has/have + finish→V3)",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:have finished]</p><p><em>संकेत:</em> We/You/They + have + V3.</p>"
+  },
+
+  { 
+    question: "V1/V3: [translate:go] → V3 = ?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:gone]</p><p><em>संकेत:</em> Present Perfect में V3 चाहिए।</p>"
+  },
+  { 
+    question: "V1/V3: [translate:write] → V3 = ?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:written]</p>"
+  },
+  { 
+    question: "V1/V3: [translate:eat] → V3 = ?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:eaten]</p>"
+  },
+  { 
+    question: "V1/V3: [translate:see] → V3 = ?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:seen]</p>"
+  },
+  { 
+    question: "V1/V3: [translate:do] → V3 = ?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:done]</p>"
+  },
+
+  { 
+    question: "Hindi → English: वे सुबह टहलते हैं।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:They walk in the morning.]</p>"
+  },
+  { 
+    question: "Hindi → English: वह गीत गा रही है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:She is singing a song.]</p>"
+  },
+  { 
+    question: "Hindi → English: हमने दरवाज़ा बंद कर दिया है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:We have closed the door.]</p>"
+  },
+  { 
+    question: "Hindi → English: क्या बच्चे पढ़ते हैं?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Do the children study?]</p>"
+  },
+  { 
+    question: "Hindi → English: क्या वह आ चुका है?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Has he come?]</p>"
+  },
+
+  { 
+    question: "English → Hindi: [translate:He does not go to school.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह स्कूल नहीं जाता है।</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:They are not playing now.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वे अभी खेल नहीं रहे हैं।</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:Has she cooked food?]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>क्या उसने खाना पका लिया है?</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:We have not finished yet.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>हमने अभी तक समाप्त नहीं किया है।</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:Are you studying English?]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>क्या अंग्रेज़ी पढ़ रहे हो?</p>"
+  },
+
+  { 
+    question: "Fill in (Do/Does): ___ she like music?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Does] she like music?</p>"
+  },
+  { 
+    question: "Fill in (Am/Is/Are): ___ they playing?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Are] they playing?</p>"
+  },
+  { 
+    question: "Fill in (Has/Have): ___ you done it?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Have] you done it?</p>"
+  },
+  { 
+    question: "Fill in (V1+ing): He is ___ a letter. (write)",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:writing]</p>"
+  },
+  { 
+    question: "Fill in (V3): They have ___ lunch. (eat)",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:eaten]</p>"
+  },
+
+  { 
+    question: "Hindi → English: वह स्कूल नहीं जाता है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:He does not go to school.]</p>"
+  },
+  { 
+    question: "Hindi → English: क्या वे खेल रहे हैं?",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:Are they playing?]</p>"
+  },
+  { 
+    question: "Hindi → English: मैंने नाश्ता कर लिया है।",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>[translate:I have eaten breakfast.]</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:She writes every day.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह रोज लिखती है।</p>"
+  },
+  { 
+    question: "English → Hindi: [translate:They have gone home.]",
+    answer: "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वे घर जा चुके हैं।</p>"
+  }
+];
