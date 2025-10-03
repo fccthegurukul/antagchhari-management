@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {"\"We are going to school.\" का सही हिंदी अनुवाद चुनें।", "correct": "हम स्कूल जा रहे हैं।", "options": ["हम स्कूल जा रहे हैं।","हम स्कूल जाते हैं।","हम स्कूल जा चुके हैं।","हम स्कूल जाएंगे।"] },
+    {"\"She is singing a song.\" का सही हिंदी अनुवाद चुनें।", "correct": "वह एक गाना गा रही है।", "options": ["वह एक गाना गा रही है।","वह एक गाना गाती है।","वह एक गाना गा चुकी है।","वह एक गाना गाएगी।"] },
+    {"\"He is playing cricket.\" का सही हिंदी अनुवाद चुनें।", "correct": "वह क्रिकेट खेल रहा है।", "options": ["वह क्रिकेट खेल रहा है।","वह क्रिकेट खेलता है।","वह क्रिकेट खेल रहा था।","वह क्रिकेट खेलेगा।"] },
+    {"\"I am reading a book.\" का सही हिंदी अनुवाद चुनें।", "correct": "मैं एक किताब पढ़ रहा हूँ।", "options": ["मैं एक किताब पढ़ रहा हूँ।","मैं एक किताब पढ़ता हूँ।","मैं एक किताब पढ़ रहा था।","मैं एक किताब पढ़ूँगा।"] },
+    {"\"They are eating food.\" का सही हिंदी अनुवाद चुनें।", "correct": "वे खाना खा रहे हैं।", "options": ["वे खाना खा रहे हैं।","वे खाना खाते हैं।","वे खाना खा रहे थे।","वे खाना खाएंगे।"] },
+
+    {"वाक्य का Tense पहचानें: \"He has played cricket.\"", "correct": "Present Perfect", "options": ["Present Perfect","Present Continuous","Simple Present","Past Perfect"] },
+    {"वाक्य का Tense पहचानें: \"They are watching a movie.\"", "correct": "Present Continuous", "options": ["Present Continuous","Simple Present","Present Perfect","Past Continuous"] },
+    {"वाक्य का Tense पहचानें: \"Do you like coffee?\"", "correct": "Simple Present", "options": ["Simple Present","Present Continuous","Simple Past","Present Perfect"] },
+    {"वाक्य का Tense पहचानें: \"It has been raining for two hours.\"", "correct": "Present Perfect Continuous", "options": ["Present Perfect Continuous","Present Continuous","Present Perfect","Past Perfect Continuous"] },
+    {"वाक्य का Tense पहचानें: \"She sang a song.\"", "correct": "Simple Past", "options": ["Simple Past","Past Continuous","Past Perfect","Simple Present"] },
+
+    {"रिक्त स्थान भरें: \"He ____ to school every day.\"", "correct": "goes", "options": ["goes","go","is going","went"] },
+    {"रिक्त स्थान भरें: \"They ____ not play football.\"", "correct": "do", "options": ["do","does","did","is"] },
+    {"सही सहायक क्रिया चुनें: \"_____ he play cricket?\"", "correct": "Does", "options": ["Does","Do","Is","Has"] },
+    {"Present Continuous के लिए सही सहायक क्रिया चुनें: \"She ____ cooking food.\"", "correct": "is", "options": ["is","are","am","has"] },
+    {"Present Continuous के लिए सही सहायक क्रिया चुनें: \"I ____ reading a newspaper.\"", "correct": "am", "options": ["am","is","are","have"] },
+
+    {"Present Perfect के लिए सही सहायक क्रिया: \"We ____ seen that movie.\"", "correct": "have", "options": ["have","has","had","were"] },
+    {"Present Perfect के लिए सही सहायक क्रिया: \"He ____ finished his homework.\"", "correct": "has", "options": ["has","have","had","is"] },
+    {"V3 चुनें: \"She has ____ the letter.\"", "correct": "written", "options": ["write","wrote","written","writing"] },
+    {"‘Since’/‘For’ का सही प्रयोग: \"He has been playing cricket ____ morning.\"", "correct": "since", "options": ["since","for","from","at"] },
+    {"‘Since’/‘For’ का सही प्रयोग: \"I have been studying ____ two hours.\"", "correct": "for", "options": ["for","since","from","at"] },
+
+    {"सही वाक्य चुनें (Present Perfect Negative).", "correct": "He has not played cricket.", "options": ["He has not played cricket.","He have not played cricket.","He did not played cricket.","He is not played cricket."] },
+    {"रिक्त स्थान भरें (Simple Past): \"They ____ a movie yesterday.\"", "correct": "watched", "options": ["watch","watched","watching","watches"] },
+    {"Simple Past Negative के लिए सहायक क्रिया चुनें: \"She ____ not go to school.\"", "correct": "did", "options": ["did","does","was","has"] },
+    {"Simple Past Interrogative के लिए सहायक क्रिया: \"_____ you see the film?\"", "correct": "Did", "options": ["Did","Do","Does","Have"] },
+    {"Past Continuous: \"We ____ watching TV at 8 pm.\"", "correct": "were", "options": ["were","was","are","had"] },
+
+    {"Past Continuous: \"He ____ playing football when it started to rain.\"", "correct": "was", "options": ["was","were","is","has"] },
+    {"Past Perfect: \"They ____ left before we arrived.\"", "correct": "had", "options": ["had","have","has","were"] },
+    {"Past Perfect: \"She ____ finished her work by 5 pm.\"", "correct": "had", "options": ["had","has","have","was"] },
+    {"Past Perfect Continuous: \"He ____ been studying for three hours before dinner.\"", "correct": "had", "options": ["had","has","have","is"] },
+    {"वाक्य का Tense पहचानें: \"We were playing.\"", "correct": "Past Continuous", "options": ["Past Continuous","Simple Past","Present Continuous","Past Perfect"] },
+
+    {"वाक्य का Tense पहचानें: \"They had finished.\"", "correct": "Past Perfect", "options": ["Past Perfect","Simple Past","Present Perfect","Past Perfect Continuous"] },
+    {"वाक्य का Tense पहचानें: \"He has been waiting since morning.\"", "correct": "Present Perfect Continuous", "options": ["Present Perfect Continuous","Present Continuous","Present Perfect","Past Continuous"] },
+    {"सही Wh-शब्द चुनें: \"____ are you going?\"", "correct": "Where", "options": ["Where","Why","When","What"] },
+    {"सही Wh-शब्द चुनें: \"____ have they left?\"", "correct": "Why", "options": ["Why","When","Where","What"] },
+    {"हिंदी से अंग्रेज़ी अनुवाद: \"क्या तुम अंग्रेजी बोलते हो?\"", "correct": "Do you speak English?", "options": ["Do you speak English?","Are you speak English?","Did you speak English?","Have you speak English?"] },
+
+    {"हिंदी से अंग्रेज़ी अनुवाद: \"वह रोज़ स्कूल जाता है।\"", "correct": "He goes to school every day.", "options": ["He go to school every day.","He goes to school every day.","He is going to school every day.","He will go to school every day."] },
+    {"हिंदी से अंग्रेज़ी अनुवाद: \"मैंने आज का अखबार नहीं पढ़ा है।\"", "correct": "I have not read today's newspaper.", "options": ["I have not read today's newspaper.","I did not read today's newspaper.","I am not read today's newspaper.","I had not read today's newspaper."] },
+    {"हिंदी से अंग्रेज़ी अनुवाद: \"क्या वह खाना खा रहा है?\"", "correct": "Is he eating food?", "options": ["Is he eating food?","Does he eating food?","Has he eating food?","Did he eating food?"] },
+    {"सही वाक्य चुनें (Simple Present — Universal truth).", "correct": "The sun does not rise in the west.", "options": ["The sun does not rise in the west.","The sun do not rise in the west.","The sun is not rise in the west.","The sun did not rise in the west."] },
+    {"Present Continuous Negative का सही वाक्य चुनें।", "correct": "They are not eating food.", "options": ["They are not eating food.","They is not eating food.","They am not eating food.","They have not eating food."] },
+
+    {"Present Continuous Interrogative का सही वाक्य चुनें।", "correct": "Are you learning English?", "options": ["Are you learning English?","Do you learning English?","Is you learning English?","Have you learning English?"] },
+    {"‘Since/For’ का सही प्रयोग: \"We have been living here ____ 2010.\"", "correct": "since", "options": ["since","for","from","by"] },
+    {"कहानी के सन्दर्भ में सही रूप चुनें: \"Rohan ____ finished his homework.\"", "correct": "has", "options": ["has","have","had","is"] },
+    {"वाक्य का Tense पहचानें: \"Do you watch a movie?\"", "correct": "Simple Present", "options": ["Simple Present","Present Continuous","Simple Past","Present Perfect"] },
+    {"रिक्त स्थान भरें (V2): \"She ____ to the market yesterday.\"", "correct": "went", "options": ["go","goes","went","gone"] },
+
+    {"त्रुटि पहचानें — सही वाक्य चुनें (Simple Present Negative).", "correct": "He does not play cricket.", "options": ["He does not play cricket.","He does not plays cricket.","He do not play cricket.","He is not play cricket."] },
+    {"Present Perfect Wh-प्रश्न: \"What ____ you done?\"", "correct": "have", "options": ["have","has","did","do"] },
+    {"Present Perfect Interrogative: \"_____ she eaten food?\"", "correct": "Has", "options": ["Has","Have","Did","Is"] },
+    {"वाक्य का Tense पहचानें: \"They have not seen that movie.\"", "correct": "Present Perfect", "options": ["Present Perfect","Present Continuous","Simple Past","Past Perfect"] },
+    {"हिंदी से अंग्रेज़ी अनुवाद: \"वह सुबह से क्रिकेट खेल रहा है।\"", "correct": "He has been playing cricket since morning.", "options": ["He has been playing cricket since morning.","He is playing cricket since morning.","He played cricket since morning.","He had been playing cricket since morning."] },
+
+    {"रिक्त स्थान भरें (Simple Present — s/es नियम): \"She ____ very hard.\"", "correct": "works", "options": ["works","work","is work","worked"] },
+    {"Simple Past Negative — सही वाक्य चुनें।", "correct": "They did not eat the food.", "options": ["They did not eat the food.","They did not ate the food.","They does not eat the food.","They are not ate the food."] },
+    {"Past Continuous Wh-प्रश्न: \"What ____ you doing at 7 pm?\"", "correct": "were", "options": ["were","was","are","had"] },
+    {"Past Perfect Wh-प्रश्न: \"Where ____ they gone before sunset?\"", "correct": "had", "options": ["had","have","has","were"] },
+    {"Present Perfect Continuous में ‘duration’ के लिए सही शब्द चुनें।", "correct": "for", "options": ["for","since","from","till"] }
+  ]
+}
