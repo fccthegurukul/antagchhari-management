@@ -1,0 +1,724 @@
+{
+  "questions": [
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"He goes to school every day.\"",
+      "correct": "वह रोज़ स्कूल जाता है।",
+      "options": ["वह रोज़ स्कूल जाता है।", "वह रोज़ स्कूल जा रहा है।", "वह रोज़ स्कूल गया।", "वह रोज़ स्कूल जा चुका है।"]
+    },
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"The dog is barking.\"",
+      "correct": "कुत्ता भौंक रहा है।",
+      "options": ["कुत्ता भौंक रहा है।", "कुत्ता भौंकता है।", "कुत्ता भौंका।", "कुत्ता भौंकेगा।"]
+    },
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"We have seen that movie.\"",
+      "correct": "हमने वह फिल्म देख ली है।",
+      "options": ["हमने वह फिल्म देख ली है।", "हमने वह फिल्म देखी थी।", "हम वह फिल्म देखेंगे।", "हम वह फिल्म देख रहे हैं।"]
+    },
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"He has been playing cricket since morning.\"",
+      "correct": "वह सुबह से क्रिकेट खेल रहा है।",
+      "options": ["वह सुबह से क्रिकेट खेल रहा है।", "वह सुबह से क्रिकेट खेल रहा था।", "वह सुबह से क्रिकेट खेलता है।", "वह सुबह से क्रिकेट खेलेगा।"]
+    },
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"I did not eat food.\"",
+      "correct": "मैंने खाना नहीं खाया।",
+      "options": ["मैंने खाना नहीं खाया।", "मैं खाना नहीं खाता हूँ।", "मैं खाना नहीं खा रहा हूँ।", "मैं खाना नहीं खा चुका था।"]
+    },
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"They were running in the park.\"",
+      "correct": "वे पार्क में दौड़ रहे थे।",
+      "options": ["वे पार्क में दौड़ रहे थे।", "वे पार्क में दौड़ते हैं।", "वे पार्क में दौड़े।", "वे पार्क में दौड़ेंगे।"]
+    },
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"The train had left before I reached the station.\"",
+      "correct": "मेरे स्टेशन पहुँचने से पहले ट्रेन जा चुकी थी।",
+      "options": ["मेरे स्टेशन पहुँचने से पहले ट्रेन जा चुकी थी।", "मेरे स्टेशन पहुँचने से पहले ट्रेन चली गई।", "जब मैं स्टेशन पहुँचा तब ट्रेन जा रही थी।", "जब मैं स्टेशन पहुँचा तब ट्रेन चली गई थी।"]
+    },
+    {
+      "question": "वाक्य का सही हिंदी अनुवाद चुनें: \"I had not been waiting for an hour before he came.\"",
+      "correct": "उसके आने से पहले मैं एक घंटे से इंतजार नहीं कर रहा था।",
+      "options": ["उसके आने से पहले मैं एक घंटे से इंतजार नहीं कर रहा था।", "उसके आने से पहले मैंने एक घंटे इंतजार नहीं किया था।", "जब वह आया तब मैं एक घंटे से इंतजार नहीं कर रहा था।", "मैं एक घंटे से इंतजार नहीं कर रहा था।"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"He ____ a song every day.\"",
+      "correct": "sings",
+      "options": ["sings", "sing", "is singing", "sang"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"She is ____ food.\"",
+      "correct": "cooking",
+      "options": ["cooking", "cook", "cooks", "cooked"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"They have ____ the match.\"",
+      "correct": "won",
+      "options": ["won", "win", "wins", "winning"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"I have been studying ____ two hours.\"",
+      "correct": "for",
+      "options": ["for", "since", "from", "at"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"He ____ to school yesterday.\"",
+      "correct": "went",
+      "options": ["went", "go", "goes", "is going"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"She ____ not cook food.\"",
+      "correct": "did",
+      "options": ["did", "does", "is", "was"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"They ____ in the park when it started to rain.\"",
+      "correct": "were playing",
+      "options": ["were playing", "was playing", "play", "played"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"He had not ____ when I called him.\"",
+      "correct": "been studying",
+      "options": ["been studying", "study", "studying", "studied"]
+    },
+    {
+      "question": "सही Structure चुनें: Simple Present Tense (Affirmative)",
+      "correct": "Subject + V1 (s/es) + Object",
+      "options": ["Subject + V1 (s/es) + Object", "Subject + V1 + Object", "Subject + is/am/are + V1 + ing + Object", "Subject + has/have + V3 + Object"]
+    },
+    {
+      "question": "सही Structure चुनें: Present Continuous Tense (Negative)",
+      "correct": "Subject + is/am/are + not + V1 + ing + Object",
+      "options": ["Subject + is/am/are + not + V1 + ing + Object", "Subject + do/does + not + V1 + ing + Object", "Subject + not + is/am/are + V1 + ing + Object", "Subject + V1 + not + ing + Object"]
+    },
+    {
+      "question": "सही Structure चुनें: Present Perfect Tense (Interrogative)",
+      "correct": "Has/Have + Subject + V3 + Object?",
+      "options": ["Has/Have + Subject + V3 + Object?", "Do/Does + Subject + V3 + Object?", "What + Subject + has/have + V3 + Object?", "Subject + has/have + V3 + Object?"]
+    },
+    {
+      "question": "सही Structure चुनें: Simple Past Tense (Negative)",
+      "correct": "Subject + did not + V1 + Object",
+      "options": ["Subject + did not + V1 + Object", "Subject + V2 + not + Object", "Subject + not + V1 + Object", "Subject + had not + V1 + Object"]
+    },
+    {
+      "question": "सही Structure चुनें: Past Continuous Tense (Affirmative)",
+      "correct": "Subject + was/were + V1 + ing + Object",
+      "options": ["Subject + was/were + V1 + ing + Object", "Subject + V2 + Object", "Subject + had + V3 + Object", "Subject + did + V1 + ing + Object"]
+    },
+    {
+      "question": "सही Structure चुनें: Past Perfect Tense (Wh-family)",
+      "correct": "Wh-Word + had + Subject + V3 + Object?",
+      "options": ["Wh-Word + had + Subject + V3 + Object?", "Wh-Word + did + Subject + V3 + Object?", "Wh-Word + Subject + had + V3 + Object?", "Wh-Word + Subject + did + V3 + Object?"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He runs quickly.\"",
+      "correct": "Simple Present Tense",
+      "options": ["Simple Present Tense", "Simple Past Tense", "Present Continuous Tense", "Present Perfect Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"She is not singing a song.\"",
+      "correct": "Present Continuous Tense",
+      "options": ["Present Continuous Tense", "Simple Present Tense", "Present Perfect Tense", "Past Continuous Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"We have not seen that movie.\"",
+      "correct": "Present Perfect Tense",
+      "options": ["Present Perfect Tense", "Simple Present Tense", "Present Continuous Tense", "Past Perfect Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He has been working for a long time.\"",
+      "correct": "Present Perfect Continuous Tense",
+      "options": ["Present Perfect Continuous Tense", "Present Continuous Tense", "Past Perfect Tense", "Simple Past Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He went to school.\"",
+      "correct": "Simple Past Tense",
+      "options": ["Simple Past Tense", "Past Continuous Tense", "Past Perfect Tense", "Simple Present Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"What did you eat?\"",
+      "correct": "Simple Past Tense",
+      "options": ["Simple Past Tense", "Simple Present Tense", "Past Perfect Tense", "Present Perfect Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"She was cooking food.\"",
+      "correct": "Past Continuous Tense",
+      "options": ["Past Continuous Tense", "Simple Past Tense", "Past Perfect Tense", "Present Continuous Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"I had eaten food before he came.\"",
+      "correct": "Past Perfect Tense",
+      "options": ["Past Perfect Tense", "Past Continuous Tense", "Simple Past Tense", "Present Perfect Tense"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"We had been living there for ten years.\"",
+      "correct": "Past Perfect Continuous Tense",
+      "options": ["Past Perfect Continuous Tense", "Past Continuous Tense", "Present Perfect Continuous Tense", "Past Perfect Tense"]
+    },
+    {
+      "question": "Present Tense में 'duration' के लिए सही शब्द चुनें।",
+      "correct": "for/since",
+      "options": ["for/since", "from/to", "at/in", "on/at"]
+    },
+    {
+      "question": "Present Perfect Tense में कौन सी Verb form का इस्तेमाल होता है?",
+      "correct": "V3 (Past Participle)",
+      "options": ["V3 (Past Participle)", "V1 (Base)", "V2 (Past)", "V4 (V+ing)"]
+    },
+    {
+      "question": "Simple Past Tense में Affirmative वाक्यों में कौन सी Verb form का इस्तेमाल होता है?",
+      "correct": "V2 (Past Form)",
+      "options": ["V2 (Past Form)", "V1 (Base Form)", "V3 (Past Participle)", "V1 + ing"]
+    },
+    {
+      "question": "Past Continuous Tense में I/He/She/It के साथ क्या लगेगा?",
+      "correct": "was",
+      "options": ["was", "were", "had", "have"]
+    },
+    {
+      "question": "Present Continuous Tense में ‘I’ के साथ क्या लगेगा?",
+      "correct": "am",
+      "options": ["am", "is", "are", "do"]
+    },
+    {
+      "question": "Simple Present Tense में ‘He/She/It/Name’ के साथ क्या लगेगा?",
+      "correct": "V1 (s/es)",
+      "options": ["V1 (s/es)", "V1", "V2", "V3"]
+    },
+    {
+      "question": "Present Perfect Tense में I/We/You/They के साथ क्या लगेगा?",
+      "correct": "have",
+      "options": ["have", "has", "had", "do"]
+    },
+    {
+      "question": "Simple Past Tense में Negative वाक्यों में कौन सी Verb form का इस्तेमाल होता है?",
+      "correct": "V1 (Base Form)",
+      "options": ["V1 (Base Form)", "V2 (Past Form)", "V3 (Past Participle)", "V1 + ing"]
+    },
+    {
+      "question": "Past Perfect Tense में कौन सी Verb form का इस्तेमाल होता है?",
+      "correct": "V3 (Past Participle)",
+      "options": ["V3 (Past Participle)", "V2 (Past)", "V1 (Base)", "V1 + ing"]
+    },
+    {
+      "question": "Simple Present Tense के Interrogative वाक्य का उदाहरण चुनें।",
+      "correct": "Do you like coffee?",
+      "options": ["Do you like coffee?", "Are you liking coffee?", "Have you liked coffee?", "Did you like coffee?"]
+    },
+    {
+      "question": "Present Continuous Tense के Negative वाक्य का उदाहरण चुनें।",
+      "correct": "वह खाना नहीं बना रही है।",
+      "options": ["वह खाना नहीं बना रही है।", "वह खाना नहीं बनाती है।", "वह खाना नहीं बना चुकी है।", "उसने खाना नहीं बनाया।"]
+    },
+    {
+      "question": "Present Perfect Tense के Affirmative वाक्य का उदाहरण चुनें।",
+      "correct": "उसने अपना काम खत्म कर लिया है।",
+      "options": ["उसने अपना काम खत्म कर लिया है।", "वह अपना काम खत्म कर रहा है।", "वह अपना काम खत्म करता है।", "वह अपना काम खत्म कर चुका था।"]
+    },
+    {
+      "question": "Present Perfect Continuous Tense के वाक्य का उदाहरण चुनें।",
+      "correct": "वह दो घंटे से पढ़ रहा है।",
+      "options": ["वह दो घंटे से पढ़ रहा है।", "वह दो घंटे से पढ़ रहा था।", "वह दो घंटे पढ़ता है।", "वह दो घंटे पढ़ चुका है।"]
+    },
+    {
+      "question": "Simple Past Tense के Interrogative वाक्य का उदाहरण चुनें।",
+      "correct": "Did he go to school?",
+      "options": ["Did he go to school?", "Did he went to school?", "Does he go to school?", "Is he going to school?"]
+    },
+    {
+      "question": "Past Continuous Tense के Affirmative वाक्य का उदाहरण चुनें।",
+      "correct": "हम पढ़ रहे थे।",
+      "options": ["हम पढ़ रहे थे।", "हम पढ़ चुके थे।", "हम पढ़ते हैं।", "हम पढ़ रहे हैं।"]
+    },
+    {
+      "question": "Past Perfect Tense के Negative वाक्य का उदाहरण चुनें।",
+      "correct": "उसके आने से पहले मैंने खाना नहीं खाया था।",
+      "options": ["उसके आने से पहले मैंने खाना नहीं खाया था।", "उसके आने के बाद मैंने खाना नहीं खाया था।", "वह आया तब मैं खाना नहीं खा रहा था।", "मैं खाना नहीं खा रहा हूँ।"]
+    },
+    {
+      "question": "Past Perfect Continuous Tense के वाक्य का उदाहरण चुनें।",
+      "correct": "वह बहुत देर से रो रही थी।",
+      "options": ["वह बहुत देर से रो रही थी।", "वह बहुत देर से रो रही है।", "वह बहुत देर तक रोई।", "वह रो रही थी।"]
+    },
+    {
+      "question": "Simple Present Tense में, 'I' के साथ कौन सा verb form आएगा?",
+      "correct": "V1",
+      "options": ["V1", "V1 (s/es)", "V2", "V3"]
+    },
+    {
+      "question": "Present Continuous Tense में, ‘They’ के साथ क्या लगेगा?",
+      "correct": "are",
+      "options": ["are", "is", "am", "do"]
+    },
+    {
+      "question": "Present Perfect Tense में, 'He' के साथ क्या लगेगा?",
+      "correct": "has",
+      "options": ["has", "have", "had", "does"]
+    },
+    {
+      "question": "Present Perfect Continuous Tense में, 'She' के साथ क्या लगेगा?",
+      "correct": "has been",
+      "options": ["has been", "have been", "had been", "is being"]
+    },
+    {
+      "question": "Simple Past Tense में, 'You' के साथ कौन सा verb form लगेगा?",
+      "correct": "V2",
+      "options": ["V2", "V1", "V3", "V1 + ing"]
+    },
+    {
+      "question": "Past Continuous Tense में, 'We' के साथ क्या लगेगा?",
+      "correct": "were",
+      "options": ["were", "was", "had", "did"]
+    },
+    {
+      "question": "Past Perfect Tense में, 'They' के साथ क्या लगेगा?",
+      "correct": "had",
+      "options": ["had", "have", "has", "did"]
+    },
+    {
+      "question": "Past Perfect Continuous Tense में, 'He' के साथ क्या लगेगा?",
+      "correct": "had been",
+      "options": ["had been", "has been", "was being", "were being"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"What do you want?\"",
+      "correct": "तुम क्या चाहते हो?",
+      "options": ["तुम क्या चाहते हो?", "तुम क्या चाह रहे हो?", "तुम क्या चाहते थे?", "तुमने क्या चाहा?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Where are you going?\"",
+      "correct": "तुम कहाँ जा रहे हो?",
+      "options": ["तुम कहाँ जा रहे हो?", "तुम कहाँ जाते हो?", "तुम कहाँ गए थे?", "तुम कहाँ जाओगे?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Why have they left?\"",
+      "correct": "वे क्यों चले गए हैं?",
+      "options": ["वे क्यों चले गए हैं?", "वे क्यों जा रहे हैं?", "वे क्यों गए थे?", "वे क्यों जाते हैं?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"What did you eat?\"",
+      "correct": "तुमने क्या खाया?",
+      "options": ["तुमने क्या खाया?", "तुम क्या खाते हो?", "तुम क्या खा रहे हो?", "तुम क्या खा चुके थे?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Where was he going?\"",
+      "correct": "वह कहाँ जा रहा था?",
+      "options": ["वह कहाँ जा रहा था?", "वह कहाँ गया?", "वह कहाँ जा रहा है?", "वह कहाँ गया था?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"What had you eaten before the party?\"",
+      "correct": "पार्टी से पहले तुमने क्या खाया था?",
+      "options": ["पार्टी से पहले तुमने क्या खाया था?", "पार्टी से पहले तुमने क्या खाया?", "तुम पार्टी से पहले क्या खा रहे थे?", "तुमने पार्टी में क्या खाया?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Why had she been crying for so long?\"",
+      "correct": "वह इतनी देर से क्यों रो रही थी?",
+      "options": ["वह इतनी देर से क्यों रो रही थी?", "वह इतनी देर से क्यों रो रही है?", "वह क्यों रोती थी?", "वह इतनी देर तक क्यों रोई?"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"Do you watch a movie?\"",
+      "correct": "Simple Present",
+      "options": ["Simple Present", "Present Continuous", "Simple Past", "Present Perfect"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He has not played cricket.\"",
+      "correct": "Present Perfect",
+      "options": ["Present Perfect", "Present Continuous", "Simple Past", "Past Perfect"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"I did not eat food.\"",
+      "correct": "Simple Past",
+      "options": ["Simple Past", "Past Continuous", "Past Perfect", "Simple Present"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"I was not playing cricket.\"",
+      "correct": "Past Continuous",
+      "options": ["Past Continuous", "Simple Past", "Past Perfect", "Present Continuous"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He had not played cricket when it started raining.\"",
+      "correct": "Past Perfect",
+      "options": ["Past Perfect", "Simple Past", "Past Continuous", "Present Perfect"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"She has been waiting since morning.\"",
+      "correct": "Present Perfect Continuous",
+      "options": ["Present Perfect Continuous", "Present Continuous", "Present Perfect", "Simple Present"]
+    },
+    {
+      "question": "Present Continuous Tense में Affirmative वाक्य का Structure क्या है?",
+      "correct": "Subject + is/am/are + V1 + ing + Object",
+      "options": ["Subject + is/am/are + V1 + ing + Object", "Subject + V1 + ing + Object", "Subject + V1 + Object", "Subject + has/have + V3 + Object"]
+    },
+    {
+      "question": "Past Continuous Tense में Negative वाक्य का Structure क्या है?",
+      "correct": "Subject + was/were + not + V1 + ing + Object",
+      "options": ["Subject + was/were + not + V1 + ing + Object", "Subject + did not + V1 + ing + Object", "Subject + had not + V1 + ing + Object", "Subject + not + V1 + ing + Object"]
+    },
+    {
+      "question": "Past Perfect Tense में Interrogative वाक्य का Structure क्या है?",
+      "correct": "Had + Subject + V3 + Object?",
+      "options": ["Had + Subject + V3 + Object?", "Did + Subject + V3 + Object?", "Was/Were + Subject + V3 + Object?", "Subject + had + V3 + Object?"]
+    },
+    {
+      "question": "Present Perfect Continuous Tense में 'time' के लिए कौन से शब्द का प्रयोग होता है?",
+      "correct": "for/since",
+      "options": ["for/since", "from/to", "at/in", "on/at"]
+    },
+    {
+      "question": "Simple Present Tense में Interrogative वाक्य का Structure क्या है?",
+      "correct": "Do/Does + Subject + V1 + Object?",
+      "options": ["Do/Does + Subject + V1 + Object?", "Is/Am/Are + Subject + V1 + Object?", "Did + Subject + V1 + Object?", "Have/Has + Subject + V1 + Object?"]
+    },
+    {
+      "question": "Simple Past Tense में 'He' के साथ Negative वाक्य में क्या लगेगा?",
+      "correct": "did not",
+      "options": ["did not", "does not", "is not", "had not"]
+    },
+    {
+      "question": "Present Perfect Tense की पहचान क्या है?",
+      "correct": "चुका है, चुकी है, चुके हैं",
+      "options": ["चुका है, चुकी है, चुके हैं", "रहा है, रही है, रहे हैं", "ता है, ती है, ते हैं", "आ, ई, ए, या, यी, ये"]
+    },
+    {
+      "question": "Past Continuous Tense की पहचान क्या है?",
+      "correct": "रहा था, रही थी, रहे थे",
+      "options": ["रहा था, रही थी, रहे थे", "चुका था, चुकी थी, चुके थे", "आ, ई, ए", "ता था, ती थी, ते थे"]
+    },
+    {
+      "question": "Past Perfect Tense की पहचान क्या है?",
+      "correct": "चुका था, चुकी थी, चुके थे",
+      "options": ["चुका था, चुकी थी, चुके थे", "रहा था, रही थी, रहे थे", "ता था, ती थी, ते थे", "या, यी, ये"]
+    },
+    {
+      "question": "Present Perfect Continuous Tense में 'since' का प्रयोग कब होता है?",
+      "correct": "समय के आरंभिक बिंदु के लिए (starting point)",
+      "options": ["समय के आरंभिक बिंदु के लिए (starting point)", "समय की अवधि के लिए (period of time)", "भविष्य के लिए", "अतीत के लिए"]
+    },
+    {
+      "question": "Past Perfect Tense का प्रयोग कब होता है?",
+      "correct": "जब अतीत में एक काम दूसरे काम से पहले पूरा हो चुका था",
+      "options": ["जब अतीत में एक काम दूसरे काम से पहले पूरा हो चुका था", "जब अतीत में कोई काम चल रहा था", "जब अतीत में कोई काम पूरा हो गया", "जब भविष्य में कोई काम होगा"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"I have been studying ____ morning.\"",
+      "correct": "since",
+      "options": ["since", "for", "from", "at"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"She ____ not cook food.\"",
+      "correct": "does",
+      "options": ["does", "do", "did", "is"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"They ____ not watching TV.\"",
+      "correct": "were",
+      "options": ["were", "was", "did", "had"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Do you learn Hindi?\"",
+      "correct": "क्या आप हिंदी सीखते हैं?",
+      "options": ["क्या आप हिंदी सीखते हैं?", "क्या आप हिंदी सीख रहे हैं?", "क्या आप हिंदी सीख चुके हैं?", "क्या आप हिंदी सीखेंगे?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Is he playing cricket?\"",
+      "correct": "क्या वह क्रिकेट खेल रहा है?",
+      "options": ["क्या वह क्रिकेट खेल रहा है?", "क्या वह क्रिकेट खेलता है?", "क्या वह क्रिकेट खेला?", "क्या वह क्रिकेट खेलेगा?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Have we seen that movie?\"",
+      "correct": "क्या हमने वह फिल्म देख ली है?",
+      "options": ["क्या हमने वह फिल्म देख ली है?", "क्या हमने वह फिल्म देखी थी?", "क्या हम वह फिल्म देख रहे हैं?", "क्या हम वह फिल्म देखेंगे?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Had I eaten food before he came?\"",
+      "correct": "क्या उसके आने से पहले मैं खाना खा चुका था?",
+      "options": ["क्या उसके आने से पहले मैं खाना खा चुका था?", "क्या मैं खाना खा रहा था?", "क्या मैंने खाना खाया था?", "क्या वह आया था और मैंने खाना खाया था?"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He loves to play football.\"",
+      "correct": "Simple Present",
+      "options": ["Simple Present", "Present Continuous", "Present Perfect", "Simple Past"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"His mother is cooking food at home.\"",
+      "correct": "Present Continuous",
+      "options": ["Present Continuous", "Simple Present", "Present Perfect", "Past Continuous"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He has finished his homework.\"",
+      "correct": "Present Perfect",
+      "options": ["Present Perfect", "Present Continuous", "Simple Past", "Past Perfect"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"Rohan has been working for a long time.\"",
+      "correct": "Present Perfect Continuous",
+      "options": ["Present Perfect Continuous", "Present Continuous", "Past Continuous", "Past Perfect Continuous"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He did not go to school.\"",
+      "correct": "Simple Past",
+      "options": ["Simple Past", "Past Continuous", "Past Perfect", "Simple Present"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"They were not watching a movie.\"",
+      "correct": "Past Continuous",
+      "options": ["Past Continuous", "Simple Past", "Past Perfect", "Present Continuous"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"I had not eaten food before he came.\"",
+      "correct": "Past Perfect",
+      "options": ["Past Perfect", "Simple Past", "Past Continuous", "Present Perfect"]
+    },
+    {
+      "question": "वाक्य का Tense पहचानें: \"He had not been studying when I called him.\"",
+      "correct": "Past Perfect Continuous",
+      "options": ["Past Perfect Continuous", "Past Continuous", "Present Perfect Continuous", "Past Perfect"]
+    },
+    {
+      "question": "Simple Present Tense में Affirmative वाक्यों का हिंदी में अंत क्या होता है?",
+      "correct": "ता है, ती है, ते हैं",
+      "options": ["ता है, ती है, ते हैं", "रहा है, रही है, रहे हैं", "चुका है, चुकी है, चुके हैं", "आ, ई, ए, या, यी, ये"]
+    },
+    {
+      "question": "Present Continuous Tense की पहचान क्या है?",
+      "correct": "रहा है, रही है, रहे हैं",
+      "options": ["रहा है, रही है, रहे हैं", "ता है, ती है, ते हैं", "चुका है, चुकी है, चुके हैं", "रहा था, रही थी, रहे थे"]
+    },
+    {
+      "question": "Present Perfect Tense की पहचान क्या है?",
+      "correct": "चुका है, चुकी है, चुके हैं या लिया है, दिया है",
+      "options": ["चुका है, चुकी है, चुके हैं या लिया है, दिया है", "रहा है, रही है, रहे हैं", "रहा हूँ, रही हूँ", "या, यी, ये"]
+    },
+    {
+      "question": "Present Perfect Continuous Tense की पहचान क्या है?",
+      "correct": "रहा है, रही है, रहे हैं + समय",
+      "options": ["रहा है, रही है, रहे हैं + समय", "चुका है, चुकी है, चुके हैं + समय", "रहा था, रही थी, रहे थे + समय", "ता है, ती है, ते हैं + समय"]
+    },
+    {
+      "question": "Simple Past Tense की पहचान क्या है?",
+      "correct": "आ, ई, ए, या, यी, ये",
+      "options": ["आ, ई, ए, या, यी, ये", "रहा था, रही थी, रहे थे", "चुका था, चुकी थी, चुके थे", "ता है, ती है, ते हैं"]
+    },
+    {
+      "question": "Past Continuous Tense की पहचान क्या है?",
+      "correct": "रहा था, रही थी, रहे थे",
+      "options": ["रहा था, रही थी, रहे थे", "चुका था, चुकी थी, चुके थे", "आ, ई, ए", "या, यी, ये"]
+    },
+    {
+      "question": "Past Perfect Tense की पहचान क्या है?",
+      "correct": "चुका था, चुकी थी, चुके थे या लिया था, दिया था",
+      "options": ["चुका था, चुकी थी, चुके थे या लिया था, दिया था", "रहा था, रही थी, रहे थे", "या, यी, ये", "ता था, ती थी, ते थे"]
+    },
+    {
+      "question": "Past Perfect Continuous Tense की पहचान क्या है?",
+      "correct": "रहा था, रही थी, रहे थे + समय",
+      "options": ["रहा था, रही थी, रहे थे + समय", "चुका था, चुकी थी, चुके थे + समय", "रहा है, रही है, रहे हैं + समय", "या, यी, ये + समय"]
+    },
+    {
+      "question": "Simple Present Tense में Negative वाक्य का Structure क्या है?",
+      "correct": "Subject + do/does not + V1 + Object",
+      "options": ["Subject + do/does not + V1 + Object", "Subject + V1 + not + Object", "Subject + am/is/are not + V1 + Object", "Subject + not + V1 + Object"]
+    },
+    {
+      "question": "Present Perfect Tense में Negative वाक्य का Structure क्या है?",
+      "correct": "Subject + has/have + not + V3 + Object",
+      "options": ["Subject + has/have + not + V3 + Object", "Subject + not + has/have + V3 + Object", "Subject + do/does + not + V3 + Object", "Subject + V3 + not + Object"]
+    },
+    {
+      "question": "Past Perfect Continuous Tense में 'since' का प्रयोग कब होता है?",
+      "correct": "समय के आरंभिक बिंदु के लिए",
+      "options": ["समय के आरंभिक बिंदु के लिए", "समय की अवधि के लिए", "भविष्य के लिए", "अतीत के लिए"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"I ____ not seen this film before.\"",
+      "correct": "have",
+      "options": ["have", "has", "had", "am"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"He ____ not play football.\"",
+      "correct": "doesn't",
+      "options": ["doesn't", "don't", "didn't", "hasn't"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"Is she ____?\"",
+      "correct": "crying",
+      "options": ["crying", "cry", "cries", "cried"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"What have you ____?\"",
+      "correct": "done",
+      "options": ["done", "do", "doing", "did"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"He has not ____ cricket.\"",
+      "correct": "played",
+      "options": ["played", "play", "playing", "plays"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"We ____ not seen that movie.\"",
+      "correct": "have",
+      "options": ["have", "has", "had", "were"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"What are you doing?\"",
+      "correct": "तुम क्या कर रहे हो?",
+      "options": ["तुम क्या कर रहे हो?", "तुम क्या करते हो?", "तुमने क्या किया?", "तुम क्या करोगे?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"He has played cricket.\"",
+      "correct": "वह क्रिकेट खेल चुका है।",
+      "options": ["वह क्रिकेट खेल चुका है।", "वह क्रिकेट खेलता है।", "वह क्रिकेट खेल रहा है।", "वह क्रिकेट खेला।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"We are going to school.\"",
+      "correct": "हम स्कूल जा रहे हैं।",
+      "options": ["हम स्कूल जा रहे हैं।", "हम स्कूल जाते हैं।", "हम स्कूल जा चुके हैं।", "हम स्कूल जाएंगे।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"She has not eaten food.\"",
+      "correct": "उसने खाना नहीं खाया है।",
+      "options": ["उसने खाना नहीं खाया है।", "वह खाना नहीं खा रही है।", "उसने खाना नहीं खाया था।", "वह खाना नहीं खाती है।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"I am reading a book.\"",
+      "correct": "मैं एक किताब पढ़ रहा हूँ।",
+      "options": ["मैं एक किताब पढ़ रहा हूँ।", "मैं एक किताब पढ़ता हूँ।", "मैंने एक किताब पढ़ी।", "मैं एक किताब पढ़ रहा था।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"The sun does not rise in the west.\"",
+      "correct": "सूरज पश्चिम में नहीं उगता है।",
+      "options": ["सूरज पश्चिम में नहीं उगता है।", "सूरज पश्चिम में नहीं उग रहा है।", "सूरज पश्चिम में नहीं उगा।", "सूरज पश्चिम में नहीं उग चुका है।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"They are watching a movie.\"",
+      "correct": "वे एक फिल्म देख रहे हैं।",
+      "options": ["वे एक फिल्म देख रहे हैं।", "वे एक फिल्म देखते हैं।", "वे एक फिल्म देख चुके हैं।", "उन्होंने एक फिल्म देखी।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"He has finished his homework.\"",
+      "correct": "उसने अपना होमवर्क खत्म कर लिया है।",
+      "options": ["उसने अपना होमवर्क खत्म कर लिया है।", "वह अपना होमवर्क खत्म कर रहा है।", "वह अपना होमवर्क खत्म करता है।", "वह अपना होमवर्क खत्म कर चुका था।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"It has been raining for two hours.\"",
+      "correct": "दो घंटे से बारिश हो रही है।",
+      "options": ["दो घंटे से बारिश हो रही है।", "दो घंटे से बारिश हो रही थी।", "बारिश हो रही है।", "बारिश हो चुकी है।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"They did not watch a movie.\"",
+      "correct": "उन्होंने एक फिल्म नहीं देखी।",
+      "options": ["उन्होंने एक फिल्म नहीं देखी।", "वे एक फिल्म नहीं देख रहे थे।", "वे एक फिल्म नहीं देखते हैं।", "वे एक फिल्म नहीं देख चुके हैं।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"I was not playing cricket.\"",
+      "correct": "मैं क्रिकेट नहीं खेल रहा था।",
+      "options": ["मैं क्रिकेट नहीं खेल रहा था।", "मैं क्रिकेट नहीं खेलता था।", "मैंने क्रिकेट नहीं खेला।", "मैं क्रिकेट नहीं खेल चुका था।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"What did you eat?\"",
+      "correct": "तुमने क्या खाया?",
+      "options": ["तुमने क्या खाया?", "तुम क्या खाते हो?", "तुम क्या खा रहे हो?", "तुम क्या खा चुके हो?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Where was he going?\"",
+      "correct": "वह कहाँ जा रहा था?",
+      "options": ["वह कहाँ जा रहा था?", "वह कहाँ गया?", "वह कहाँ जा रहा है?", "वह कहाँ गया था?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Had you seen that movie before?\"",
+      "correct": "क्या तुमने वह फिल्म पहले देख ली थी?",
+      "options": ["क्या तुमने वह फिल्म पहले देख ली थी?", "क्या तुमने वह फिल्म देखी थी?", "क्या तुम वह फिल्म देख रहे थे?", "क्या तुम वह फिल्म पहले देख चुके हो?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Where had he gone before you called him?\"",
+      "correct": "तुम्हारे बुलाने से पहले वह कहाँ गया था?",
+      "options": ["तुम्हारे बुलाने से पहले वह कहाँ गया था?", "वह कहाँ गया था?", "तुमने उसे बुलाया तो वह कहाँ गया?", "वह कहाँ गया है?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"We had been living there for ten years before we moved.\"",
+      "correct": "वहाँ जाने से पहले हम वहाँ दस साल से रह रहे थे।",
+      "options": ["वहाँ जाने से पहले हम वहाँ दस साल से रह रहे थे।", "हम वहाँ दस साल से रह रहे हैं।", "हम दस साल से वहाँ रह चुके हैं।", "हम वहाँ दस साल से रहे।"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"Why had she been crying for so long?\"",
+      "correct": "वह इतनी देर से क्यों रो रही थी?",
+      "options": ["वह इतनी देर से क्यों रो रही थी?", "वह इतनी देर से क्यों रो रही है?", "वह क्यों रो रही थी?", "वह इतनी देर तक क्यों रोई?"]
+    },
+    {
+      "question": "सही हिंदी अनुवाद चुनें: \"How long had he been working?\"",
+      "correct": "वह कितनी देर से काम कर रहा था?",
+      "options": ["वह कितनी देर से काम कर रहा था?", "वह कितनी देर से काम कर रहा है?", "उसने कितनी देर काम किया?", "वह कब से काम कर रहा था?"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"She ____ a song.\"",
+      "correct": "sings",
+      "options": ["sings", "sing", "is singing", "sang"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"They ____ watching a movie.\"",
+      "correct": "are",
+      "options": ["are", "is", "am", "do"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"He has ____ his homework.\"",
+      "correct": "finished",
+      "options": ["finished", "finish", "finishing", "finishes"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"It has been raining ____ two hours.\"",
+      "correct": "for",
+      "options": ["for", "since", "from", "at"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"Do you ____ coffee?\"",
+      "correct": "like",
+      "options": ["like", "likes", "liked", "liking"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"The sun ____ not rise in the west.\"",
+      "correct": "does",
+      "options": ["does", "do", "did", "is"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"Where are you ____?\"",
+      "correct": "going",
+      "options": ["going", "go", "went", "gone"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"I have not ____ this film before.\"",
+      "correct": "seen",
+      "options": ["seen", "see", "saw", "seeing"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"The students have been ____ for three hours.\"",
+      "correct": "studying",
+      "options": ["studying", "study", "studied", "studies"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"What do you ____?\"",
+      "correct": "want",
+      "options": ["want", "wants", "wanted", "wanting"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"Is she ____?\"",
+      "correct": "crying",
+      "options": ["crying", "cry", "cries", "cried"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"He doesn't ____ football.\"",
+      "correct": "play",
+      "options": ["play", "plays", "played", "playing"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"She has been waiting ____ morning.\"",
+      "correct": "since",
+      "options": ["since", "for", "from", "at"]
+    },
+    {
+      "question": "रिक्त स्थान भरें: \"I don't ____ the answer.\"",
+      "correct": "know",
+      "options": ["know", "knows", "knew", "knowing"]
+    }
+  ]
+}
