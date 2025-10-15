@@ -1,0 +1,202 @@
+this.questions = [
+  {
+    "question": "Hindi → English: मैं रोज स्कूल जाता हूँ।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>I go to school daily.</p><p><em>संकेत:</em> यह एक आदत है।</p>"
+  },
+  {
+    "question": "English → Hindi: He eats an apple.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह एक सेब खाता है।</p><p><em>संकेत:</em> Simple Present Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह किताबें पढ़ रहा है।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He is reading books.</p><p><em>संकेत:</em> काम अभी हो रहा है।</p>"
+  },
+  {
+    "question": "English → Hindi: I am studying for my exam.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मैं अपनी परीक्षा के लिए पढ़ रहा हूँ।</p><p><em>संकेत:</em> Present Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह खाना खा चुका है।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He has eaten food.</p><p><em>संकेत:</em> काम अभी-अभी पूरा हुआ है।</p>"
+  },
+  {
+    "question": "English → Hindi: We have finished our work.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>हम अपना काम पूरा कर चुके हैं।</p><p><em>संकेत:</em> Present Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: मैं दो घंटे से पढ़ रहा हूँ।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>I have been studying for two hours.</p><p><em>संकेत:</em> काम कुछ समय से चल रहा है।</p>"
+  },
+  {
+    "question": "English → Hindi: They have been playing for three hours.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वे तीन घंटे से खेल रहे हैं।</p><p><em>संकेत:</em> Present Perfect Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: हमने क्रिकेट खेला।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>We played cricket.</p><p><em>संकेत:</em> काम हो चुका है।</p>"
+  },
+  {
+    "question": "English → Hindi: She went to the store.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह दुकान पर गई।</p><p><em>संकेत:</em> Simple Past Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: जब मैं घर पहुँचा, बारिश हो रही थी।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>It was raining when I reached home.</p><p><em>संकेत:</em> एक काम जारी था जब दूसरा हुआ।</p>"
+  },
+  {
+    "question": "English → Hindi: They were sleeping when I called.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>जब मैंने फोन किया, वे सो रहे थे।</p><p><em>संकेत:</em> Past Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: पुलिस के आने से पहले चोर भाग चुका था।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>The thief had escaped before the police came.</p><p><em>संकेत:</em> एक काम दूसरे काम से पहले पूरा हुआ।</p>"
+  },
+  {
+    "question": "English → Hindi: We had cooked the dinner by the time the guests arrived.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मेहमानों के आने तक हम खाना बना चुके थे।</p><p><em>संकेत:</em> Past Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: हम सुबह से खेल रहे थे।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>We had been playing since morning.</p><p><em>संकेत:</em> काम बीते समय से चल रहा था।</p>"
+  },
+  {
+    "question": "English → Hindi: He had been waiting for two hours before I arrived.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मेरे आने से पहले वह दो घंटे से इंतज़ार कर रहा था।</p><p><em>संकेत:</em> Past Perfect Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह पत्र लिखेगा।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He will write a letter.</p><p><em>संकेत:</em> काम भविष्य में होगा।</p>"
+  },
+  {
+    "question": "English → Hindi: I will meet you tomorrow.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मैं तुमसे कल मिलूंगा।</p><p><em>संकेत:</em> Simple Future Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह स्कूल जा रहा होगा।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He will be going to school.</p><p><em>संकेत:</em> काम भविष्य में जारी होगा।</p>"
+  },
+  {
+    "question": "English → Hindi: At this time tomorrow, I will be relaxing on a beach.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>कल इस समय, मैं एक समुद्र तट पर आराम कर रहा हूँगा।</p><p><em>संकेत:</em> Future Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: हम 2 घंटे में खाना खा चुके होंगे।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>We will have eaten food in 2 hours.</p><p><em>संकेत:</em> काम भविष्य में पूरा हो चुका होगा।</p>"
+  },
+  {
+    "question": "English → Hindi: They will have completed the project by next week.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वे अगले हफ्ते तक प्रोजेक्ट पूरा कर चुके होंगे।</p><p><em>संकेत:</em> Future Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह सुबह से पत्र लिख रहा होगा।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He will have been writing a letter since morning.</p><p><em>संकेत:</em> काम भविष्य में किसी समय तक जारी रहेगा।</p>"
+  },
+  {
+    "question": "English → Hindi: By 5 p.m., they will have been swimming for an hour.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>शाम 5 बजे तक, वे एक घंटे से तैर रहे होंगे।</p><p><em>संकेत:</em> Future Perfect Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह क्रिकेट खेलता है।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He plays cricket.</p><p><em>संकेत:</em> Simple Present Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: She cooked food.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>उसने खाना पकाया।</p><p><em>संकेत:</em> Simple Past Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह खाना खा रहा था।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He was eating food.</p><p><em>संकेत:</em> Past Continuous Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: They will have gone.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वे जा चुके होंगे।</p><p><em>संकेत:</em> Future Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह गाना गा रही थी।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>She was singing a song.</p><p><em>संकेत:</em> Past Continuous Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: I will be playing cricket.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मैं क्रिकेट खेल रहा हूँगा।</p><p><em>संकेत:</em> Future Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: सूरज पूरब से निकलता है।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>The sun rises in the east.</p><p><em>संकेत:</em> यह एक सार्वभौमिक सत्य है।</p>"
+  },
+  {
+    "question": "English → Hindi: He has been running for an hour.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह एक घंटे से दौड़ रहा है।</p><p><em>संकेत:</em> Present Perfect Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वे एक फिल्म देख चुके हैं।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>They have watched a movie.</p><p><em>संकेत:</em> Present Perfect Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: She had gone to the market.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह बाजार जा चुकी थी।</p><p><em>संकेत:</em> Past Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: हम कल दिल्ली जाएंगे।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>We will go to Delhi tomorrow.</p><p><em>संकेत:</em> Simple Future Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: The baby is crying.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>बच्चा रो रहा है।</p><p><em>संकेत:</em> Present Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: मैं अपना होमवर्क कर चुका हूँ।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>I have done my homework.</p><p><em>संकेत:</em> Present Perfect Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: She will be cooking dinner.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह रात का खाना बना रही होगी।</p><p><em>संकेत:</em> Future Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: उसने एक गाना गाया।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He sang a song.</p><p><em>संकेत:</em> Simple Past Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: They had been talking for an hour.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वे एक घंटे से बात कर रहे थे।</p><p><em>संकेत:</em> Past Perfect Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वह सुबह से सो रहा था।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He had been sleeping since morning.</p><p><em>संकेत:</em> Past Perfect Continuous Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: We will have finished by then.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>हम तब तक पूरा कर चुके होंगे।</p><p><em>संकेत:</em> Future Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: मैं अपनी कार धो रहा हूँ।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>I am washing my car.</p><p><em>संकेत:</em> Present Continuous Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: They have visited the temple.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वे मंदिर जा चुके हैं।</p><p><em>संकेत:</em> Present Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: उसने एक पत्र लिखा।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>He wrote a letter.</p><p><em>संकेत:</em> Simple Past Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: He was going to the park.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह पार्क जा रहा था।</p><p><em>संकेत:</em> Past Continuous Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वे टीवी देख रहे होंगे।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>They will be watching TV.</p><p><em>संकेत:</em> Future Continuous Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: I will have finished my meal by now.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>मैं अब तक अपना खाना खत्म कर चुका हूँगा।</p><p><em>संकेत:</em> Future Perfect Tense.</p>"
+  },
+  {
+    "question": "Hindi → English: वे दो घंटे से नाच रहे थे।",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>They had been dancing for two hours.</p><p><em>संकेत:</em> Past Perfect Continuous Tense.</p>"
+  },
+  {
+    "question": "English → Hindi: She has been singing since morning.",
+    "answer": "<p><strong>उत्तर:</strong></p><p class='highlight-answer'>वह सुबह से गा रही है।</p><p><em>संकेत:</em> Present Perfect Continuous Tense.</p>"
+  }
+];
