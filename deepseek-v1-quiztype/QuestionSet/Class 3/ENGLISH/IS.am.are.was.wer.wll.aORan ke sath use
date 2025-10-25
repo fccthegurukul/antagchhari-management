@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "question": "‘वह मेरा दोस्त ___.’ में सही अंग्रेज़ी शब्द लगाइए।",
+      "correct": "is",
+      "options": ["am", "is", "are", "was"]
+    },
+    {
+      "question": "‘मैं एक छात्र ___.’ में सही शब्द चुनें।",
+      "correct": "am",
+      "options": ["is", "am", "are", "were"]
+    },
+    {
+      "question": "‘वे खेल रहे ___.’ सही उत्तर क्या होगा?",
+      "correct": "are",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘वह एक अच्छी लड़की ___.’",
+      "correct": "is",
+      "options": ["is", "was", "are", "am"]
+    },
+    {
+      "question": "‘यह एक सेब ___.’ सही उत्तर क्या होगा?",
+      "correct": "is",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘मैं खुश ___.’ सही शब्द लगाइए।",
+      "correct": "am",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘तुम मेरे सबसे अच्छे दोस्त ___.’",
+      "correct": "are",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘रिया पार्क में ___.’ सही उत्तर चुनें।",
+      "correct": "is",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘हम तैयार ___.’ सही शब्द क्या होगा?",
+      "correct": "are",
+      "options": ["is", "am", "are", "were"]
+    },
+    {
+      "question": "‘वह डॉक्टर ___.’ में सही शब्द भरें।",
+      "correct": "is",
+      "options": ["am", "is", "are", "was"]
+    },
+    {
+      "question": "‘मैं स्कूल में ___ था।’ में सही शब्द लगाइए।",
+      "correct": "was",
+      "options": ["am", "is", "was", "were"]
+    },
+    {
+      "question": "‘वे व्यस्त ___ थे।’ सही शब्द भरें।",
+      "correct": "were",
+      "options": ["was", "is", "were", "am"]
+    },
+    {
+      "question": "‘वह कल खुश ___ थी।’",
+      "correct": "was",
+      "options": ["is", "was", "were", "am"]
+    },
+    {
+      "question": "‘यह बहुत ठंडा ___ था।’ सही उत्तर?",
+      "correct": "was",
+      "options": ["is", "was", "were", "will"]
+    },
+    {
+      "question": "‘हम दोस्त ___ थे।’ सही उत्तर चुनें।",
+      "correct": "were",
+      "options": ["was", "were", "is", "am"]
+    },
+    {
+      "question": "‘मैं तुम्हें कल फोन ___।’ सही शब्द लगाइए।",
+      "correct": "will",
+      "options": ["is", "am", "was", "will"]
+    },
+    {
+      "question": "‘वह कल आएगा’ को अंग्रेज़ी में क्या कहेंगे?",
+      "correct": "He will come tomorrow.",
+      "options": ["He is coming tomorrow.", "He will come tomorrow.", "He was come tomorrow.", "He are coming tomorrow."]
+    },
+    {
+      "question": "‘यह मेरी किताब है’ को अंग्रेज़ी में अनुवाद करें।",
+      "correct": "This is my book.",
+      "options": ["This are my book.", "This was my book.", "This is my book.", "This am my book."]
+    },
+    {
+      "question": "‘वह मेरा शिक्षक था’ का सही अंग्रेज़ी अनुवाद क्या होगा?",
+      "correct": "He was my teacher.",
+      "options": ["He is my teacher.", "He was my teacher.", "He are my teacher.", "He were my teacher."]
+    },
+    {
+      "question": "‘तुम देर से आए ___।’ सही शब्द भरें।",
+      "correct": "are",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘वह कल नाचेगी’ का अंग्रेज़ी अनुवाद क्या है?",
+      "correct": "She will dance tomorrow.",
+      "options": ["She is dancing tomorrow.", "She was dancing tomorrow.", "She will dance tomorrow.", "She are dancing tomorrow."]
+    },
+    {
+      "question": "‘हम फिर मिलेंगे’ का सही अंग्रेज़ी अनुवाद क्या है?",
+      "correct": "We will meet again.",
+      "options": ["We are meet again.", "We will meet again.", "We were meet again.", "We is meet again."]
+    },
+    {
+      "question": "‘यह मेरा खिलौना था’ अंग्रेज़ी में क्या होगा?",
+      "correct": "This was my toy.",
+      "options": ["This is my toy.", "This are my toy.", "This was my toy.", "This will my toy."]
+    },
+    {
+      "question": "‘वह कार में है’ को अंग्रेज़ी में कहो।",
+      "correct": "He is in the car.",
+      "options": ["He was in the car.", "He is in the car.", "He are in the car.", "He am in the car."]
+    },
+    {
+      "question": "‘यह आसान होगा’ का अंग्रेज़ी अनुवाद क्या है?",
+      "correct": "This will be easy.",
+      "options": ["This is easy.", "This will easy.", "This will be easy.", "This was easy."]
+    },
+    {
+      "question": "‘बारिश हो रही ___’ सही शब्द कौन सा है?",
+      "correct": "is",
+      "options": ["am", "is", "are", "was"]
+    },
+    {
+      "question": "‘सब ठीक ___ जाएगा।’ सही शब्द लगाइए।",
+      "correct": "हो",
+      "options": ["है", "था", "हो", "होगा"]
+    },
+    {
+      "question": "‘They ___ my friends.’ में सही शब्द लगाइए।",
+      "correct": "are",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘That ___ your pen.’ में सही विकल्प क्या है?",
+      "correct": "is",
+      "options": ["is", "are", "was", "were"]
+    },
+    {
+      "question": "‘We ___ going to market.’ सही उत्तर?",
+      "correct": "are",
+      "options": ["is", "are", "was", "will"]
+    },
+    {
+      "question": "‘It ___ a sunny day yesterday.’ का सही शब्द?",
+      "correct": "was",
+      "options": ["is", "was", "are", "will"]
+    },
+    {
+      "question": "‘I ___ call you tomorrow.’ सही उत्तर?",
+      "correct": "will",
+      "options": ["is", "am", "will", "was"]
+    },
+    {
+      "question": "‘They ___ late yesterday.’ सही विकल्प?",
+      "correct": "were",
+      "options": ["is", "am", "was", "were"]
+    },
+    {
+      "question": "‘He ___ very kind.’ सही शब्द भरें।",
+      "correct": "is",
+      "options": ["is", "are", "was", "will"]
+    },
+    {
+      "question": "‘We ___ at school yesterday.’ सही उत्तर क्या है?",
+      "correct": "were",
+      "options": ["are", "am", "were", "is"]
+    },
+    {
+      "question": "‘You ___ very happy today.’ सही विकल्प?",
+      "correct": "are",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘She ___ help me.’ सही शब्द कौन सा है?",
+      "correct": "will",
+      "options": ["is", "am", "was", "will"]
+    },
+    {
+      "question": "‘It ___ be fine.’ सही विकल्प चुनें।",
+      "correct": "will",
+      "options": ["is", "am", "was", "will"]
+    },
+    {
+      "question": "‘These ___ apples.’ सही उत्तर क्या है?",
+      "correct": "are",
+      "options": ["is", "are", "was", "will"]
+    },
+    {
+      "question": "‘I ___ in the park.’ सही शब्द क्या है?",
+      "correct": "am",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘He ___ my cousin.’ सही उत्तर?",
+      "correct": "is",
+      "options": ["is", "are", "am", "was"]
+    },
+    {
+      "question": "‘They ___ going home soon.’ सही शब्द लगाइए।",
+      "correct": "are",
+      "options": ["is", "am", "are", "will"]
+    },
+    {
+      "question": "‘She ___ very clever.’ सही उत्तर?",
+      "correct": "is",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘We ___ learn English.’ सही शब्द कौन सा है?",
+      "correct": "will",
+      "options": ["is", "am", "are", "will"]
+    },
+    {
+      "question": "‘That ___ my new bag.’ सही उत्तर?",
+      "correct": "is",
+      "options": ["is", "are", "am", "was"]
+    },
+    {
+      "question": "‘Those ___ my toys.’ सही उत्तर क्या है?",
+      "correct": "are",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘It ___ raining now.’ सही शब्द लगाइए।",
+      "correct": "is",
+      "options": ["am", "is", "are", "was"]
+    },
+    {
+      "question": "‘You ___ clever.’ सही उत्तर?",
+      "correct": "are",
+      "options": ["is", "am", "are", "was"]
+    },
+    {
+      "question": "‘He ___ in class five last year.’ सही शब्द?",
+      "correct": "was",
+      "options": ["is", "was", "were", "will"]
+    },
+    {
+      "question": "‘We ___ in Delhi two years ago.’ सही शब्द?",
+      "correct": "were",
+      "options": ["is", "am", "were", "will"]
+    },
+    {
+      "question": "‘She ___ be late today.’ सही उत्तर?",
+      "correct": "will",
+      "options": ["is", "am", "was", "will"]
+    }
+  ]
+}
