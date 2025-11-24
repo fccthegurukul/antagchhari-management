@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>फूलों की दुनिया - प्रश्नोत्तरी (Quiz)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* BASIC SETUP */
+        * { box-sizing: border-box; }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Hind', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* QUIZ CONTAINER */
+        .quiz-container {
+            background-color: #121212;
+            border: 1px solid #333;
+            border-radius: 24px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            width: 100%;
+            max-width: 800px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Neon Gradient Top Bar */
+        .quiz-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #a3e635, #3b82f6, #ec4899);
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            color: #a3e635;
+            margin-bottom: 10px;
+        }
+
+        .question-number {
+            color: #9ca3af;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .question-text {
+            font-size: 28px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        /* OPTIONS GRID */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .option-btn {
+            background-color: #1f2937;
+            border: 2px solid #374151;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Hind', sans-serif;
+            font-weight: 500;
+        }
+
+        .option-btn:hover {
+            background-color: #374151;
+            border-color: #a3e635;
+            transform: translateY(-2px);
+        }
+
+        .option-btn.correct {
+            background-color: #065f46 !important;
+            border-color: #34d399 !important;
+            color: #fff;
+        }
+
+        .option-btn.wrong {
+            background-color: #7f1d1d !important;
+            border-color: #f87171 !important;
+            opacity: 0.7;
+        }
+
+        .option-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        /* CONTROLS */
+        .next-btn, .restart-btn {
+            background: linear-gradient(45deg, #a3e635, #22c55e);
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 22px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            display: none; /* Hidden initially */
+            margin: 20px auto 0;
+            font-family: 'Poppins', sans-serif;
+            transition: transform 0.2s;
+        }
+
+        .next-btn:hover, .restart-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(163, 230, 53, 0.5);
+        }
+
+        /* SCORE SCREEN */
+        .score-section {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 8px solid #a3e635;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0 auto 30px;
+            background: #000;
+            box-shadow: 0 0 30px rgba(163,230,53,0.3);
+        }
+
+        /* PROGRESS BAR */
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background-color: #374151;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #a3e635;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .options-grid { grid-template-columns: 1fr; }
+            .question-text { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <!-- Quiz Section -->
+    <div id="quiz-section">
+        <h1>फूलों की दुनिया <i class="fa-solid fa-leaf"></i></h1>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <div class="question-number">प्रश्न <span id="current-q">1</span> / 20</div>
+        <div class="question-text" id="question-text">प्रश्न लोड हो रहा है...</div>
+        
+        <div class="options-grid" id="options-container">
+            <!-- Options will be injected here -->
+        </div>
+
+        <div id="feedback" style="height: 30px; margin-bottom: 10px; font-size: 20px; font-weight: bold;"></div>
+        <button class="next-btn" id="next-btn" onclick="nextQuestion()">अगला प्रश्न <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- Score Section -->
+    <div id="score-section" class="score-section">
+        <h1>बहुत बढ़िया! <i class="fa-solid fa-trophy" style="color: gold;"></i></h1>
+        <p style="font-size: 24px; margin-bottom: 20px;">आपका स्कोर है:</p>
+        <div class="score-circle">
+            <span id="final-score">0</span>/20
+        </div>
+        <p id="score-message" style="font-size: 20px; color: #d1d5db;">आपने बहुत अच्छा प्रयास किया!</p>
+        <button class="restart-btn" onclick="restartQuiz()" style="display: inline-block;">फिर से खेलें <i class="fa-solid fa-rotate-right"></i></button>
+    </div>
+</div>
+
+<script>
+    // 20 Questions Data
+    const questions = [
+        { q: "इनमें से कौन सा फूल लाल रंग का होता है?", options: ["गेंदा", "गुलाब", "चमेली", "सूरजमुखी"], answer: 1 },
+        { q: "सूरजमुखी का फूल किस तरफ मुड़ता है?", options: ["चाँद की तरफ", "पानी की तरफ", "सूरज की तरफ", "जमीन की तरफ"], answer: 2 },
+        { q: "इनमें से कौन सा फूल रात में खिलता है?", options: ["कमल", "रातरानी", "गुड़हल", "गेंदा"], answer: 1 },
+        { q: "हमारा राष्ट्रीय फूल कौन सा है?", options: ["गुलाब", "कमल", "लिली", "ट्यूलिप"], answer: 1 },
+        { q: "मधुमक्खियाँ फूलों से क्या इकट्ठा करती हैं?", options: ["पानी", "रस (Nectar)", "पत्तियाँ", "बीज"], answer: 1 },
+        { q: "इनमें से किस फूल की खुशबू बहुत अच्छी होती है और इत्र बनता है?", options: ["चमेली", "घास", "कैक्टस", "धतूरा"], answer: 0 },
+        { q: "कौन सा फूल पानी में खिलता है?", options: ["गुलाब", "गेंदा", "कमल", "सदाबहार"], answer: 2 },
+        { q: "इनमें से कौन सा फूल पीले रंग का है?", options: ["गुड़हल", "मोगरा", "गेंदा", "गुलाब"], answer: 2 },
+        { q: "सर्दी के मौसम में कौन सा फूल खिलता है?", options: ["डहलिया", "गुलमोहर", "कमल", "अम्मलतास"], answer: 0 },
+        { q: "गुलमोहर का फूल किस मौसम में खिलता है?", options: ["सर्दी", "गर्मी", "बरसात", "कभी नहीं"], answer: 1 },
+        { q: "बरसात में खिलने वाला फूल कौन सा है?", options: ["रेन लिली", "गुलाब", "गेंदा", "पैंसी"], answer: 0 },
+        { q: "रात में खिलने वाले फूल अक्सर किस रंग के होते हैं?", options: ["काले", "लाल", "सफेद", "नीले"], answer: 2 },
+        { q: "फूलों का उपयोग किस काम में होता है?", options: ["सजावट", "पूजा", "इत्र बनाना", "ये सभी"], answer: 3 },
+        { q: "इनमें से कौन सा फूल सफ़ेद रंग का है?", options: ["मोगरा", "गुड़हल", "सूरजमुखी", "गुलमोहर"], answer: 0 },
+        { q: "किस फूल से प्राकृतिक रंग (Dye) बनाया जा सकता है?", options: ["टेसू/पलाश", "चमेली", "लिली", "मोगरा"], answer: 0 },
+        { q: "गुड़हल (Hibiscus) का रंग कैसा होता है?", options: ["नीला", "लाल", "हरा", "काला"], answer: 1 },
+        { q: "इनमें से कौन सा फूल नहीं है?", options: ["गुलाब", "कमल", "तुलसी (पत्ता)", "चमेली"], answer: 2 },
+        { q: "माला बनाने के लिए अक्सर किस फूल का उपयोग होता है?", options: ["कैक्टस", "गेंदा", "कमल", "घास"], answer: 1 },
+        { q: "कौन सा फूल दिन में खिलता है और रात में बंद हो जाता है?", options: ["रातरानी", "हरसिंगार", "सूरजमुखी", "रजनीगंधा"], answer: 2 },
+        { q: "पौधों का सबसे सुंदर और रंगीन भाग कौन सा होता है?", options: ["जड़", "तना", "फूल", "कांटा"], answer: 2 }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionEl = document.getElementById('question-text');
+    const optionsEl = document.getElementById('options-container');
+    const currentQEl = document.getElementById('current-q');
+    const nextBtn = document.getElementById('next-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const feedbackEl = document.getElementById('feedback');
+    const quizSection = document.getElementById('quiz-section');
+    const scoreSection = document.getElementById('score-section');
+    const finalScoreEl = document.getElementById('final-score');
+
+    function loadQuestion() {
+        const q = questions[currentQuestion];
+        questionEl.innerText = q.q;
+        currentQEl.innerText = currentQuestion + 1;
+        optionsEl.innerHTML = '';
+        feedbackEl.innerText = '';
+        feedbackEl.style.color = '';
+        nextBtn.style.display = 'none';
+
+        // Update progress bar
+        const progress = ((currentQuestion) / questions.length) * 100;
+        progressBar.style.width = progress + '%';
+
+        q.options.forEach((opt, index) => {
+            const btn = document.createElement('button');
+            btn.innerText = opt;
+            btn.classList.add('option-btn');
+            btn.onclick = () => checkAnswer(index, btn);
+            optionsEl.appendChild(btn);
+        });
+    }
+
+    function checkAnswer(selectedIndex, btn) {
+        const correctIndex = questions[currentQuestion].answer;
+        const buttons = optionsEl.querySelectorAll('.option-btn');
+        
+        // Disable all buttons
+        buttons.forEach(b => b.disabled = true);
+
+        if (selectedIndex === correctIndex) {
+            btn.classList.add('correct');
+            score++;
+            feedbackEl.innerText = "सही जवाब! 🎉";
+            feedbackEl.style.color = "#4ade80";
+        } else {
+            btn.classList.add('wrong');
+            buttons[correctIndex].classList.add('correct'); // Show correct answer
+            feedbackEl.innerText = "ओह! गलत जवाब।";
+            feedbackEl.style.color = "#f87171";
+        }
+        
+        nextBtn.style.display = 'inline-block';
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+        } else {
+            showScore();
+        }
+    }
+
+    function showScore() {
+        quizSection.style.display = 'none';
+        scoreSection.style.display = 'block';
+        finalScoreEl.innerText = score;
+        
+        const msgEl = document.getElementById('score-message');
+        if (score === 20) {
+            msgEl.innerText = "अद्भुत! आप तो फूलों के उस्ताद हैं! 🌟";
+        } else if (score >= 15) {
+            msgEl.innerText = "बहुत अच्छा! आपने बहुत कुछ सीखा है। 👏";
+        } else {
+            msgEl.innerText = "अच्छा प्रयास! थोड़ा और पढ़कर फिर कोशिश करें। 👍";
+        }
+    }
+
+    function restartQuiz() {
+        currentQuestion = 0;
+        score = 0;
+        scoreSection.style.display = 'none';
+        quizSection.style.display = 'block';
+        loadQuestion();
+    }
+
+    // Initial Load
+    loadQuestion();
+
+</script>
+
+</body>
+</html>
